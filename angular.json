@@ -3,36 +3,87 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sula": {
-      "root": "",
-      "sourceRoot": "src",
+    "ui": {
+      "root": "projects/ui",
+      "sourceRoot": "projects/ui/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ui/tsconfig.lib.json",
+            "project": "projects/ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ui/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ui/src/test.ts",
+            "tsConfig": "projects/ui/tsconfig.spec.json",
+            "karmaConfig": "projects/ui/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ui/tsconfig.lib.json",
+              "projects/ui/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ui-docs": {
+      "root": "projects/ui-docs/",
+      "sourceRoot": "projects/ui-docs/src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss",
+          "changeDetection": "OnPush"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sula",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "outputPath": "dist/ui-docs",
+            "index": "projects/ui-docs/src/index.html",
+            "main": "projects/ui-docs/src/main.ts",
+            "polyfills": "projects/ui-docs/src/polyfills.ts",
+            "tsConfig": "projects/ui-docs/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/ui-docs/src/favicon.ico",
+              "projects/ui-docs/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "projects/ui-docs/src/styles/main.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/ui-docs/src/styles",
+                "projects/ui/src/lib/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "projects/ui-docs/src/environments/environment.ts",
+                  "with": "projects/ui-docs/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -50,34 +101,34 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sula:build"
+            "browserTarget": "ui-docs:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sula:build:production"
+              "browserTarget": "ui-docs:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sula:build"
+            "browserTarget": "ui-docs:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
+            "main": "projects/ui-docs/src/test.ts",
+            "polyfills": "projects/ui-docs/src/polyfills.ts",
+            "tsConfig": "projects/ui-docs/tsconfig.spec.json",
+            "karmaConfig": "projects/ui-docs/karma.conf.js",
             "styles": [
-              "styles.css"
+              "projects/ui-docs/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/ui-docs/src/favicon.ico",
+              "projects/ui-docs/src/assets"
             ]
           }
         },
@@ -85,8 +136,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "projects/ui-docs/tsconfig.app.json",
+              "projects/ui-docs/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -95,21 +146,21 @@
         }
       }
     },
-    "sula-e2e": {
-      "root": "e2e/",
+    "ui-docs-e2e": {
+      "root": "projects/ui-docs-e2e/",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "sula:serve"
+            "protractorConfig": "projects/ui-docs-e2e/protractor.conf.js",
+            "devServerTarget": "ui-docs:serve"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
+            "tsConfig": "projects/ui-docs-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
@@ -117,6 +168,5 @@
         }
       }
     }
-  },
-  "defaultProject": "sula"
+  }
 }

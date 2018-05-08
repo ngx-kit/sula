@@ -1,0 +1,18 @@
+<ui-vertical-menu>
+  <a uiVerticalMenuItem routerLink="/">Overview</a>
+  <ui-vertical-menu-group>
+    Style
+    <ui-vertical-menu-sub *kitCollapse>
+      <a uiVerticalMenuItem routerLink="/style/colors">Colors</a>
+      <a uiVerticalMenuItem routerLink="/style/typography">Typography</a>
+      <a uiVerticalMenuItem routerLink="/style/iconography">Iconography</a>
+    </ui-vertical-menu-sub>
+  </ui-vertical-menu-group>
+  <ui-vertical-menu-group>
+    Components
+    <ui-vertical-menu-sub *kitCollapse>
+      <a uiVerticalMenuItem routerLink="/component/ui-button">Button</a>
+      <a uiVerticalMenuItem routerLink="/component/ui-vertical-menu">Vertical-menu</a>
+    </ui-vertical-menu-sub>
+  </ui-vertical-menu-group>
+</ui-vertical-menu>

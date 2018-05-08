@@ -1,0 +1,23 @@
+@import "params";
+
+:host {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.content {
+  overflow: auto;
+  padding: $grid * 3 $grid * 5;
+}

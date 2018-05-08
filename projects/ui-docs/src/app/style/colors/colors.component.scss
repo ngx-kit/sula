@@ -1,0 +1,9 @@
+@import "params";
+
+.color {
+  width: 200px;
+  height: 100px;
+  &.-primary {
+    background: $primaryColor;
+  }
+}
