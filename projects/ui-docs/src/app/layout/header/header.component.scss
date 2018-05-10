@@ -1,4 +1,8 @@
+@import "params";
+
 :host {
-  background: aquamarine;
+  background: $mainColor;
+  color: $whiteColor;
   display: flex;
+  flex-shrink: 0;
 }

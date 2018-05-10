@@ -1,9 +1,142 @@
 @import "params";
 
+.color-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .color {
-  width: 200px;
-  height: 100px;
+  border: 1px solid $mainColorLight4;
+  border-radius: $grid/2;
+  box-sizing: border-box;
+  color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130px;
+  margin: $grid;
+  padding: $grid * 2;
+  width: 25%;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
   &.-primary {
     background: $primaryColor;
   }
+  &.-main {
+    background: $mainColor;
+  }
+  &.-white {
+    background: $whiteColor;
+    color: $mainColor;
+  }
+  &.-light {
+    background: $lightColor;
+    color: $mainColor;
+  }
+  &.-error {
+    background: $errorColor;
+  }
+  &.-success{
+    background: $successColor;
+  }
+  &.-warning {
+    background: $warningColor;
+  }
+  &.-info {
+    background: $infoColor;
+  }
 }
+
+table {
+  margin: $grid * 3 0;
+
+  .-primary {
+    background: $primaryColor;
+  }
+  .-primary1 {
+    background: $primaryColorDark1;
+  }
+  .-primary2 {
+    background: $primaryColorDark2;
+  }
+  .-primary3 {
+    background: $primaryColorLight1;
+  }
+  .-primary4 {
+    background: $primaryColorLight2;
+  }
+  .-main {
+    background: $mainColor;
+  }
+  .-main1 {
+    background: $mainColorLight1;
+  }
+  .-main2 {
+    background: $mainColorLight2;
+  }
+  .-main3 {
+    background: $mainColorLight3;
+  }
+  .-main4 {
+    background: $mainColorLight4;
+  }
+  .-white {
+    background: $whiteColor;
+  }
+  .-light {
+    background: $lightColor;
+  }
+  .-error {
+    background: $errorColor;
+  }
+  .-error1 {
+    background: $errorColorLight1;
+  }
+  .-error2 {
+    background: $errorColorLight2;
+  }
+  .-success {
+    background: $successColor;
+  }
+  .-success1 {
+    background: $successColorLight1;
+  }
+  .-success2 {
+    background: $successColorLight2;
+  }
+  .-warning {
+    background: $warningColor;
+  }
+  .-warning1 {
+    background: $warningColorLight1;
+  }
+  .-warning2 {
+    background: $warningColorLight2;
+  }
+  .-info {
+    background: $infoColor;
+  }
+  .-info1 {
+    background: $infoColorLight1;
+  }
+  .-info2 {
+    background: $infoColorLight2;
+  }
+  tr {
+    :first-child {
+      width: 70px;
+    }
+    :nth-child(2){
+      width: 80px;
+    }
+  }
+  th,td{
+    border-color: $mainColorLight4;
+  }
+}
+

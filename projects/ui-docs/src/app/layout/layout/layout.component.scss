@@ -18,6 +18,14 @@
 }
 
 .content {
+  box-sizing: border-box;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
   overflow: auto;
   padding: $grid * 3 $grid * 5;
+}
+
+.main-wrapper{
+  max-width: 1000px;
 }
