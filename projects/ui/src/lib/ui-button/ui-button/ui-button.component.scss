@@ -4,7 +4,7 @@ $borderRadius: 3px;
 
 :host {
   background-image: none;
-  border: 0;
+  border: 1px solid;
   border-radius: $borderRadius;
   box-sizing: border-box;
   cursor: pointer;
@@ -20,28 +20,151 @@ $borderRadius: 3px;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  outline: none;
+  &:hover {
+    box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+    transform: translate3d(0, -1px, 0);
+  }
   &.color {
     &-default {
-      background: #cccccc;
-      color: #333333;
+      background: none;
+      color: $primaryColor;
+      border-color: $primaryColor;
       &:hover {
-        background: #bbbbbb;
+        border-color: $primaryColorDark2;
+        color: $primaryColorDark2;
       }
-      &.checked {
-        background: #aaaaaa;
+      &:active, &.checked {
+        color: $primaryColorDark1;
+        border-color: $primaryColorDark1;
+      }
+      &:disabled {
+        color: $primaryColorLight2;
+        border-color: $primaryColorLight2;
+        pointer-events: none;
       }
     }
     &-primary {
       background: $primaryColor;
+      border-color: $primaryColor;
       color: #ffffff;
       &:hover {
-        background: #248acd;
+        background: $primaryColorDark2;
+        border-color: $primaryColorDark2;
       }
-      &.checked {
-        background: #1e80cd;
+      &:active, &.checked {
+        background: $primaryColorDark1;
+        border-color: $primaryColorDark1;
+      }
+      &:disabled {
+        background: $primaryColorLight2;
+        border-color: $primaryColorLight2;
+        pointer-events: none;
+      }
+    }
+    &-error {
+      background: $errorColor;
+      border-color: $errorColor;
+      color: #ffffff;
+      &:hover {
+        background: $errorColorDark1;
+        border-color: $errorColorDark1;
+      }
+      &:active, &.checked {
+        background: $errorColorDark2;
+        border-color: $errorColorDark2;
+      }
+      &:disabled {
+        background: $errorColorLight2;
+        border-color: $errorColorLight2;
+        pointer-events: none;
+      }
+    }
+    &-success {
+      background: $successColor;
+      border-color: $successColor;
+      color: #ffffff;
+      &:hover {
+        background: $successColorDark1;
+        border-color: $successColorDark1;
+      }
+      &:active, &.checked {
+        background: $successColorDark2;
+        border-color: $successColorDark2;
+      }
+      &:disabled {
+        background: $successColorLight2;
+        border-color: $successColorLight2;
+        pointer-events: none;
+      }
+    }
+    &-warning {
+      background: $warningColor;
+      border-color: $warningColor;
+      color: #ffffff;
+      &:hover {
+        background: $warningColorDark1;
+        border-color: $warningColorDark1;
+      }
+      &:active, &.checked {
+        background: $warningColorDark2;
+        border-color: $warningColorDark2;
+      }
+      &:disabled {
+        background: $warningColorLight2;
+        border-color: $warningColorLight2;
+        pointer-events: none;
+      }
+    }
+    &-info {
+      background: $infoColor;
+      border-color: $infoColor;
+      color: #ffffff;
+      &:hover {
+        background: $infoColorDark1;
+        border-color: $infoColorDark1;
+      }
+      &:active, &.checked {
+        background: $infoColorDark2;
+        border-color: $infoColorDark2;
+      }
+      &:disabled {
+        background: $infoColorLight2;
+        border-color: $infoColorLight2;
+        pointer-events: none;
       }
     }
   }
+
+  &.link {
+    background: none;
+    color: $primaryColor;
+    border: none;
+    &:hover {
+      background: none;
+      box-shadow: none;
+      border: none;
+      color: $primaryColorDark2;
+      text-decoration: underline;
+      transform: none;
+    }
+    &:active, &.checked {
+      background: none;
+      box-shadow: none;
+      border: none;
+      color: $primaryColorDark1;
+      transform: none;
+    }
+    &:disabled {
+      background: none;
+      box-shadow: none;
+      border: none;
+      color: $primaryColorLight2;
+      pointer-events: none;
+      transform: none;
+    }
+  }
+
   &.size {
     &-s {
       font-size: .85rem;
@@ -49,16 +172,20 @@ $borderRadius: 3px;
     }
     &-m {
       font-size: 1rem;
-      padding: 4px 12px;
+      padding: 8px 16px;
     }
     &-l {
       font-size: 1.15rem;
-      padding: 8px 20px;
+      padding: 14px 28px;
     }
   }
+
   &.groupDirection {
     &-row {
       border-radius: 0;
+      &:hover {
+        transform: none;
+      }
       &:first-child {
         border-bottom-left-radius: $borderRadius;
         border-top-left-radius: $borderRadius;
@@ -70,6 +197,9 @@ $borderRadius: 3px;
     }
     &-column {
       border-radius: 0;
+      &:hover {
+        transform: none;
+      }
       &:first-child {
         border-top-left-radius: $borderRadius;
         border-top-right-radius: $borderRadius;

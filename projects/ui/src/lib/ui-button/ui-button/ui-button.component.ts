@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, Optional,
 import { KitClassService } from '@ngx-kit/core';
 import { UiButtonColor, UiButtonSize } from '../meta';
 import { UiButtonGroupComponent } from '../ui-button-group/ui-button-group.component';
+import { b } from "@angular/core/src/render3";
 
 /**
  * @apiOrder 1
@@ -27,6 +28,8 @@ export class UiButtonComponent implements OnInit, OnChanges {
 
   @Input() size: UiButtonSize = 'm';
 
+  @Input() link = false;
+
   constructor(
     private kitClass: KitClassService,
     @Optional() private group: UiButtonGroupComponent,
@@ -46,6 +49,7 @@ export class UiButtonComponent implements OnInit, OnChanges {
       disabled: this.disabled,
       color: this.color,
       size: this.size,
+      link: this.link,
       groupDirection: !!this.group ? this.group.direction : null,
     });
   }

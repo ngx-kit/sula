@@ -1,5 +1,9 @@
 @import "params";
 
+> div {
+  padding: 30px 0;
+}
+
 .color-panel {
   display: flex;
   flex-direction: row;
@@ -41,7 +45,7 @@
   &.-error {
     background: $errorColor;
   }
-  &.-success{
+  &.-success {
     background: $successColor;
   }
   &.-warning {
@@ -131,11 +135,11 @@ table {
     :first-child {
       width: 70px;
     }
-    :nth-child(2){
+    :nth-child(2) {
       width: 80px;
     }
   }
-  th,td{
+  th, td {
     border-color: $mainColorLight4;
   }
 }

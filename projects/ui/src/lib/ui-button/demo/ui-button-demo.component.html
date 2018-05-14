@@ -1,57 +1,64 @@
-<h1>Button</h1>
+<h1>Buttons</h1>
 
 <div>
-  <h3>Default</h3>
-  <button uiButton>Click!</button>
+  <h2>Default button</h2>
+  <button uiButton>Click!</button>&nbsp;
+  <button uiButton [link]="true">Link</button>&nbsp;
 </div>
 
 <div>
-  <h3>Colors</h3>
-  <button uiButton color="default">Default color</button>&nbsp;
-  <button uiButton color="primary">Primary color</button>
+  <h2>Colors and states</h2>
+  <h3>Default state</h3>
+  <button uiButton color="primary">Primary color</button>&nbsp;
+  <button uiButton color="error">Error color</button>&nbsp;
+  <button uiButton color="success">Success color</button>&nbsp;
+  <button uiButton color="warning">Warning color</button>&nbsp;
+  <button uiButton color="info">Info color</button>&nbsp;
+  <h3>Disabled state</h3>
+  <button uiButton disabled>Default button</button>&nbsp;
+  <button uiButton color="primary" disabled>Primary color</button>&nbsp;
+  <button uiButton color="error" disabled>Error color</button>&nbsp;
+  <button uiButton color="success" disabled>Success color</button>&nbsp;
+  <button uiButton color="warning" disabled>Warning color</button>&nbsp;
+  <button uiButton color="info" disabled>Info color</button>&nbsp;
+  <button uiButton [link]="true" disabled>Link</button>&nbsp;
+
 </div>
 
 <div>
-  <h3>Sizes</h3>
-  <button uiButton size="s">Size=s</button>
-  <button uiButton size="m">Size=m</button>
-  <button uiButton size="l">Size=l</button>
+  <h2>Sizes</h2>
+  <button uiButton color="primary" size="s">Size = s</button>&nbsp;
+  <button uiButton color="primary" size="m">Size = m</button>&nbsp;
+  <button uiButton color="primary" size="l">Size = l</button>
 </div>
 
-<h2>Button group</h2>
-
 <div>
+  <h2>Button group</h2>
   <h3>Default</h3>
   <ui-button-group>
-    <button uiButton>Grouped 1</button>
-    <button uiButton>Grouped 2</button>
-    <button uiButton>Grouped 3</button>
+    <button uiButton color="primary">Grouped 1</button>
+    <button uiButton color="primary">Grouped 2</button>
+    <button uiButton color="primary">Grouped 3</button>
   </ui-button-group>
-</div>
 
-<div>
   <h3>Vertical</h3>
   <ui-button-group direction="column">
-    <button uiButton>Vert Grouped 1</button>
-    <button uiButton>Vert Grouped 2</button>
-    <button uiButton>Vert Grouped 3</button>
+    <button uiButton color="primary">Vert Grouped 1</button>
+    <button uiButton color="primary">Vert Grouped 2</button>
+    <button uiButton color="primary">Vert Grouped 3</button>
   </ui-button-group>
-</div>
 
-<div>
   <h3>Selectable</h3>
   <ui-button-group>
-    <button uiButton kitCheck [(ngModel)]="buttonModel1">Checkbox button 1</button>
-    <button uiButton kitCheck [(ngModel)]="buttonModel2">Checkbox button 2</button>
-    <button uiButton kitCheck [(ngModel)]="buttonModel3">Checkbox button 3</button>
+    <button uiButton color="primary" kitCheck [(ngModel)]="buttonModel1">Checkbox button 1</button>
+    <button uiButton color="primary" kitCheck [(ngModel)]="buttonModel2">Checkbox button 2</button>
+    <button uiButton color="primary" kitCheck [(ngModel)]="buttonModel3">Checkbox button 3</button>
   </ui-button-group>
 
-</div>
-<div>
   <h3>Multiple</h3>
   <ui-button-group>
-    <button uiButton kitCheck [(ngModel)]="buttonModel" [value]="1">Radio button 1</button>
-    <button uiButton kitCheck [(ngModel)]="buttonModel" [value]="2">Radio button 2</button>
-    <button uiButton kitCheck [(ngModel)]="buttonModel" [value]="3">Radio button 3</button>
+    <button uiButton color="primary" kitCheck [(ngModel)]="buttonModel" [value]="1">Radio button 1</button>
+    <button uiButton color="primary" kitCheck [(ngModel)]="buttonModel" [value]="2">Radio button 2</button>
+    <button uiButton color="primary" kitCheck [(ngModel)]="buttonModel" [value]="3">Radio button 3</button>
   </ui-button-group>
 </div>
