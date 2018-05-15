@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { UiComponent } from './ui.component';
+import { UiNotificationModule } from './ui-notification/ui-notification.module';
 
 @NgModule({
   imports: [
+    UiNotificationModule.forRoot(),
   ],
-  declarations: [UiComponent],
-  exports: [UiComponent]
 })
-export class UiModule { }
+export class UiModule {
+}

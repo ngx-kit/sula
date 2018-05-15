@@ -1,0 +1,86 @@
+<h1>Autocomplete</h1>
+
+<div>
+  <div>
+    Value: {{ value | json }}
+  </div>
+  <input uiAutocomplete
+         [options]="options"
+         (search)="searchOptions($event)"
+         [(ngModel)]="value"
+         placeholder="Start typing…">
+</div>
+
+<div>
+  <h3>Autocomplete with select mode</h3>
+  <div>
+    Value: {{ value2 | json }}
+  </div>
+  <input uiAutocomplete
+         [options]="options"
+         [selectMode]="true"
+         (search)="searchOptions($event)"
+         [(ngModel)]="value2"
+         placeholder="Start typing…">
+</div>
+
+<div>
+  <h3>Autocomplete option object</h3>
+  <p>Using <code>{{ '{' }}value: any, label: string{{ '}' }}</code> for options allows to use different `ngModel` and input value.</p>
+  <p>Also you could any other data to the options and use it in a custom template.</p>
+  <div>
+    Value: {{ value3 | json }}
+  </div>
+  <input uiAutocomplete
+         [options]="options"
+         [selectMode]="true"
+         (search)="searchOptions($event)"
+         [(ngModel)]="value3"
+         placeholder="Start typing…">
+</div>
+
+<div>
+  <h3>Show options on focus</h3>
+  <p>Display options on input focus.</p>
+  <div>
+    Value: {{ value4 | json }}
+  </div>
+  <input uiAutocomplete
+         [options]="options"
+         [showOptionsOnFocus]="true"
+         [selectMode]="true"
+         (search)="searchOptions($event)"
+         [(ngModel)]="value4"
+         placeholder="Start typing…">
+</div>
+
+<div>
+  <h3>Autocomplete with debounce</h3>
+  <p>Handle `(search)` output Observable with debounce and cancelling previous request.</p>
+  <div>
+    Value: {{ value5 | json }}
+  </div>
+  <input uiAutocomplete
+         [options]="options"
+         [debounce]="750"
+         (search)="searchOptions($event)"
+         [(ngModel)]="value5"
+         placeholder="Start typing…">
+</div>
+
+<div>
+  <h3>Autocomplete with custom option template</h3>
+  <p>Customize option template.</p>
+  <div>
+    Value: {{ value6 | json }}
+  </div>
+  <input uiAutocomplete
+         [options]="options"
+         [optionTemplate]="optionTemplate"
+         (search)="searchOptions($event)"
+         [(ngModel)]="value6"
+         placeholder="Start typing…">
+  <ng-template #optionTemplate let-option>
+    <strong>{{ option }}</strong>
+  </ng-template>
+</div>

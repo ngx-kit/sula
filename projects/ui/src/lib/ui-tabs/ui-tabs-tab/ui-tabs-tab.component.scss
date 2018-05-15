@@ -1,0 +1,15 @@
+:host {
+  border-bottom: 1px solid #eeeeee;
+  cursor: pointer;
+  padding: 8px;
+  transition-duration: .25s;
+  transition-property: background, border;
+  user-select: none;
+  &:hover {
+    background: #e4e4e4;
+    border-bottom-color: #eeeeee;
+  }
+  &.active {
+    border-bottom-color: #2399e5;
+  }
+}
