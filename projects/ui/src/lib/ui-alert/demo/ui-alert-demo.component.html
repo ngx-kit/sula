@@ -1,25 +1,46 @@
 <h1>Alert</h1>
+<ui-alert>Message text</ui-alert>
 
-<div>
-  <ui-alert>Message text</ui-alert>
+<h2>With title</h2>
+<ui-alert>
+  <ui-alert-title>Message title</ui-alert-title>
+  Message description
+</ui-alert>
+
+<h2>Colors</h2>
+<ui-alert color="primary"><b>Primary</b> message text</ui-alert>
+<ui-alert color="error"><b>Error</b> message text</ui-alert>
+<ui-alert color="success"><b>Success</b> message text</ui-alert>
+<ui-alert color="warning"><b>Warning</b> message text</ui-alert>
+<ui-alert color="info"><b>Info</b> message text</ui-alert>
+
+<h2>Closable</h2>
+<div class="alert-box">
+  <ui-alert  [closable]="true" [(isOpen)]="isOpen1">Closable message text</ui-alert>
+  <button uiButton *ngIf="!isOpen1" (click)="isOpen1 = true">Reopen</button>
 </div>
 
-<div>
-  <h3>Alert color</h3>
-  <ui-alert color="default">Default message text</ui-alert>
-  <ui-alert color="primary">Primary message text</ui-alert>
+<div class="alert-box">
+  <ui-alert color="primary" [closable]="true" [(isOpen)]="isOpen2">Closable <b>Primary</b> message text</ui-alert>
+  <button uiButton color="primary" *ngIf="!isOpen2" (click)="isOpen2 = true">Reopen</button>
 </div>
 
-<div>
-  <h3>Alert title</h3>
-  <ui-alert>
-    <ui-alert-title>Message title</ui-alert-title>
-    Message description
-  </ui-alert>
+<div class="alert-box">
+<ui-alert color="error" [closable]="true" [(isOpen)]="isOpen3">Closable <b>Error</b> message text</ui-alert>
+<button uiButton color="error" *ngIf="!isOpen3" (click)="isOpen3 = true">Reopen</button>
 </div>
 
-<div>
-  <h3>Closable alert</h3>
-  <ui-alert [closable]="true" [(isOpen)]="isOpen">Closable message text</ui-alert>
-  <button *ngIf="!isOpen" (click)="isOpen = true">Reopen</button>
+<div class="alert-box">
+  <ui-alert color="success" [closable]="true" [(isOpen)]="isOpen4">Closable <b>Success</b> message text</ui-alert>
+  <button uiButton color="success" *ngIf="!isOpen4" (click)="isOpen4 = true">Reopen</button>
+</div>
+
+<div class="alert-box">
+  <ui-alert color="warning" [closable]="true" [(isOpen)]="isOpen5">Closable <b>Warning</b> message text</ui-alert>
+  <button uiButton color="warning" *ngIf="!isOpen5" (click)="isOpen5 = true">Reopen</button>
+</div>
+
+<div class="alert-box">
+  <ui-alert color="info" [closable]="true" [(isOpen)]="isOpen6">Closable <b>Info</b> message text</ui-alert>
+  <button uiButton color="info" *ngIf="!isOpen6" (click)="isOpen6 = true">Reopen</button>
 </div>
