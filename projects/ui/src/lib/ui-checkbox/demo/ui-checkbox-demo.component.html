@@ -1,14 +1,120 @@
 <h1>Checkbox</h1>
 
-<div>
+<label>
+  <input type="checkbox"
+         uiCheckbox
+         [(ngModel)]="checkboxModel">
+  Checkbox label
+</label>
+
+<h2>Colors and states</h2>
+
+<h3>Default state</h3>
+<p>
   <label>
     <input type="checkbox"
            uiCheckbox
-           [(ngModel)]="checkboxModel">
-    Checkbox label
+           color="primary"
+           [(ngModel)]="checkboxModel2">
+    Primary color
   </label>
+</p>
 
-  <div>
-    Model: {{ checkboxModel | json }}
-  </div>
-</div>
+<p>
+  <label>
+    <input type="checkbox"
+           uiCheckbox
+           color="error"
+           [(ngModel)]="checkboxModel3">
+    Error color
+  </label>
+</p>
+
+<p>
+  <label>
+    <input type="checkbox"
+           uiCheckbox
+           color="success"
+           [(ngModel)]="checkboxModel4">
+    Success color
+  </label>
+</p>
+
+<p>
+  <label>
+    <input type="checkbox"
+           uiCheckbox
+           color="warning"
+           [(ngModel)]="checkboxModel5">
+    Warning color
+  </label>
+</p>
+
+<p>
+  <label>
+    <input type="checkbox"
+           uiCheckbox
+           color="info"
+           [(ngModel)]="checkboxModel6">
+    Info color
+  </label>
+</p>
+
+<h3>Disabled state</h3>
+<p>
+  <label>
+  <input type="checkbox" disabled
+         uiCheckbox
+         [(ngModel)]="checkboxModel7">
+  Checkbox label
+</label>
+</p>
+<p>
+  <label>
+    <input type="checkbox" disabled
+           uiCheckbox
+           color="primary"
+           [(ngModel)]="checkboxModel8">
+    Primary color
+  </label>
+</p>
+
+<p>
+  <label>
+    <input type="checkbox" disabled
+           uiCheckbox
+           color="error"
+           [(ngModel)]="checkboxModel9">
+    Error color
+  </label>
+</p>
+
+<p>
+  <label>
+    <input type="checkbox" disabled
+           uiCheckbox
+           color="success"
+           [(ngModel)]="checkboxModel10">
+    Success color
+  </label>
+</p>
+
+<p>
+  <label>
+    <input type="checkbox" disabled
+           uiCheckbox
+           color="warning"
+           [(ngModel)]="checkboxModel11">
+    Warning color
+  </label>
+</p>
+
+<p>
+  <label>
+    <input type="checkbox" disabled
+           uiCheckbox
+           color="info"
+           [(ngModel)]="checkboxModel12">
+    Info color
+  </label>
+</p>

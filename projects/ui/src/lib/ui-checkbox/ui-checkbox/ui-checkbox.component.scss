@@ -1,4 +1,6 @@
-$boxSize: 16px;
+@import "../../styles/params";
+
+$boxSize: 22px;
 $borderWidth: 1px;
 
 :host {
@@ -15,59 +17,190 @@ $borderWidth: 1px;
   cursor: pointer;
   margin-left: $boxSize + 8px;
   position: relative;
-  &.-checked {
-    &::before {
-      background: #2399e5;
-      border-color: #2399e5;
+  &.color {
+    &-default {
+      &.-checked {
+        &::before {
+          border-color: $mainColorLight4;
+        }
+        &::after {
+          border-color: $mainColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          border-color: $mainColor;
+        }
+      }
+
+      &::before {
+        border: $borderWidth solid $mainColorLight4;
+      }
     }
+
+    &-primary {
+      &.-checked {
+        &::before {
+          background: $primaryColor;
+        }
+        &::after {
+          border-color: $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          border-color: $primaryColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $primaryColor;
+      }
+    }
+
+    &-error {
+      &.-checked {
+        &::before {
+          background: $errorColor;
+        }
+        &::after {
+          border-bottom: 2px solid $whiteColor;
+          border-right: 2px solid $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          border-color: $errorColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $errorColor;
+      }
+    }
+
+    &-success {
+      &.-checked {
+        &::before {
+          background: $successColor;
+        }
+        &::after {
+          border-bottom: 2px solid $whiteColor;
+          border-right: 2px solid $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          border-color: $successColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $successColor;
+      }
+    }
+
+    &-warning {
+      &.-checked {
+        &::before {
+          background: $warningColor;
+        }
+        &::after {
+          border-bottom: 2px solid $whiteColor;
+          border-right: 2px solid $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          border-color: $warningColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $warningColor;
+      }
+    }
+
+    &-info {
+      &.-checked {
+        &::before {
+          background: $infoColor;
+        }
+        &::after {
+          border-bottom: 2px solid $whiteColor;
+          border-right: 2px solid $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          border-color: $infoColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $infoColor;
+      }
+    }
+  }
+
+  &:hover {
+    &::before {
+      box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+    }
+  }
+
+  &.-checked {
     &::after {
-      border-bottom: 2px solid #ffffff;
-      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid;
+      border-right: 2px solid;
       content: "";
       height: $boxSize / 2;
       left: $boxSize / 3 + $borderWidth;
       margin-left: - $boxSize - 8px;
       position: absolute;
-      top: 50%;
+      top: 48%;
       transform: translateY(-50%) rotate(45deg) scale(1);
       width: $boxSize / 4;
     }
   }
+
   &.-focused {
     &::before {
-      border-color: #2399e5;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+      box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
     }
   }
-  &.-has-errors {
-    &::before {
-      border-color: #ff0c09;
-    }
-    &.-checked::before {
-      background: #ff0c09;
-    }
-  }
+
   &.-disabled {
-    cursor: default;
-    &.-checked {
+    cursor: not-allowed;
+    &:hover {
       &::before {
-        background: #9da8b4;
-        border-color: #9da8b4;
+        box-shadow: none;
       }
-      &::after {
-        border-bottom: 2px solid #ffffff;
-        border-right: 2px solid #ffffff;
-      }
-    }
-    &::before {
-      background: #f6f6f6;
-      border-color: #becad6;
     }
   }
+
   &::before {
     background-color: #ffffff;
-    border: $borderWidth solid #becad6;
-    border-radius: 2px;
+    border-radius: $borderRadius;
     box-shadow: none;
     content: "";
     display: inline-block;

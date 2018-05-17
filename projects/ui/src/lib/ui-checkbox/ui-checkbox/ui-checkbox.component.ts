@@ -17,7 +17,7 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { NgControl } from '@angular/forms';
-import { isUndefined, KitNgControlDirective, uuid } from '@ngx-kit/core';
+import { isUndefined, KitClassService, KitNgControlDirective, uuid } from '@ngx-kit/core';
 
 @Component({
   // tslint:disable-next-line
@@ -32,6 +32,8 @@ export class UiCheckboxComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() id: string;
 
   @Input('disabled') disabledInput: boolean;
+
+  @Input() color = 'default';
 
   @ViewChild('checkTemplate') checkTemplate: TemplateRef<any>;
 

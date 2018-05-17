@@ -10,7 +10,9 @@ import { UiCheckboxDemoComponent } from './ui-checkbox-demo.component';
     FormsModule,
     UiCheckboxModule,
   ],
-  declarations: [UiCheckboxDemoComponent],
+  declarations: [
+    UiCheckboxDemoComponent,
+  ],
   exports: [],
   providers: [],
 })
