@@ -1,3 +1,5 @@
+@import "../../styles/params";
+
 :host {
   border-radius: 1rem;
   line-height: 1;
@@ -5,14 +7,50 @@
   text-align: center;
   &.color {
     &-default {
-      background: #cccccc;
-      color: #404040;
+      background: none;
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
     }
     &-primary {
-      background: #2399e5;
+      background: $primaryColor;
+      border-color: $primaryColor;
       color: #ffffff;
     }
+    &-error {
+      background: $errorColor;
+      border-color: $errorColor;
+      color: #ffffff;
+    }
+    &-success {
+      background: $successColor;
+      border-color: $successColor;
+      color: #ffffff;
+    }
+    &-warning {
+      background: $warningColor;
+      border-color: $warningColor;
+      color: #ffffff;
+    }
+    &-info {
+      background: $infoColor;
+      border-color: $infoColor;
+      color: #ffffff;
+      &:hover {
+        background: $infoColorDark1;
+        border-color: $infoColorDark1;
+      }
+      &:active, &.checked {
+        background: $infoColorDark2;
+        border-color: $infoColorDark2;
+      }
+      &:disabled {
+        background: $infoColorLight2;
+        border-color: $infoColorLight2;
+        pointer-events: none;
+      }
+    }
   }
+
   &.size {
     &-s {
       font-size: .8rem;
