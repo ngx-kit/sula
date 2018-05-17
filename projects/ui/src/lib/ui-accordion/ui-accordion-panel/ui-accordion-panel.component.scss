@@ -1,3 +1,8 @@
+@import "../../styles/params";
+
 :host {
   display: block;
+  margin: $grid 0;
+  border-radius: $borderRadius;
+  border: 1px solid $mainColorLight4;
 }

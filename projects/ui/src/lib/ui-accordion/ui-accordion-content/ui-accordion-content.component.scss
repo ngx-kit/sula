@@ -1,8 +1,13 @@
+@import "../../styles/params";
+
 :host {
   display: block;
   overflow: hidden;
+  color: $mainColorLight3;
 }
 
 .content {
-  padding: 8px 16px;
+  border-top: 1px solid $mainColorLight4;
+  margin: 0 24px;
+  padding: 14px 0;
 }

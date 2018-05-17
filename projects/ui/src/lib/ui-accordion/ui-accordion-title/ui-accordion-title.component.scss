@@ -1,8 +1,11 @@
+@import "../../styles/params";
+
 :host {
-  background: #eeeeee;
+  background: transparent;
   cursor: pointer;
+  color: $mainColor;
   display: block;
-  padding: 8px 16px;
+  padding: 14px 28px;
   transition-duration: .25s;
   transition-property: background;
   user-select: none;

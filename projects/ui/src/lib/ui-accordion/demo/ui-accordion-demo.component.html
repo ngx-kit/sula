@@ -1,78 +1,74 @@
 <h1>Accordion</h1>
 
-<div>
   <ui-accordion>
     <ui-accordion-panel>
       <ui-accordion-title>Panel 1</ui-accordion-title>
       <ui-accordion-content *kitCollapse>
-        Panel 1 content
+        <p>Panel 1 content</p>
+        <p>Panel 1 content</p>
       </ui-accordion-content>
     </ui-accordion-panel>
     <ui-accordion-panel>
       <ui-accordion-title>Panel 2</ui-accordion-title>
       <ui-accordion-content *kitCollapse>
-        Panel 2 content
+        <p>Panel 2 content</p>
       </ui-accordion-content>
     </ui-accordion-panel>
     <ui-accordion-panel>
       <ui-accordion-title>Panel 3</ui-accordion-title>
       <ui-accordion-content *kitCollapse>
-        Panel 3 content
+        <p>Panel 3 content</p>
       </ui-accordion-content>
     </ui-accordion-panel>
   </ui-accordion>
-</div>
 
-<div>
-  <h3>Multiple accordion</h3>
+  <h2>Multiple</h2>
   <ui-accordion [multiple]="true">
     <ui-accordion-panel>
       <ui-accordion-title>Panel 1</ui-accordion-title>
       <ui-accordion-content *kitCollapse>
-        Panel 1 content
+        <p>Panel 1 content</p>
       </ui-accordion-content>
     </ui-accordion-panel>
     <ui-accordion-panel>
       <ui-accordion-title>Panel 2</ui-accordion-title>
       <ui-accordion-content *kitCollapse>
-        Panel 2 content
+        <p>Panel 2 content</p>
       </ui-accordion-content>
     </ui-accordion-panel>
     <ui-accordion-panel>
       <ui-accordion-title>Panel 3</ui-accordion-title>
       <ui-accordion-content *kitCollapse>
-        Panel 3 content
+        <p>Panel 3 content</p>
       </ui-accordion-content>
     </ui-accordion-panel>
   </ui-accordion>
-</div>
 
-<div>
-  <h3>Accordion, activate first</h3>
+  <h2>Activate first</h2>
   <ui-accordion [activateFirst]="true">
     <ui-accordion-panel>
       <ui-accordion-title>Panel 1</ui-accordion-title>
       <ui-accordion-content *kitCollapse>
-        Panel 1 content
+        <p>Panel 1 content</p>
+        <p>Panel 1 content</p>
+        <p>Panel 1 content</p>
       </ui-accordion-content>
     </ui-accordion-panel>
     <ui-accordion-panel>
       <ui-accordion-title>Panel 2</ui-accordion-title>
       <ui-accordion-content *kitCollapse>
-        Panel 2 content
+        <p>Panel 2 content</p>
       </ui-accordion-content>
     </ui-accordion-panel>
     <ui-accordion-panel>
       <ui-accordion-title>Panel 3</ui-accordion-title>
       <ui-accordion-content *kitCollapse>
-        Panel 3 content
+        <p>Panel 3 content</p>
       </ui-accordion-content>
     </ui-accordion-panel>
   </ui-accordion>
-</div>
 
-<div>
-  <h3>Accordion generated from data</h3>
+  <h2>Generated from data</h2>
   <ui-accordion>
     <ui-accordion-panel *ngFor="let panel of panels">
       <ui-accordion-title>{{ panel.title }}</ui-accordion-title>
@@ -81,4 +77,3 @@
       </ui-accordion-content>
     </ui-accordion-panel>
   </ui-accordion>
-</div>
