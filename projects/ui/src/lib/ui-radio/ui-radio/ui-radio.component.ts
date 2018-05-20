@@ -33,6 +33,8 @@ export class UiRadioComponent implements OnInit, OnChanges, AfterViewInit {
 
   @Input('disabled') disabledInput: boolean;
 
+  @Input() color = 'default';
+
   @ViewChild('checkTemplate') checkTemplate: TemplateRef<any>;
 
   @HostBinding('attr.id') idBinding = uuid();

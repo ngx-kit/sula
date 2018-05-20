@@ -1,3 +1,8 @@
+@import "../../styles/params";
+
+$boxSize: 16px;
+$borderWidth: 1px;
+
 :host {
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
@@ -8,20 +13,159 @@
   width: 1px;
 }
 
-$boxSize: 16px;
-$borderWidth: 1px;
-
-.option {
+.option  {
   cursor: pointer;
   margin-left: $boxSize + 8px;
   position: relative;
-  &.-checked {
-    &::before {
-      background: #2399e5;
-      border-color: #2399e5;
+  &.color {
+    &-default {
+      &.-checked {
+        &::before {
+          border-color: $mainColorLight4;
+        }
+        &::after {
+          background: $mainColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          background: $mainColor;
+        }
+      }
+
+      &::before {
+        border: $borderWidth solid $mainColorLight4;
+      }
     }
+
+    &-primary {
+      &.-checked {
+        &::before {
+          background: $primaryColor;
+        }
+        &::after {
+          background: $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          background: $primaryColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $primaryColor;
+      }
+    }
+
+    &-error {
+      &.-checked {
+        &::before {
+          background: $errorColor;
+        }
+        &::after {
+          background: $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          background: $errorColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $errorColor;
+      }
+    }
+
+    &-success {
+      &.-checked {
+        &::before {
+          background: $successColor;
+        }
+        &::after {
+          background: $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          background: $successColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $successColor;
+      }
+    }
+
+    &-warning {
+      &.-checked {
+        &::before {
+          background: $warningColor;
+        }
+        &::after {
+          background: $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          background: $warningColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $warningColor;
+      }
+    }
+
+    &-info {
+      &.-checked {
+        &::before {
+          background: $infoColor;
+        }
+        &::after {
+          background: $whiteColor;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+        &::after {
+          background: $infoColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $infoColor;
+      }
+    }
+  }
+
+  &:hover {
+    &::before {
+      box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+    }
+  }
+
+  &.-checked {
     &::after {
-      background: #ffffff;
       border-radius: 50%;
       content: "";
       height: $boxSize / 2;
@@ -33,36 +177,22 @@ $borderWidth: 1px;
       width: $boxSize / 2;
     }
   }
+
   &.-focused {
     &::before {
-      border-color: #2399e5;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+      box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
     }
   }
-  &.-has-errors {
-    &::before {
-      border-color: #ff0c09;
-    }
-    &.-checked::before {
-      background: #ff0c09;
-    }
-  }
+
   &.-disabled {
-    cursor: default;
-    &.-checked {
+    cursor: not-allowed;
+    &:hover {
       &::before {
-        background: #9da8b4;
-        border-color: #9da8b4;
+        box-shadow: none;
       }
-      &::after {
-        background: #ffffff;
-      }
-    }
-    &::before {
-      background: #f6f6f6;
-      border-color: #becad6;
     }
   }
+
   &::before {
     background-color: #ffffff;
     border: $borderWidth solid #becad6;
@@ -80,4 +210,5 @@ $borderWidth: 1px;
     width: $boxSize;
   }
 }
+
 
