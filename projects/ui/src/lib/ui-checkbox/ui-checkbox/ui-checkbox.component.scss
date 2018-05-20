@@ -1,6 +1,6 @@
 @import "../../styles/params";
 
-$boxSize: 22px;
+$boxSize: 16px;
 $borderWidth: 1px;
 
 :host {
@@ -71,8 +71,7 @@ $borderWidth: 1px;
           background: $errorColor;
         }
         &::after {
-          border-bottom: 2px solid $whiteColor;
-          border-right: 2px solid $whiteColor;
+          border-color: $whiteColor;
         }
       }
       &.-disabled {
@@ -95,8 +94,7 @@ $borderWidth: 1px;
           background: $successColor;
         }
         &::after {
-          border-bottom: 2px solid $whiteColor;
-          border-right: 2px solid $whiteColor;
+          border-color: $whiteColor;
         }
       }
       &.-disabled {
@@ -119,8 +117,7 @@ $borderWidth: 1px;
           background: $warningColor;
         }
         &::after {
-          border-bottom: 2px solid $whiteColor;
-          border-right: 2px solid $whiteColor;
+          border-color: $whiteColor;
         }
       }
       &.-disabled {
@@ -143,8 +140,7 @@ $borderWidth: 1px;
           background: $infoColor;
         }
         &::after {
-          border-bottom: 2px solid $whiteColor;
-          border-right: 2px solid $whiteColor;
+          border-color: $whiteColor;
         }
       }
       &.-disabled {

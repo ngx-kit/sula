@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class UiCheckboxDemoComponent {
   checkboxModel = false;
-  checkboxModel2 = false;
+  checkboxModel2 = true;
   checkboxModel3 = false;
   checkboxModel4 = false;
   checkboxModel5 = false;
