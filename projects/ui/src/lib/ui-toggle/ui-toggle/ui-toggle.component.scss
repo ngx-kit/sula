@@ -1,3 +1,6 @@
+@import "../../styles/params";
+
+
 :host {
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
@@ -15,9 +18,12 @@ $borderWidth: 1px;
   cursor: pointer;
   margin-left: $boxSize + 8px;
   position: relative;
+  &.-disabled{
+    cursor: not-allowed;
+  }
   &::before {
-    background-color: #ffffff;
-    border: $borderWidth solid #becad6;
+    background-color: $whiteColor;
+    border: $borderWidth solid $mainColorLight4;
     border-radius: $boxSize;
     box-shadow: none;
     content: "";
@@ -32,7 +38,7 @@ $borderWidth: 1px;
     width: $boxSize;
   }
   &::after {
-    background: #becad6;
+    background: $mainColorLight4;
     border-radius: ($boxSize / 2 - 4px) / 2;
     content: "";
     height: $boxSize / 2 - 4px;
@@ -45,12 +51,8 @@ $borderWidth: 1px;
     width: $boxSize / 2 - 4px;
   }
   &.-checked {
-    &::before {
-      background: #2399e5;
-      border-color: #2399e5;
-    }
     &::after {
-      background: #ffffff;
+      background: $whiteColor;
       margin-left: - $boxSize / 2 - 8px;
     }
     &:active {
@@ -59,39 +61,87 @@ $borderWidth: 1px;
       }
     }
   }
-  &.-focused {
-    &::before {
-      border-color: #2399e5;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-    }
-  }
-  &.-has-errors {
-    &::before {
-      border-color: #ff0c09;
-    }
-    &.-checked::before {
-      background: #ff0c09;
-    }
-  }
-  &.-disabled {
-    cursor: default;
-    &.-checked {
-      &::before {
-        background: #9da8b4;
-        border-color: #9da8b4;
-      }
-      &::after {
-        background: #ffffff;
-      }
-    }
-    &::before {
-      background: #f6f6f6;
-      border-color: #becad6;
-    }
-  }
   &:active {
     &::after {
       width: $boxSize / 2;
+    }
+  }
+
+
+  &.color {
+    &-default {
+      &.-checked {
+        &::before {
+          background: $mainColor;
+        }
+        &::after {
+          border-color: $mainColorLight4;
+        }
+      }
+      &.-disabled {
+        &::before {
+          background: $lightColor;
+          border-color: $lightColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $mainColorLight4;
+      }
+    }
+
+    &-primary {
+      &.-checked {
+        &::before {
+          background: $primaryColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $primaryColor;
+      }
+    }
+
+    &-error {
+      &.-checked {
+        &::before {
+          background: $errorColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $errorColor;
+      }
+    }
+
+    &-success {
+      &.-checked {
+        &::before {
+          background: $successColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $successColor;
+      }
+    }
+
+    &-warning {
+      &.-checked {
+        &::before {
+          background: $warningColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $warningColor;
+      }
+    }
+
+    &-info {
+      &.-checked {
+        &::before {
+          background: $infoColor;
+        }
+      }
+      &::before {
+        border: $borderWidth solid $infoColor;
+      }
     }
   }
 }

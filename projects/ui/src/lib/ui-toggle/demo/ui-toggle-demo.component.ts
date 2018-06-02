@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 export class UiToggleDemoComponent implements OnInit {
 
   toggleModel = false;
+  toggleModel2 = true;
+  toggleModel3 = false;
+  toggleModel4 = false;
+  toggleModel5 = false;
+  toggleModel6 = false;
+  toggleModel7 = false;
+  toggleModel8 = true;
+
 
   constructor() {
   }

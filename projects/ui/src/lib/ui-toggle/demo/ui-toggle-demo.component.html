@@ -1,14 +1,67 @@
 <h1>Toggle</h1>
 
-<div>
-  <label>
-    <input type="checkbox"
-           uiToggle
-           [(ngModel)]="toggleModel">
-    Toggle label
-  </label>
+<label>
+  <input type="checkbox"
+         uiToggle
+         [(ngModel)]="toggleModel">
+  Toggle label
+</label>
 
-  <div>
-    Model: {{ toggleModel | json }}
-  </div>
-</div>
+<h2>Colors and states</h2>
+
+<h3>Default state</h3>
+
+<p><label>
+  <input type="checkbox"
+         uiToggle
+         color="primary"
+         [(ngModel)]="toggleModel2">
+  Primary color
+</label></p>
+
+<p><label>
+  <input type="checkbox"
+         uiToggle
+         color="error"
+         [(ngModel)]="toggleModel3">
+  Error color
+</label></p>
+
+<p><label>
+  <input type="checkbox"
+         uiToggle
+         color="success"
+         [(ngModel)]="toggleModel4">
+  Success color
+</label></p>
+
+<p><label>
+  <input type="checkbox"
+         uiToggle
+         color="warning"
+         [(ngModel)]="toggleModel5">
+  Warning color
+</label></p>
+
+<p><label>
+  <input type="checkbox"
+         uiToggle
+         color="info"
+         [(ngModel)]="toggleModel6">
+  Info color
+</label></p>
+
+<h3>Disabled state</h3>
+<p><label>
+  <input type="checkbox" disabled
+         uiToggle
+         [(ngModel)]="toggleModel7">
+  Disabled
+</label></p>
+<p><label>
+  <input type="checkbox" disabled
+         uiToggle
+         [(ngModel)]="toggleModel8">
+  Disabled active
+</label></p>
+
