@@ -1,26 +1,25 @@
+@import "../../styles/params";
+
 :host {
-  background: #f7f7f7;
-  border: 1px solid #d6d6d6;
-  border-radius: 2px;
-  box-shadow: 0 0 2px 0 rgba(50, 50, 50, .1);
+  border: 1px solid $mainColorLight4;
+  border-radius: $borderRadius;
   box-sizing: border-box;
-  color: #4a505a;
-  padding: 4px 8px;
+  color: $mainColor;
+  padding: 8px 16px;
   transition: all .3s;
   width: 100%;
   &:hover {
-    border-color: #acadb0;
+    box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
     outline: none;
   }
   &:focus {
-    border-color: #2399e5;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    border-color: $primaryColor;
     outline: none;
   }
   &.-has-errors {
-    border-color: #ff0c09;
+    border-color: $errorColor;
     &:hover, &:focus {
-      border-color: #ff0c09;
+      border-color: $errorColor;
     }
   }
 }
