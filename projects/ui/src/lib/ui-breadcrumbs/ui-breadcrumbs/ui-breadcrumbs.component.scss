@@ -1,3 +1,5 @@
+@import "../../styles/params";
+
 :host {
   display: flex;
   flex-direction: row;
@@ -5,5 +7,6 @@
 }
 
 .separator {
-  padding: 0 8px;
+  color: $mainColor;
+  padding: 0 10px;
 }
