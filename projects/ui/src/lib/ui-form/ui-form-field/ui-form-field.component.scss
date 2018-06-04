@@ -1,9 +1,12 @@
+@import "../../styles/params";
+
 :host {
   display: block;
   margin-bottom: 8px;
 }
 
 :host-context([uiForm].layout-aligned,ui-form-field.layout-aligned) {
+  align-items: baseline;
   display: flex;
   flex-direction: row;
   label {
@@ -20,6 +23,7 @@
 }
 
 :host-context([uiForm].layout-inline,ui-form-field.layout-inline) {
+  align-items: baseline;
   display: flex;
   flex-direction: row;
   margin-bottom: 0;
@@ -38,7 +42,7 @@
 
 label {
   .required {
-    color: #ff0c09;
+    color: $errorColor;
   }
 }
 
@@ -47,6 +51,6 @@ label {
   display: flex;
   flex-direction: column;
   .error {
-    color: #ff0c09;
+    color: $errorColor;
   }
 }
