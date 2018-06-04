@@ -1,0 +1,10 @@
+:host {
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+  display: block;
+  padding: 4px;
+  &:last-child {
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,17 @@
+<h1>Dropdown</h1>
+
+<div>
+  <button uiButton
+          kitAnchor
+          #dropdownAnchor="anchor"
+          (click)="displayDropdown = !displayDropdown">
+    Click ME!
+  </button>
+  <ui-dropdown *kitOverlay="displayDropdown"
+               [anchor]="dropdownAnchor"
+               (kitOutsideClick)="displayDropdown = false">
+    <button uiDropdownItem>Item 1</button>
+    <button uiDropdownItem>Item 2</button>
+    <button uiDropdownItem>Item 3</button>
+  </ui-dropdown>
+</div>
