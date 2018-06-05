@@ -5,4 +5,7 @@
   margin: $grid 0;
   border-radius: $borderRadius;
   border: 1px solid $mainColorLight4;
+  &:hover {
+    box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+  }
 }
