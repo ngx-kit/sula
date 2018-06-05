@@ -1,4 +1,6 @@
-<div *ngIf="header" class="header">
+<div *ngIf="header"
+     class="header"
+     [kitClass]="{color: headerColor}">
   <div class="title">{{ header }}</div>
   <div>
     <button class="close" (click)="close()">X</button>

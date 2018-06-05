@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ui-modal-demo.component.scss']
 })
 export class UiModalDemoComponent implements OnInit {
+  display1 = false;
+  display2 = false;
+  display3 = false;
+  display4 = false;
+  display5 = false;
+  display6 = false;
+  display7 = false;
+  display8 = false;
 
   constructor() { }
 

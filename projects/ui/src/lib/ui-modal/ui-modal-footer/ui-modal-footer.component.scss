@@ -1,5 +1,9 @@
+@import "../../styles/params";
+
 :host {
-  border-top: 1px solid #eeeeee;
-  display: block;
+  border-top: 1px solid $lightColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   padding: 16px;
 }

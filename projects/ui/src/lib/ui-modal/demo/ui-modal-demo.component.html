@@ -1,13 +1,128 @@
 <h1>Modal</h1>
 
-<button (click)="display = true">Show modal</button>
+<button uiButton (click)="display1 = true">Show modal</button>
 
-<kit-modal (close)="display = false">
-  <ui-modal *kitOverlay="display"
+<kit-modal (close)="display1 = false">
+  <ui-modal *kitOverlay="display1"
             header="Modal title">
     Modal body
     <ui-modal-footer>
-      <button (click)="display = false">Close</button>
+      <button uiButton (click)="display1 = false">Cancel</button>
     </ui-modal-footer>
   </ui-modal>
 </kit-modal>
+
+<h2>
+  Modal with header and body
+</h2>
+<div>
+  <button uiButton (click)="display7 = true">Show modal</button>
+
+  <kit-modal (close)="display7 = false">
+    <ui-modal *kitOverlay="display7"
+              header="Title">
+      Modal body
+    </ui-modal>
+  </kit-modal>
+</div>
+
+<h2>
+  Modal with body and footer
+</h2>
+<div>
+  <button uiButton (click)="display8 = true">Show modal</button>
+
+  <kit-modal (close)="display8 = false">
+    <ui-modal *kitOverlay="display8">
+      Modal body
+      <ui-modal-footer>
+        <button uiButton (click)="display8 = false">Cancel</button>
+      </ui-modal-footer>
+    </ui-modal>
+  </kit-modal>
+</div>
+
+<h2>
+  Modals for status messages
+</h2>
+<div class="row">
+  <div>
+    <button uiButton color="primary" (click)="display2 = true">Primary modal</button>
+
+    <kit-modal (close)="display2 = false">
+      <ui-modal *kitOverlay="display2"
+                header="Title"
+                headerColor="primary">
+        Modal body
+        <ui-modal-footer>
+          <button uiButton (click)="display2 = false">Cancel</button>
+          <button uiButton color="primary" (click)="display2 = false">Save</button>
+        </ui-modal-footer>
+      </ui-modal>
+    </kit-modal>
+  </div>
+
+  <div>
+    <button uiButton color="error" (click)="display3 = true">Error modal</button>
+
+    <kit-modal (close)="display3 = false">
+      <ui-modal *kitOverlay="display3"
+                header="Title"
+                headerColor="error">
+        Modal body
+        <ui-modal-footer>
+          <button uiButton (click)="display3 = false">Cancel</button>
+          <button uiButton color="error" (click)="display3 = false">Save</button>
+        </ui-modal-footer>
+      </ui-modal>
+    </kit-modal>
+  </div>
+
+  <div>
+    <button uiButton color="success" (click)="display4 = true">Success modal</button>
+
+    <kit-modal (close)="display4 = false">
+      <ui-modal *kitOverlay="display4"
+                header="Title"
+                headerColor="success">
+        Modal body
+        <ui-modal-footer>
+          <button uiButton (click)="display4 = false">Cancel</button>
+          <button uiButton color="success" (click)="display4 = false">Save</button>
+        </ui-modal-footer>
+      </ui-modal>
+    </kit-modal>
+  </div>
+
+  <div>
+    <button uiButton color="warning" (click)="display5 = true">Warning modal</button>
+
+    <kit-modal (close)="display5 = false">
+      <ui-modal *kitOverlay="display5"
+                header="Title"
+                headerColor="warning">
+        Modal body
+        <ui-modal-footer>
+          <button uiButton (click)="display5 = false">Cancel</button>
+          <button uiButton color="warning" (click)="display5 = false">Save</button>
+        </ui-modal-footer>
+      </ui-modal>
+    </kit-modal>
+  </div>
+
+  <div>
+    <button uiButton color="info" (click)="display6 = true">Info modal</button>
+
+    <kit-modal (close)="display6 = false">
+      <ui-modal *kitOverlay="display6"
+                header="Title"
+                headerColor="info">
+        Modal body
+        <ui-modal-footer>
+          <button uiButton (click)="display6 = false">Cancel</button>
+          <button uiButton color="info" (click)="display6 = false">Save</button>
+        </ui-modal-footer>
+      </ui-modal>
+    </kit-modal>
+  </div>
+</div>

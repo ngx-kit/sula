@@ -28,6 +28,8 @@ import { KitFocusManagerService, KitModalRef } from '@ngx-kit/core';
 export class UiModalComponent implements OnInit {
   @Input() header: string;
 
+  @Input() headerColor = 'default';
+
   @HostBinding('@host') hostTrigger: void;
 
   constructor(

@@ -1,0 +1,13 @@
+.row{
+  display: flex;
+  flex-direction: row;
+  >div{
+    margin-right: 10px;
+  }
+}
+
+ui-modal-footer{
+  button{
+    margin-left: 10px;
+  }
+}

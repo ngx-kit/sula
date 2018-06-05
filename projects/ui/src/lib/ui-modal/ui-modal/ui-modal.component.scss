@@ -1,12 +1,15 @@
+@import "../../styles/params";
+
 :host {
   background: #ffffff;
+  border-radius: $borderRadius;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
   display: flex;
   flex-direction: column;
   left: 50%;
   max-height: 90%;
   max-width: 90%;
-  min-width: 400px;
+  min-width: 500px;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -14,8 +17,10 @@
 
 .header {
   align-items: center;
-  background: #bfbfbf;
+  border-bottom: 1px solid $lightColor;
+  border-radius: $borderRadius $borderRadius 0 0;
   display: flex;
+  font-weight: 700;
   flex-direction: row;
   padding: 16px;
   .title {
@@ -24,12 +29,60 @@
   .close {
     background: transparent;
     border: none;
-    color: #ffffff;
+    cursor: pointer;
+    color: $mainColor;
+    font-weight: 700;
+    outline: none;
+  }
+  &.color {
+    &-default {
+      border-bottom-color: $lightColor;
+    }
+    &-primary {
+      background: $primaryColorLight2;
+      border-bottom-color: $primaryColorLight1;
+      color: $primaryColor;
+      .close{
+        color: $primaryColor;
+      }
+    }
+    &-error {
+      background: $errorColorLight2;
+      border-bottom-color: $errorColorLight1;
+      color: $errorColor;
+      .close{
+        color: $errorColor;
+      }
+    }
+    &-success {
+      background: $successColorLight2;
+      border-bottom-color: $successColorLight1;
+      color: $successColor;
+      .close{
+        color: $successColor;
+      }
+    }
+    &-warning {
+      background: $warningColorLight2;
+      border-bottom-color: $warningColorLight1;
+      color: $warningColor;
+      .close{
+        color: $warningColor;
+      }
+    }
+    &-info {
+      background: $infoColorLight2;
+      border-bottom-color: $infoColorLight1;
+      color: $infoColor;
+      .close{
+        color: $infoColor;
+      }
+    }
   }
 }
 
 .body {
   flex-grow: 1;
   overflow: auto;
-  padding: 16px;
+  padding: 32px 16px;
 }
