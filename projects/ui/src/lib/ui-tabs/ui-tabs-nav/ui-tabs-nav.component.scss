@@ -1,6 +1,8 @@
+@import "../../styles/params";
+
 :host {
-  background: #eeeeee;
-  color: #333333;
+  border-bottom: 1px solid $mainColorLight4;
+  color: $mainColor;
   display: flex;
   flex-direction: row;
   list-style: none;

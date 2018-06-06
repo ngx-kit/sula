@@ -14,7 +14,7 @@
 </div>
 
 <div>
-  <h3>Generate tabs from data</h3>
+  <h2>Generate tabs from data</h2>
   <ui-tabs>
     <ui-tabs-nav>
       <ui-tabs-tab *ngFor="let tab of tabs; let id = index" [id]="id">{{ tab.tab }}</ui-tabs-tab>
@@ -23,5 +23,4 @@
       <ui-tabs-content *kitSlide="id">{{ tab.content }}</ui-tabs-content>
     </ng-container>
   </ui-tabs>
-
 </div>
