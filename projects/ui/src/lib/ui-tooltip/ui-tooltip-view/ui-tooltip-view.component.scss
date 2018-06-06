@@ -1,15 +1,26 @@
+@import "../../styles/params";
+
 :host {
-  border-radius: 3px;
-  box-shadow: 0 0 6px 0 rgba(50, 50, 50, .1);
+  background: $mainColor;
+  border-radius: $borderRadius;
+  box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+  color: #ffffff;
   padding: 4px 8px;
   &.color {
-    &-default {
-      background: rgba(0, 0, 0, .6);
-      color: #ffffff;
-    }
     &-primary {
-      background: rgba(35, 153, 229, .8);
-      color: #ffffff;
+      background: $primaryColor;
+    }
+    &-error {
+      background: $errorColor;
+    }
+    &-success {
+      background: $successColor;
+    }
+    &-warning {
+      background: $warningColor;
+    }
+    &-info {
+      background: $infoColor;
     }
   }
 }
