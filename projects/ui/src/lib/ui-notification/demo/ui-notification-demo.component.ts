@@ -13,8 +13,8 @@ export class UiNotificationDemoComponent implements OnInit {
   ngOnInit() {
   }
 
-  open() {
-    this.notificationService.open({title: 'hello', message: 'there'});
+  open(params?: any) {
+    this.notificationService.open({title: 'hello', message: 'there', ...params});
   }
 
   openWithDuration(duration: number) {

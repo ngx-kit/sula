@@ -1,21 +1,35 @@
 <h1>Notification</h1>
 
 <div>
-  <button (click)="open()">Open default</button>
+  <button uiButton (click)="open()">Open default</button>
 </div>
 
 <div>
-  <h3>Position</h3>
-  <button (click)="openWithPosition('top-right')">Set top-right and open</button>
-  <button (click)="openWithPosition('bottom-right')">Set bottom-right and open</button>
-  <button (click)="openWithPosition('bottom-left')">Set bottom-left and open</button>
-  <button (click)="openWithPosition('top-left')">Set top-left and open</button>
+  <h2>Colors</h2>
+  <div class="row">
+    <button uiButton color="primary" (click)="open({color: 'primary'})">Primary color</button>
+    <button uiButton color="error" (click)="open({color: 'error'})">Error color</button>
+    <button uiButton color="success" (click)="open({color: 'success'})">Success color</button>
+    <button uiButton color="warning" (click)="open({color: 'warning'})">Warning color</button>
+    <button uiButton color="info" (click)="open({color: 'info'})">Info color</button>
+  </div>
 </div>
 
 <div>
-  <h3>Duration</h3>
-  <button (click)="openWithDuration(2000)">Set duration=2000 and open</button>
-  <button (click)="openWithDuration(4000)">Set duration=4000 and open</button>
-  <button (click)="openWithDuration(10000)">Set duration=10000 and open</button>
+  <h2>Position</h2>
+  <div class="row">
+    <button uiButton (click)="openWithPosition('top-right')">Set top-right and open</button>
+    <button uiButton (click)="openWithPosition('bottom-right')">Set bottom-right and open</button>
+    <button uiButton (click)="openWithPosition('bottom-left')">Set bottom-left and open</button>
+    <button uiButton (click)="openWithPosition('top-left')">Set top-left and open</button>
+  </div>
 </div>
 
+<div>
+  <h2>Duration</h2>
+  <div class="row">
+    <button uiButton (click)="openWithDuration(2000)">Set duration=2000 and open</button>
+    <button uiButton (click)="openWithDuration(4000)">Set duration=4000 and open</button>
+    <button uiButton (click)="openWithDuration(10000)">Set duration=10000 and open</button>
+  </div>
+</div>

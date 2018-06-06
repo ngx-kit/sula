@@ -1,3 +1,5 @@
+@import "../../styles/params";
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -27,15 +29,38 @@
 }
 
 .item {
-  background: rgba(0, 0, 0, .6);
-  border-radius: 3px;
-  box-shadow: 0 0 15px 0 rgba(50, 50, 50, .3);
-  color: #ffffff;
+  background: $mainColor;
+  border-radius: $borderRadius;
+  box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+  color: $whiteColor;
   margin: 8px;
   min-width: 150px;
+  opacity: 0.95;
   padding: 16px;
   .title {
     margin: 0;
     padding: 0;
+  }
+  &.color {
+    &-primary {
+      background: $primaryColorLight2;
+      color: $primaryColor;
+    }
+    &-error {
+      background: $errorColorLight2;
+      color: $errorColor;
+    }
+    &-success {
+      background: $successColorLight2;
+      color: $successColor;
+    }
+    &-warning {
+      background: $warningColorLight2;
+      color: $warningColor;
+    }
+    &-info {
+      background: $infoColorLight2;
+      color: $infoColor;
+    }
   }
 }
