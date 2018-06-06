@@ -1,5 +1,7 @@
-$height: 4px;
-$pointer: 10px;
+@import "../../styles/params";
+
+$height: 6px;
+$pointer: 20px;
 $pad: 4px;
 
 .slider {
@@ -9,12 +11,14 @@ $pad: 4px;
 }
 
 .bg {
-  background: #dddddd;
+  background: $lightColor;
+  border-radius: $borderRadius;
   height: $height;
 }
 
 .fill {
-  background: #2399e5;
+  background: $primaryColor;
+  border-radius: $borderRadius;
   bottom: $pad;
   height: $height;
   left: 0;
@@ -23,20 +27,18 @@ $pad: 4px;
 }
 
 .pointer {
-  background: #ffffff;
-  border: 1px solid #2399e5;
-  border-radius: 50%;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, .3);
+  background: $whiteColor;
+  border: 1px solid $mainColorLight4;
+  border-radius: $borderRadius;
   box-sizing: border-box;
   cursor: pointer;
   height: $pointer;
   position: absolute;
   top: ($height - $pointer) / 2 + $pad;
   transform: translateX(-50%);
-  width: $pointer;
+  width: $pointer / 2;
   &:focus {
-    background: #f9f9f9;
-    box-shadow: 1px 1px 11px rgba(0, 0, 0, .4);
+    box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
     outline: none;
   }
 }
