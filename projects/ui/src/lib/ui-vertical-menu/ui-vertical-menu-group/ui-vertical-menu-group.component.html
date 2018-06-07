@@ -1,0 +1,10 @@
+<div class="title"
+     [class.-active]="activeState"
+     (click)="toggle()">
+  <span class="wrapper"><ng-content></ng-content></span>
+  <button class="arrow">
+    <ng-container *ngIf="activeState">&#10005;</ng-container>
+    <ng-container *ngIf="!activeState">&#9661;</ng-container>
+  </button>
+</div>
+<ng-content select="ui-vertical-menu-sub"></ng-content>

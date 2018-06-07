@@ -1,11 +1,25 @@
+@import "../../styles/params";
+
+
 :host {
-  border-bottom: 1px solid #eeeeee;
-  color: #333333;
+  color: $mainColor;
+  font-weight: 600;
   cursor: pointer;
   display: block;
   padding: 8px 16px;
   text-decoration: none;
-  &:last-child {
-    border-bottom: 0;
+  &.-active {
+    background: $lightColor;
+    border-radius: $borderRadius;
+    color: $primaryColor;
   }
+  &:hover{
+    background: $lightColor;
+    border-radius: $borderRadius;
+  }
+}
+
+:host-context(ui-vertical-menu-group) {
+  font-weight: 400;
+  color: $mainColorLight1;
 }

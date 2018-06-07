@@ -1,5 +1,6 @@
+@import "../../styles/params";
+
 :host {
-  border-bottom: 1px solid #eeeeee;
   display: block;
   &:last-child {
     border-bottom: 0;
@@ -10,6 +11,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: row;
+  font-weight: 600;
   padding: 8px 16px;
   .wrapper {
     flex-grow: 1;
@@ -17,5 +19,14 @@
   .arrow {
     background: transparent;
     border: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  &.-active {
+    color: $primaryColor;
+  }
+  &:hover {
+    background: $lightColor;
+    border-radius: $borderRadius;
   }
 }

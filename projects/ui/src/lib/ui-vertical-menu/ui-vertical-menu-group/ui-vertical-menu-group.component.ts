@@ -14,16 +14,7 @@ import { KitCollapseHostService, KitCollapseItemService } from '@ngx-kit/core';
  */
 @Component({
   selector: 'ui-vertical-menu-group',
-  template: `
-    <div class="title" (click)="toggle()">
-      <span class="wrapper"><ng-content></ng-content></span>
-      <button class="arrow">
-        <ng-container *ngIf="activeState">&#10005;</ng-container>
-        <ng-container *ngIf="!activeState">&#9661;</ng-container>
-      </button>
-    </div>
-    <ng-content select="ui-vertical-menu-sub"></ng-content>
-  `,
+  templateUrl: './ui-vertical-menu-group.component.html',
   styleUrls: ['./ui-vertical-menu-group.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
