@@ -1,0 +1,25 @@
+@import "../styles/params";
+
+h1 {
+  padding: 14px 0;
+}
+
+h2 {
+  padding: 10px 0;
+}
+
+h3 {
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  text-transform: uppercase;
+}
+
+a{
+  color: $primaryColor;
+}
+
+abbr{
+  border-bottom: .05rem dotted;
+  cursor: help;
+}
