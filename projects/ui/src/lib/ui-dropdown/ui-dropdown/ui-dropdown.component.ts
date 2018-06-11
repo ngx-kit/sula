@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
-import { KitAnchorDirective, KitOverlayPosition, KitOverlayPositionService, KitStyleService } from '@ngx-kit/core';
+import { ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges } from '@angular/core';
+import { KitOutsideClickService, KitOverlayToggleDirective, KitSidePosition } from '@ngx-kit/core';
 
 @Component({
   selector: 'ui-dropdown',
@@ -7,27 +7,24 @@ import { KitAnchorDirective, KitOverlayPosition, KitOverlayPositionService, KitS
   styleUrls: ['./ui-dropdown.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    KitOverlayPositionService,
-    KitStyleService,
+    KitOutsideClickService,
   ],
 })
-export class UiDropdownComponent implements OnInit, OnChanges {
-  @Input() anchor: KitAnchorDirective;
+export class UiDropdownComponent implements OnChanges {
+  @Input() toggle: KitOverlayToggleDirective;
 
-  @Input() position: KitOverlayPosition = 'bottom-right';
+  @Input() position: KitSidePosition = 'bottom-right';
 
   constructor(
-    private positionService: KitOverlayPositionService,
+    private elementRef: ElementRef,
+    private outsideClick: KitOutsideClickService,
   ) {
-    this.positionService.type = 'dropdown';
-  }
-
-  ngOnInit() {
   }
 
   ngOnChanges() {
-    this.positionService.anchor = this.anchor;
-    this.positionService.position = this.position;
-    this.positionService.reposition();
+    this.outsideClick.skip = [this.elementRef, this.toggle.nativeEl];
+    this.outsideClick.outsideClick.subscribe(() => {
+      this.toggle.hide();
+    });
   }
 }

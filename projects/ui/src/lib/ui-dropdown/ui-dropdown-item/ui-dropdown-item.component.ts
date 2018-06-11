@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, Input } from '@angular/core';
+import { UiDropdownComponent } from '../ui-dropdown/ui-dropdown.component';
 
 @Component({
   selector: 'ui-dropdown-item,button[uiDropdownItem],a[uiDropdownItem]',
@@ -8,4 +9,11 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class UiDropdownItemComponent {
   @Input() uiDropdownItem: void;
+
+  constructor(private dropdown: UiDropdownComponent) {
+  }
+
+  @HostListener('click') clickHandler() {
+    this.dropdown.toggle.hide();
+  }
 }

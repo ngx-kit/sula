@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { KitAnchorModule, KitOutsideClickModule, KitOverlayModule } from '@ngx-kit/core';
+import { KitOutsideClickModule, KitOverlayModule, KitPositionModule } from '@ngx-kit/core';
 import { UiDropdownItemComponent } from './ui-dropdown-item/ui-dropdown-item.component';
 import { UiDropdownComponent } from './ui-dropdown/ui-dropdown.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    KitPositionModule,
   ],
   declarations: [
     UiDropdownComponent,
@@ -14,12 +15,9 @@ import { UiDropdownComponent } from './ui-dropdown/ui-dropdown.component';
   ],
   exports: [
     KitOverlayModule,
-    KitAnchorModule,
-    KitOutsideClickModule,
     UiDropdownComponent,
     UiDropdownItemComponent,
   ],
-  providers: [],
 })
 export class UiDropdownModule {
 }

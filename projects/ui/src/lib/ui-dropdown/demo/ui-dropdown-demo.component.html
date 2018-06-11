@@ -2,14 +2,12 @@
 
 <div>
   <button uiButton
-          kitAnchor
-          #dropdownAnchor="anchor"
-          (click)="displayDropdown = !displayDropdown">
+          kitOverlayToggle
+          #toggle="toggle">
     Click ME!
   </button>
-  <ui-dropdown *kitOverlay="displayDropdown"
-               [anchor]="dropdownAnchor"
-               (kitOutsideClick)="displayDropdown = false">
+  <ui-dropdown *kitOverlay="toggle.state"
+               [toggle]="toggle">
     <button uiDropdownItem>Item 1</button>
     <button uiDropdownItem>Item 2</button>
     <button uiDropdownItem>Item 3</button>

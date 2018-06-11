@@ -15,14 +15,13 @@
   text-align: center;
   text-decoration: none;
   transition-duration: .3s;
-  transition-property: background;
+  transition-property: background, box-shadow;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   outline: none;
   &:hover {
     box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
-    transform: translate3d(0, -1px, 0);
   }
   &.color {
     &-default {
