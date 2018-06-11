@@ -1,8 +1,10 @@
+@import "../../styles/params";
+
 $offset: 8px;
 
 .popup {
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: $borderRadius;
   box-shadow: 0 0 8px rgba(0, 0, 0, .2);
   &.position {
     &-top-center {
