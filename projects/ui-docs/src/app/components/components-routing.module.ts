@@ -12,6 +12,7 @@ import { UiDropdownDemoComponent } from '../../../../ui/src/lib/ui-dropdown/demo
 import { UiFormDemoComponent } from '../../../../ui/src/lib/ui-form/demo/ui-form-demo.component';
 import { UiModalDemoComponent } from '../../../../ui/src/lib/ui-modal/demo/ui-modal-demo.component';
 import { UiNotificationDemoComponent } from '../../../../ui/src/lib/ui-notification/demo/ui-notification-demo.component';
+import { UiPopupDemoComponent } from '../../../../ui/src/lib/ui-popup/demo/ui-popup-demo.component';
 import { UiRadioDemoComponent } from '../../../../ui/src/lib/ui-radio/demo/ui-radio-demo.component';
 import { UiSelectDemoComponent } from '../../../../ui/src/lib/ui-select/demo/ui-select-demo.component';
 import { UiSliderDemoComponent } from '../../../../ui/src/lib/ui-slider/demo/ui-slider-demo.component';
@@ -72,6 +73,10 @@ const routes: Routes = [
       {
         path: 'ui-notification',
         component: UiNotificationDemoComponent,
+      },
+      {
+        path: 'ui-popup',
+        component: UiPopupDemoComponent,
       },
       {
         path: 'ui-radio',
