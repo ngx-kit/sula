@@ -31,7 +31,7 @@
 .item {
   background: $mainColor;
   border-radius: $borderRadius;
-  box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+  box-shadow: $shadow;
   color: $whiteColor;
   margin: 8px;
   min-width: 150px;

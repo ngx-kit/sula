@@ -5,7 +5,8 @@
   margin: $grid 0;
   border-radius: $borderRadius;
   border: 1px solid $mainColorLight4;
+  transition: $transition;
   &:hover {
-    box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+    box-shadow: $shadow;
   }
 }

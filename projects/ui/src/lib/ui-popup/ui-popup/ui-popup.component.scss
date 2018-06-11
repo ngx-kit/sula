@@ -5,7 +5,7 @@ $offset: 8px;
 .popup {
   background: #ffffff;
   border-radius: $borderRadius;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+  box-shadow: $shadow;
   &.position {
     &-top-center {
       margin-bottom: $offset;

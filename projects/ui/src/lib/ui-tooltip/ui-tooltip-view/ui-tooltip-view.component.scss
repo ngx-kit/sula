@@ -3,7 +3,7 @@
 :host {
   background: $mainColor;
   border-radius: $borderRadius;
-  box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+  box-shadow: $shadow;
   color: #ffffff;
   padding: 4px 8px;
   &.color {

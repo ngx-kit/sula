@@ -17,6 +17,7 @@ $borderWidth: 1px;
   cursor: pointer;
   margin-left: $boxSize + 8px;
   position: relative;
+  transition: $transition;
   &.color {
     &-default {
       &.-checked {
@@ -160,7 +161,7 @@ $borderWidth: 1px;
 
   &:hover {
     &::before {
-      box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+      box-shadow: $shadow;
     }
   }
 
@@ -180,7 +181,7 @@ $borderWidth: 1px;
 
   &.-focused {
     &::before {
-      box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+      box-shadow: $shadow;
     }
   }
 

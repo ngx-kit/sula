@@ -9,10 +9,10 @@
   color: $mainColor;
   display: inline-flex;
   padding: 8px 16px;
-  transition: all .3s;
+  transition: $transition;
   width: 100%;
   &:hover {
-    box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+    box-shadow: $shadow;
     outline: none;
   }
   &:focus {

@@ -38,7 +38,7 @@ $pad: 4px;
   transform: translateX(-50%);
   width: $pointer / 2;
   &:focus {
-    box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+    box-shadow: $shadow;
     outline: none;
   }
 }
