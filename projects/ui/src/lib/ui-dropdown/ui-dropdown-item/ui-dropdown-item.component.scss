@@ -1,10 +1,17 @@
+@import "../../styles/params";
+
 :host {
   background: #ffffff;
   border: 0;
-  border-bottom: 1px solid #eeeeee;
+  cursor: pointer;
   display: block;
-  padding: 4px;
-  &:last-child {
-    border-bottom: 0;
+  min-width: 80px;
+  padding: 8px 12px;
+  outline: none;
+  &:hover {
+    background: $lightColor;
+  }
+  &:active{
+    color: $primaryColor;
   }
 }

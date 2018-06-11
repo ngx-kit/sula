@@ -1,4 +1,9 @@
+@import "../../styles/params";
+
 .dropdown {
   background: #ffffff;
-  border: 1px solid #eeeeee;
+  border-radius:$borderRadius;
+  box-shadow: 0 0 10px rgba(36, 37, 47, 0.2);
+  box-sizing: border-box;
+  margin-top: 4px;
 }
