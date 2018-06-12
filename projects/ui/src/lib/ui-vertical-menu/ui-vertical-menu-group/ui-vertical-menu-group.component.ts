@@ -3,14 +3,14 @@ import {
   ChangeDetectorRef,
   Component,
   ContentChildren,
-  DoCheck,
   Input,
   OnChanges,
   OnInit,
+  Optional,
   QueryList,
   SimpleChanges,
 } from '@angular/core';
-import { RouterLinkActive } from '@angular/router';
+import { Router, RouterLinkActive } from '@angular/router';
 import { KitCollapseHostService, KitCollapseItemService } from '@ngx-kit/core';
 
 @Component({
@@ -22,7 +22,7 @@ import { KitCollapseHostService, KitCollapseItemService } from '@ngx-kit/core';
     KitCollapseItemService,
   ],
 })
-export class UiVerticalMenuGroupComponent implements OnInit, OnChanges, DoCheck {
+export class UiVerticalMenuGroupComponent implements OnInit, OnChanges {
   @Input() active: boolean;
 
   @ContentChildren(RouterLinkActive) routerLinks: QueryList<RouterLinkActive>;
@@ -33,29 +33,20 @@ export class UiVerticalMenuGroupComponent implements OnInit, OnChanges, DoCheck 
     private item: KitCollapseItemService,
     private host: KitCollapseHostService,
     private cdr: ChangeDetectorRef,
+    @Optional() private router: Router,
   ) {
   }
 
   ngOnInit() {
     this.host.activeChanges.subscribe(() => {
       this.activeState = this.item.active;
-      this.cdr.markForCheck();
+      this.cdr.detectChanges();
     });
   }
 
   ngOnChanges(changes: SimpleChanges) {
     if ('active' in changes) {
       this.item.active = this.active;
-    }
-  }
-
-  ngDoCheck() {
-    if (this.routerLinks) {
-      this.routerLinks.forEach(rl => {
-        if (rl.isActive) {
-          this.item.active = true;
-        }
-      });
     }
   }
 
