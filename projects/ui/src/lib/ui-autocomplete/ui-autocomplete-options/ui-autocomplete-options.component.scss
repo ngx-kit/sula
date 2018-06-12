@@ -1,12 +1,16 @@
 @import "../../styles/params";
 
-:host {
+.options {
   background: #ffffff;
   border-radius: $borderRadius;
   box-shadow: $shadow;
   box-sizing: border-box;
   margin-top: 4px;
+  max-height: 90%;
+  overflow-y: auto;
   transition: $transition;
+  transform-origin: top;
+  width: 100%;
 }
 
 button {

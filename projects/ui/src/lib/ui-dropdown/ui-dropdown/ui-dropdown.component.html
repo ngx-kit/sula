@@ -1,7 +1,8 @@
 <div kitSidePosition
      [position]="position"
      [anchor]="toggle">
-  <div class="dropdown">
+  <div class="dropdown"
+       [@fade]="true">
     <ng-content></ng-content>
   </div>
 </div>

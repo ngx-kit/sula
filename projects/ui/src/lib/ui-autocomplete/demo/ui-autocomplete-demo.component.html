@@ -1,15 +1,19 @@
-<h1>Autocomplete</h1>
+<div>
+  <h3>Default autocomplete</h3>
   <div>
-    Value: {{ value | json }}
+    Value: {{ value1 | json }}
   </div>
   <input uiAutocomplete
          uiText
          [options]="options"
          (search)="searchOptions($event)"
-         [(ngModel)]="value"
-         placeholder="Start typing…">
+         [(ngModel)]="value1"
+         placeholder="Start typing name of month…">
+</div>
 
-  <h2>Autocomplete with select mode</h2>
+<div>
+  <h3>Select mode</h3>
+  <p>`ngModel` will be updated only after option submit.</p>
   <div>
     Value: {{ value2 | json }}
   </div>
@@ -19,23 +23,27 @@
          [selectMode]="true"
          (search)="searchOptions($event)"
          [(ngModel)]="value2"
-         placeholder="Start typing…">
+         placeholder="Start typing name of month…">
+</div>
 
-  <h2>Autocomplete option object</h2>
-  <p>Using <code>{{ '{' }}value: any, label: string{{ '}' }}</code> for options allows to use different `ngModel` and input value.</p>
+<div>
+  <h3>Custom option object</h3>
+  <p>Using `value: any, label: string` for options allows to use different `ngModel` and input value.</p>
   <p>Also you could any other data to the options and use it in a custom template.</p>
   <div>
     Value: {{ value3 | json }}
   </div>
   <input uiAutocomplete
          uiText
-         [options]="options"
+         [options]="objOptions"
          [selectMode]="true"
-         (search)="searchOptions($event)"
+         (search)="searchObjOptions($event)"
          [(ngModel)]="value3"
-         placeholder="Start typing…">
+         placeholder="Start typing name of month…">
+</div>
 
-  <h2>Show options on focus</h2>
+<div>
+  <h3>Show options on focus</h3>
   <p>Display options on input focus.</p>
   <div>
     Value: {{ value4 | json }}
@@ -43,13 +51,15 @@
   <input uiAutocomplete
          uiText
          [options]="options"
-         [showOptionsOnFocus]="true"
+         [emitSearchOnFocus]="true"
          [selectMode]="true"
-         (search)="searchOptions($event)"
+         (search)="searchFocusOptions($event)"
          [(ngModel)]="value4"
-         placeholder="Start typing…">
+         placeholder="Start typing name of month…">
+</div>
 
-  <h2>Autocomplete with debounce</h2>
+<div>
+  <h3>Search emit debounce</h3>
   <p>Handle `(search)` output Observable with debounce and cancelling previous request.</p>
   <div>
     Value: {{ value5 | json }}
@@ -60,10 +70,11 @@
          [debounce]="750"
          (search)="searchOptions($event)"
          [(ngModel)]="value5"
-         placeholder="Start typing…">
+         placeholder="Start typing name of month…">
+</div>
 
-  <h2>Autocomplete with custom option template</h2>
-  <p>Customize option template.</p>
+<div>
+  <h3>Custom option template</h3>
   <div>
     Value: {{ value6 | json }}
   </div>
@@ -73,7 +84,8 @@
          [optionTemplate]="optionTemplate"
          (search)="searchOptions($event)"
          [(ngModel)]="value6"
-         placeholder="Start typing…">
-  <ng-template #optionTemplate let-option>
-    <strong>{{ option }}</strong>
+         placeholder="Start typing name of month…">
+  <ng-template #optionTemplate let-option let-index="index">
+    {{ index + 1 }}. <strong>{{ option }}</strong>
   </ng-template>
+</div>
