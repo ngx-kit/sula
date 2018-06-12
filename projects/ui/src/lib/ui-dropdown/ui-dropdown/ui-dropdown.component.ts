@@ -1,6 +1,6 @@
 import { animate, animateChild, query, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input, OnChanges } from '@angular/core';
-import { KitOutsideClickService, KitOverlayToggleDirective, KitSidePosition } from '@ngx-kit/core';
+import { KitOutsideClickService, KitOverlayToggleDirective, KitPinPosition } from '@ngx-kit/core';
 
 @Component({
   selector: 'ui-dropdown',
@@ -40,7 +40,7 @@ import { KitOutsideClickService, KitOverlayToggleDirective, KitSidePosition } fr
 export class UiDropdownComponent implements OnChanges {
   @Input() toggle: KitOverlayToggleDirective;
 
-  @Input() position: KitSidePosition = 'bottom-right';
+  @Input() position: KitPinPosition = 'bottom-right';
 
   @HostBinding('@host') hostTrigger = true;
 

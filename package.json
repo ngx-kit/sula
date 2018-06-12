@@ -21,7 +21,7 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
-    "@ngx-kit/core": "github:ngx-kit/core-builds#test+b637d8c",
+    "@ngx-kit/core": "github:ngx-kit/core-builds#test+1a810ff",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "rxjs": "^6.0.0",
