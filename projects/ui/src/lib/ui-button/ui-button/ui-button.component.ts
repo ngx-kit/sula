@@ -2,11 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, Optional,
 import { KitClassService } from '@ngx-kit/core';
 import { UiButtonColor, UiButtonSize } from '../meta';
 import { UiButtonGroupComponent } from '../ui-button-group/ui-button-group.component';
-import { b } from "@angular/core/src/render3";
 
-/**
- * @apiOrder 1
- */
 @Component({
   // tslint:disable-next-line
   selector: 'button[uiButton],a[uiButton]',
