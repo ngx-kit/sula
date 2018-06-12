@@ -1,10 +1,8 @@
-@import "../../styles/params";
+@import "params";
 
 :host {
   display: block;
-  &:last-child {
-    border-bottom: 0;
-  }
+  margin: 4px 0;
 }
 
 .title {
@@ -12,7 +10,8 @@
   display: flex;
   flex-direction: row;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: 16px;
+
   .wrapper {
     flex-grow: 1;
   }
@@ -23,10 +22,13 @@
     outline: none;
   }
   &.-active {
+    border-radius: $borderRadius;
     color: $primaryColor;
+    transition: $transitionSlow;
   }
   &:hover {
     background: $lightColor;
     border-radius: $borderRadius;
+    transition: $transitionSlow;
   }
 }

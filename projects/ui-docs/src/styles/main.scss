@@ -50,14 +50,14 @@ table tr {
 }
 
 code {
-  background: #f7f7f7;
+  background: $lightColor;
   padding: 2px 4px;
   border-radius: 2px;
   font-size: 0.75em;
 }
 
 pre {
-  background: #f7f7f7;
+  background: $lightColor;
   margin: 0;
   overflow-x: auto;
   padding: 8px;
@@ -71,3 +71,8 @@ pre code {
 tt, code, kbd, samp {
   font-family: 'Droid Sans Mono', monospace;
 }
+
+.demo-panel{
+  margin-top: 50px;
+}
+

@@ -1,19 +1,27 @@
 <h1>Alert</h1>
-<ui-alert>Message text</ui-alert>
 
+<div>
+<ui-alert>Message text</ui-alert>
+</div>
+
+<div class="demo-panel">
 <h2>With title</h2>
 <ui-alert>
   <ui-alert-title>Message title</ui-alert-title>
   Message description
 </ui-alert>
+</div>
 
+<div class="demo-panel">
 <h2>Colors</h2>
 <ui-alert color="primary"><b>Primary</b> message text</ui-alert>
 <ui-alert color="error"><b>Error</b> message text</ui-alert>
 <ui-alert color="success"><b>Success</b> message text</ui-alert>
 <ui-alert color="warning"><b>Warning</b> message text</ui-alert>
 <ui-alert color="info"><b>Info</b> message text</ui-alert>
+</div>
 
+<div class="demo-panel">
 <h2>Closable</h2>
 <div class="alert-box">
   <ui-alert  [closable]="true" [(isOpen)]="isOpen1">Closable message text</ui-alert>
@@ -43,4 +51,5 @@
 <div class="alert-box">
   <ui-alert color="info" [closable]="true" [(isOpen)]="isOpen6">Closable <b>Info</b> message text</ui-alert>
   <button uiButton color="info" *ngIf="!isOpen6" (click)="isOpen6 = true">Reopen</button>
+</div>
 </div>

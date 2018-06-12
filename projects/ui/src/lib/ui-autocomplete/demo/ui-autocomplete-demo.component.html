@@ -1,8 +1,9 @@
+<h1>Autocomplete</h1>
+
 <div>
-  <h3>Default autocomplete</h3>
-  <div>
+  <span>
     Value: {{ value1 | json }}
-  </div>
+  </span>
   <input uiAutocomplete
          uiText
          [options]="options"
@@ -11,12 +12,12 @@
          placeholder="Start typing name of month…">
 </div>
 
-<div>
-  <h3>Select mode</h3>
+<div class="demo-panel">
+  <h2>Select mode</h2>
   <p>`ngModel` will be updated only after option submit.</p>
-  <div>
+  <span>
     Value: {{ value2 | json }}
-  </div>
+  </span>
   <input uiAutocomplete
          uiText
          [options]="options"
@@ -26,13 +27,13 @@
          placeholder="Start typing name of month…">
 </div>
 
-<div>
-  <h3>Custom option object</h3>
-  <p>Using `value: any, label: string` for options allows to use different `ngModel` and input value.</p>
-  <p>Also you could any other data to the options and use it in a custom template.</p>
-  <div>
+<div class="demo-panel">
+  <h2>Custom option object</h2>
+  <p>Using `value: any, label: string` for options allows to use different `ngModel` and input value.<br>
+    Also you could any other data to the options and use it in a custom template.</p>
+  <span>
     Value: {{ value3 | json }}
-  </div>
+  </span>
   <input uiAutocomplete
          uiText
          [options]="objOptions"
@@ -42,12 +43,12 @@
          placeholder="Start typing name of month…">
 </div>
 
-<div>
-  <h3>Show options on focus</h3>
+<div class="demo-panel">
+  <h2>Show options on focus</h2>
   <p>Display options on input focus.</p>
-  <div>
+  <span>
     Value: {{ value4 | json }}
-  </div>
+  </span>
   <input uiAutocomplete
          uiText
          [options]="options"
@@ -58,12 +59,12 @@
          placeholder="Start typing name of month…">
 </div>
 
-<div>
-  <h3>Search emit debounce</h3>
+<div class="demo-panel">
+  <h2>Search emit debounce</h2>
   <p>Handle `(search)` output Observable with debounce and cancelling previous request.</p>
-  <div>
+  <span>
     Value: {{ value5 | json }}
-  </div>
+  </span>
   <input uiAutocomplete
          uiText
          [options]="options"
@@ -73,11 +74,11 @@
          placeholder="Start typing name of month…">
 </div>
 
-<div>
-  <h3>Custom option template</h3>
-  <div>
+<div class="demo-panel">
+  <h2>Custom option template</h2>
+  <span>
     Value: {{ value6 | json }}
-  </div>
+  </span>
   <input uiAutocomplete
          uiText
          [options]="options"

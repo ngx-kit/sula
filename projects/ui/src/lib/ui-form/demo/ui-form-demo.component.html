@@ -1,99 +1,104 @@
 <h1>Form</h1>
 
-<form uiForm>
-  <ui-form-field label="Email">
-    <input uiText
-           [(ngModel)]="email"
-           name="email"
-           required
-           email>
-    <span *kitFormError="'required'">Field is required</span>
-    <span *kitFormError="'email'">Enter a valid email</span>
-  </ui-form-field>
-  <ui-form-field label="Name">
-    <input uiText
-           [(ngModel)]="name"
-           name="name">
-  </ui-form-field>
-  <button uiButton kitFormTouch>Submit</button>
-</form>
+<div>
+  <form uiForm>
+    <ui-form-field label="Email">
+      <input uiText
+             [(ngModel)]="email"
+             name="email"
+             required
+             email>
+      <span *kitFormError="'required'">Field is required</span>
+      <span *kitFormError="'email'">Enter a valid email</span>
+    </ui-form-field>
+    <ui-form-field label="Name">
+      <input uiText
+             [(ngModel)]="name"
+             name="name">
+    </ui-form-field>
+    <button uiButton kitFormTouch>Submit</button>
+  </form>
+</div>
 
-<h2>Form with inline layout</h2>
-<p>Add class `layout-inline` to `uiForm` or `uiFormField`.</p>
-<form uiForm
-      class="layout-inline">
-  <ui-form-field label="Email">
-    <input uiText
-           [(ngModel)]="email"
-           name="email"
-           required
-           email>
-    <span *kitFormError="'required'">Field is required</span>
-    <span *kitFormError="'email'">Enter a valid email</span>
-  </ui-form-field>
-  <ui-form-field label="Name">
-    <input uiText
-           [(ngModel)]="name"
-           name="name">
-  </ui-form-field>
-  <button uiButton kitFormTouch>Submit</button>
-</form>
+<div class="demo-panel">
+  <h2>Form with inline layout</h2>
+  <p>Add class `layout-inline` to `uiForm` or `uiFormField`.</p>
+  <form uiForm
+        class="layout-inline">
+    <ui-form-field label="Email">
+      <input uiText
+             [(ngModel)]="email"
+             name="email"
+             required
+             email>
+      <span *kitFormError="'required'">Field is required</span>
+      <span *kitFormError="'email'">Enter a valid email</span>
+    </ui-form-field>
+    <ui-form-field label="Name">
+      <input uiText
+             [(ngModel)]="name"
+             name="name">
+    </ui-form-field>
+    <button uiButton kitFormTouch>Submit</button>
+  </form>
+</div>
 
-<h2>Form combined with other ui-components</h2>
-<form uiForm>
-  <ui-form-field label="Email">
-    <input uiText
-           [(ngModel)]="email"
-           name="email"
-           required
-           email>
-    <span *kitFormError="'required'">Field is required</span>
-    <span *kitFormError="'email'">Enter a valid email</span>
-  </ui-form-field>
-  <ui-form-field label="Name">
-    <input uiText
-           [(ngModel)]="name"
-           name="name">
-  </ui-form-field>
-  <ui-form-field label="Type">
-    <div class="row">
-    <div>
-      <input type="radio"
+<div class="demo-panel">
+  <h2>Form combined with other ui-components</h2>
+  <form uiForm>
+    <ui-form-field label="Email">
+      <input uiText
+             [(ngModel)]="email"
+             name="email"
+             required
+             email>
+      <span *kitFormError="'required'">Field is required</span>
+      <span *kitFormError="'email'">Enter a valid email</span>
+    </ui-form-field>
+    <ui-form-field label="Name">
+      <input uiText
+             [(ngModel)]="name"
+             name="name">
+    </ui-form-field>
+    <ui-form-field label="Type">
+      <div class="row">
+        <div>
+          <input type="radio"
+                 color="primary"
+                 uiRadio
+                 [(ngModel)]="type"
+                 name="type"
+                 id="type-customer"
+                 value="customer"
+                 required>
+          <label for="type-customer">Customer</label>
+        </div>
+        <div>
+          <input type="radio"
+                 color="primary"
+                 uiRadio
+                 [(ngModel)]="type"
+                 name="type"
+                 id="type-merchant"
+                 value="merchant"
+                 required>
+          <label for="type-merchant">Merchant</label>
+        </div>
+      </div>
+      <span *kitFormError="'required'">Select a type</span>
+    </ui-form-field>
+    <ui-form-field>
+      <input uiCheckbox
+             type="checkbox"
              color="primary"
-             uiRadio
-             [(ngModel)]="type"
-             name="type"
-             id="type-customer"
-             value="customer"
-             required>
-      <label for="type-customer">Customer</label>
-    </div>
-    <div>
-      <input type="radio"
-             color="primary"
-             uiRadio
-             [(ngModel)]="type"
-             name="type"
-             id="type-merchant"
-             value="merchant"
-             required>
-      <label for="type-merchant">Merchant</label>
-    </div>
-    </div>
-    <span *kitFormError="'required'">Select a type</span>
-  </ui-form-field>
-  <ui-form-field>
-    <input uiCheckbox
-           type="checkbox"
-           color="primary"
-           [(ngModel)]="rememberMe"
-           name="rememberMe"
-           id="rememberMe">
-    <label for="rememberMe">Remember Me</label>
-  </ui-form-field>
-  <button uiButton
-          kitFormTouch
-          (click)="submit()">Submit
-  </button>
-</form>
-
+             [(ngModel)]="rememberMe"
+             name="rememberMe"
+             id="rememberMe">
+      <label for="rememberMe">Remember Me</label>
+    </ui-form-field>
+    <button uiButton
+            kitFormTouch
+            (click)="submit()">Submit
+    </button>
+  </form>
+</div>

@@ -1,5 +1,6 @@
 <h1>Accordion</h1>
 
+<div>
   <ui-accordion>
     <ui-accordion-panel>
       <ui-accordion-title>Panel 1</ui-accordion-title>
@@ -21,7 +22,9 @@
       </ui-accordion-content>
     </ui-accordion-panel>
   </ui-accordion>
+</div>
 
+<div class="demo-panel">
   <h2>Multiple</h2>
   <ui-accordion [multiple]="true">
     <ui-accordion-panel>
@@ -43,7 +46,9 @@
       </ui-accordion-content>
     </ui-accordion-panel>
   </ui-accordion>
+</div>
 
+<div class="demo-panel">
   <h2>Activate first</h2>
   <ui-accordion [activateFirst]="true">
     <ui-accordion-panel>
@@ -67,7 +72,9 @@
       </ui-accordion-content>
     </ui-accordion-panel>
   </ui-accordion>
+</div>
 
+<div class="demo-panel">
   <h2>Generated from data</h2>
   <ui-accordion>
     <ui-accordion-panel *ngFor="let panel of panels">
@@ -77,3 +84,4 @@
       </ui-accordion-content>
     </ui-accordion-panel>
   </ui-accordion>
+</div>

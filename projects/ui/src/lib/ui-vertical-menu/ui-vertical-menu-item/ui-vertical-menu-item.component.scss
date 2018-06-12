@@ -1,4 +1,4 @@
-@import "../../styles/params";
+@import "params";
 
 
 :host {
@@ -6,20 +6,29 @@
   font-weight: 600;
   cursor: pointer;
   display: block;
-  padding: 8px 16px;
+  padding: 16px;
   text-decoration: none;
+
   &.-active {
-    background: $lightColor;
+    background: $primaryColor;
     border-radius: $borderRadius;
-    color: $primaryColor;
+    color: $whiteColor;
+    transition: $transitionSlow;
+    &:hover{
+      background: $primaryColor;
+    }
   }
   &:hover{
     background: $lightColor;
     border-radius: $borderRadius;
+    transition: $transitionSlow;
   }
 }
 
 :host-context(ui-vertical-menu-group) {
-  font-weight: 400;
   color: $mainColorLight1;
+  font-weight: 400;
+  margin: 4px 0;
+  padding: 8px 16px;
+
 }

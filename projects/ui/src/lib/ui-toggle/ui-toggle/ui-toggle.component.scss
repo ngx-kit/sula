@@ -1,5 +1,4 @@
-@import "../../styles/params";
-
+@import "params";
 
 :host {
   clip: rect(0 0 0 0);
@@ -18,7 +17,7 @@ $borderWidth: 1px;
   cursor: pointer;
   margin-left: $boxSize + 8px;
   position: relative;
-  &.-disabled{
+  &.-disabled {
     cursor: not-allowed;
   }
   &::before {
@@ -67,15 +66,12 @@ $borderWidth: 1px;
     }
   }
 
-
   &.color {
     &-default {
       &.-checked {
         &::before {
           background: $mainColor;
-        }
-        &::after {
-          border-color: $mainColorLight4;
+          border: $borderWidth solid $mainColor;
         }
       }
       &.-disabled {

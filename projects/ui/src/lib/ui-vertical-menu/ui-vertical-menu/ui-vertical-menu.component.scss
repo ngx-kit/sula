@@ -1,7 +1,8 @@
-@import "../../styles/params";
+@import "params";
 
 
 :host {
   display: block;
+  padding: 10px;
   width: 100%;
 }

@@ -1,19 +1,26 @@
 <h1>Badge</h1>
-<ui-badge [count]="150"></ui-badge>
+<div>
+  <ui-badge [count]="150"></ui-badge>
+</div>
 
-<h2>Color</h2>
-<ui-badge [count]="1" color="default"></ui-badge>&nbsp;
-<ui-badge [count]="2" color="primary"></ui-badge>&nbsp;
-<ui-badge [count]="3" color="error"></ui-badge>&nbsp;
-<ui-badge [count]="4" color="success"></ui-badge>&nbsp;
-<ui-badge [count]="5" color="warning"></ui-badge>&nbsp;
-<ui-badge [count]="6" color="info"></ui-badge>
+<div class="demo-panel">
+  <h2>Color</h2>
+  <ui-badge [count]="1" color="default"></ui-badge>&nbsp;
+  <ui-badge [count]="2" color="primary"></ui-badge>&nbsp;
+  <ui-badge [count]="3" color="error"></ui-badge>&nbsp;
+  <ui-badge [count]="4" color="success"></ui-badge>&nbsp;
+  <ui-badge [count]="5" color="warning"></ui-badge>&nbsp;
+  <ui-badge [count]="6" color="info"></ui-badge>
+</div>
 
+<div class="demo-panel">
 <h2>Size</h2>
 <ui-badge [count]="66" color="primary" size="s"></ui-badge>&nbsp;
 <ui-badge [count]="66" color="primary" size="m"></ui-badge>&nbsp;
 <ui-badge [count]="66" color="primary" size="l"></ui-badge>
+</div>
 
+<div class="demo-panel">
 <h2>Position</h2>
 <ui-badge [count]="54" color="primary" position="inline"></ui-badge>
 <div [ngStyle]="{width: '50px', height: '50px', background: '#eee', margin: '16px', position: 'relative'}">
@@ -21,4 +28,5 @@
   <ui-badge [count]="6" color="primary" position="bottom-right"></ui-badge>
   <ui-badge [count]="7" color="primary" position="bottom-left"></ui-badge>
   <ui-badge [count]="8" color="primary" position="top-left"></ui-badge>
+</div>
 </div>

@@ -3,6 +3,7 @@ import { UiAutocompleteOptionObject } from '../meta';
 
 @Component({
   templateUrl: './ui-autocomplete-demo.component.html',
+  styleUrls: ['./ui-autocomplete-demo.component.scss']
 })
 export class UiAutocompleteDemoComponent {
   value1: string;
