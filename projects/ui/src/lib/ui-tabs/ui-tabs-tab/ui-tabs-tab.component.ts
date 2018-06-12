@@ -7,13 +7,10 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { KitSlideHostService } from '@ngx-kit/core';
+import { isDefined, KitSlideHostService } from '@ngx-kit/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-/**
- * @apiOrder 3
- */
 @Component({
   selector: 'ui-tabs-tab',
   template: '<ng-content></ng-content>',
@@ -44,7 +41,7 @@ export class UiTabsTabComponent implements OnInit, OnDestroy {
 
   @HostListener('click')
   clickHandler() {
-    if (this.id) {
+    if (isDefined(this.id) && this.id !== null) {
       this.host.active = this.id;
     }
   }
