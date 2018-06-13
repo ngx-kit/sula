@@ -1,0 +1,35 @@
+<div #vBarWrapper
+     class="v-bar-wrapper"
+     [class.-active]="vBarActive"
+     [class.-hidden]="!barsDisplay || !vBarState.display">
+  <div #vBar
+       class="bar"
+       [style.height.px]="vBarState.size"
+       [style.top.px]="vBarState.position">
+  </div>
+</div>
+
+<div #hBarWrapper
+     class="h-bar-wrapper"
+     [class.-active]="hBarActive"
+     [class.-hidden]="!barsDisplay || !hBarState.display">
+  <div #hBar
+       class="bar"
+       [style.width.px]="hBarState.size"
+       [style.left.px]="hBarState.position">
+  </div>
+</div>
+
+<div #vWrapper
+     class="v-wrapper"
+     [style.marginBottom.px]="-nativeScrollbarWidth"
+     [style.paddingRight.px]="nativeScrollbarWidth"
+     (scroll)="updateVBar()">
+  <div #hWrapper
+       class="h-wrapper"
+       [style.marginRight.px]="-nativeScrollbarWidth"
+       [style.paddingBottom.px]="nativeScrollbarWidth"
+       (scroll)="updateHBar()">
+    <ng-content></ng-content>
+  </div>
+</div>

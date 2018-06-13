@@ -3,3 +3,8 @@
   display: flex;
   width: 300px;
 }
+
+ui-scroll {
+  flex-grow: 1;
+  max-height: none;
+}
