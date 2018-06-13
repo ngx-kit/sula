@@ -1,4 +1,6 @@
+@import "params";
+
 :host {
   display: block;
-  padding: 16px;
+  padding: $grid * 2;
 }

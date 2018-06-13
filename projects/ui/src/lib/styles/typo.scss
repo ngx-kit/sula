@@ -1,17 +1,17 @@
-@import "../styles/params";
+@import "params";
 
 h1 {
-  padding: 14px 0;
+  padding: $grid * 2 0;
 }
 
 h2 {
-  padding: 10px 0;
+  padding: $grid * 1.5 0;
 }
 
 h3 {
   font-size: 1em;
   letter-spacing: 0.5px;
-  padding: 8px 0;
+  padding: $grid 0;
   text-transform: uppercase;
 }
 

@@ -5,7 +5,7 @@
   border-radius: $borderRadius;
   box-shadow: $shadow;
   box-sizing: border-box;
-  margin-top: 4px;
+  margin-top: $grid / 2;
   max-height: 90%;
   overflow-y: auto;
   transition: $transition;
@@ -19,7 +19,7 @@ button {
   cursor: pointer;
   display: block;
   outline: none;
-  padding: 8px;
+  padding: $grid;
   text-align: left;
   width: 100%;
   &:hover {

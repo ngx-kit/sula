@@ -1,8 +1,24 @@
 @import "params";
 
 :host {
+  align-items: center;
   background: $mainColor;
   color: $whiteColor;
   display: flex;
   flex-shrink: 0;
+  justify-content: space-between;
+  padding: $grid * 2.5 $grid * 3;
+}
+
+.logo{
+  box-sizing: border-box;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.created{
+  color: $primaryColor;
+  font-size: 16px;
+  font-weight: 400;
 }

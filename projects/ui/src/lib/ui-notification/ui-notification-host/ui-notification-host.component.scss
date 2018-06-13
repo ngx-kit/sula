@@ -33,10 +33,10 @@
   border-radius: $borderRadius;
   box-shadow: $shadow;
   color: $whiteColor;
-  margin: 8px;
+  margin: $grid;
   min-width: 150px;
   opacity: 0.95;
-  padding: 16px;
+  padding: $grid * 2;
   .title {
     margin: 0;
     padding: 0;

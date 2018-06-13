@@ -54,15 +54,15 @@
   &.size {
     &-s {
       font-size: .8rem;
-      padding: 2px 4px;
+      padding: $grid / 4 $grid / 2;
     }
     &-m {
       font-size: .9rem;
-      padding: 2px 8px;
+      padding: $grid / 4 $grid;
     }
     &-l {
       font-size: 1.1rem;
-      padding: 4px 8px;
+      padding: $grid / 2 $grid;
     }
   }
   &.position {

@@ -5,6 +5,6 @@
   border-radius:$borderRadius;
   box-shadow: $shadow;
   box-sizing: border-box;
-  margin-top: 4px;
+  margin-top: $grid / 2;
   transform-origin: top;
 }

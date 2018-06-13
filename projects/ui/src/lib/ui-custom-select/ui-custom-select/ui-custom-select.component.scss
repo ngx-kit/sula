@@ -7,7 +7,7 @@
   cursor: pointer;
   color: $mainColor;
   display: inline-flex;
-  padding: 8px 16px;
+  padding: $grid $grid * 2;
   transition: all .3s;
   width: 100%;
   &:hover {
@@ -36,13 +36,13 @@
   border-radius:$borderRadius;
   box-shadow: $shadow;
   box-sizing: border-box;
-  margin-top: 4px;
+  margin-top: $grid / 2;
 }
 
 .option {
   cursor: pointer;
   display: block;
-  padding: 8px 16px;
+  padding: $grid $grid * 2;
   &:hover {
     background: $lightColor;
   }

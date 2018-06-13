@@ -6,7 +6,7 @@
   font-weight: 600;
   cursor: pointer;
   display: block;
-  padding: 16px;
+  padding: $grid * 2;
   text-decoration: none;
 
   &.-active {
@@ -28,7 +28,7 @@
 :host-context(ui-vertical-menu-group) {
   color: $mainColorLight1;
   font-weight: 400;
-  margin: 4px 0;
-  padding: 8px 16px;
+  margin: $grid / 2 0;
+  padding: $grid $grid * 2;
 
 }

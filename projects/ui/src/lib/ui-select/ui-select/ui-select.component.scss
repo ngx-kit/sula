@@ -8,7 +8,7 @@
   cursor: pointer;
   color: $mainColor;
   display: inline-flex;
-  padding: 8px 16px;
+  padding: $grid $grid * 2;
   transition: $transition;
   width: 100%;
   &:hover {

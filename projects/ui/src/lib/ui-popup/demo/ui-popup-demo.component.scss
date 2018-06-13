@@ -1,9 +1,11 @@
+@import "params";
+
 button {
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-right: $grid;
+  margin-bottom: $grid;
 }
 
 .content {
-  padding: 12px 16px;
+  padding: $grid * 1.5 $grid * 2;
   min-width: 160px;
 }

@@ -8,7 +8,7 @@
   border-radius: $borderRadius;
   display: block;
   margin: 8px 0;
-  padding: 14px 28px;
+  padding: $grid * 1.5 $grid * 3;
   border: 1px solid;
   &.color {
     &-default {
@@ -66,7 +66,7 @@
   display: block;
   font-size: 1.2rem;
   font-weight: 700;
-  margin: 8px 0 16px 0;
+  margin: $grid 0 $grid * 2 0;
 }
 
 .close {
@@ -75,6 +75,6 @@
   cursor: pointer;
   float: right;
   font-weight: 700;
-  margin: 0 0 0 16px;
+  margin: 0 0 0 $grid * 2;
   padding: 0;
 }

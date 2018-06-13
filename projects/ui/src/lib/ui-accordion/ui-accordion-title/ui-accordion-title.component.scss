@@ -5,7 +5,7 @@
   cursor: pointer;
   color: $mainColor;
   display: block;
-  padding: 14px 28px;
+  padding: $grid * 1.5 $grid * 3;
   transition-duration: .25s;
   transition-property: background;
   user-select: none;

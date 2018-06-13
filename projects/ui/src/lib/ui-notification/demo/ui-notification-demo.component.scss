@@ -1,7 +1,9 @@
+@import "params";
+
 .row{
   display: flex;
   flex-direction: row;
   >button{
-    margin-right: 10px;
+    margin-right: $grid;
   }
 }

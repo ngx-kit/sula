@@ -166,15 +166,15 @@
   &.size {
     &-s {
       font-size: .85rem;
-      padding: 2px 6px;
+      padding: $grid / 4 $grid / 2;
     }
     &-m {
       font-size: 1rem;
-      padding: 8px 16px;
+      padding: $grid $grid * 2;
     }
     &-l {
       font-size: 1.15rem;
-      padding: 14px 28px;
+      padding: $grid * 1.5 $grid * 3;
     }
   }
 
