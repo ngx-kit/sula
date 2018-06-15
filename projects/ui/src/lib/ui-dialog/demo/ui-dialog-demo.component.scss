@@ -1,0 +1,15 @@
+@import "params";
+
+.row{
+  display: flex;
+  flex-direction: row;
+  >div{
+    margin-right: $grid;
+  }
+}
+
+ui-modal-footer{
+  button{
+    margin-left: $grid;
+  }
+}

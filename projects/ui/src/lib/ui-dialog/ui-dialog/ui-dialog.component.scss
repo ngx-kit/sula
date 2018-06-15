@@ -1,3 +1,5 @@
+@import "params";
+
 :host {
   position: fixed;
   top: 0;
@@ -11,25 +13,62 @@
 
 .dialog {
   background: #ffffff;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
+  border-radius: $borderRadius;
+  box-shadow: $shadow;
   max-height: 90%;
   max-width: 90%;
   min-width: 400px;
   display: flex;
   flex-direction: column;
   &.color {
+    &-default {
+      .header {
+        border-bottom-color: $lightColor;
+      }
+    }
     &-primary {
       .header {
-        background: #2399e5;
-        color: #ffffff;
+        background: $primaryColorLight2;
+        border-bottom-color: $primaryColorLight1;
+        color: $primaryColor;
+      }
+    }
+    &-error {
+      .header {
+        background: $errorColorLight2;
+        border-bottom-color: $errorColorLight1;
+        color: $errorColor;
+      }
+    }
+    &-success {
+      .header {
+        background: $successColorLight2;
+        border-bottom-color: $successColorLight1;
+        color: $successColor;
+      }
+    }
+    &-warning {
+      .header {
+        background: $warningColorLight2;
+        border-bottom-color: $warningColorLight1;
+        color: $warningColor;
+      }
+    }
+    &-info {
+      .header {
+        background: $infoColorLight2;
+        border-bottom-color: $infoColorLight1;
+        color: $infoColor;
       }
     }
   }
 }
 
 .header {
-  background: #bfbfbf;
-  padding: 16px;
+  border-bottom: 1px solid;
+  border-radius: $borderRadius $borderRadius 0 0;
+  font-weight: 700;
+  padding: $grid * 2;
 }
 
 .body {
@@ -39,8 +78,9 @@
 }
 
 .footer {
-  border-top: 1px solid #eeeeee;
-  display: block;
-  padding: 16px;
-  text-align: right;
+  border-top: 1px solid $lightColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: $grid * 2;
 }

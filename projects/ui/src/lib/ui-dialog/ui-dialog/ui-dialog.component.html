@@ -14,9 +14,14 @@
   </div>
   <div class="footer">
     <button *ngIf="options?.type === 'confirm' || options?.type === 'prompt'"
+            uiButton
             (click)="cancelHandler()">
       Cancel
+    </button>&nbsp;
+    <button uiButton
+            [color]="options?.color"
+            (click)="submitHandler()">
+      Okay
     </button>
-    <button (click)="submitHandler()">Okay</button>
   </div>
 </div>

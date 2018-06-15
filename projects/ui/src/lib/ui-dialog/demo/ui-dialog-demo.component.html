@@ -1,35 +1,55 @@
-<div>
-  <h3>Alert dialog</h3>
-  <button (click)="alert()">Alert</button>
+<h1>Dialog</h1>
 
-  <h4>Custom template</h4>
-  <button (click)="alertWithTemplate(alertTemplate)">Alert</button>
+<div class="demo-panel">
+  <h2>Alert dialog</h2>
+  <button uiButton (click)="alert()">Alert</button>
+
+  <h3>Custom template</h3>
+  <button uiButton (click)="alertWithTemplate(alertTemplate)">Alert</button>
   <ng-template #alertTemplate>
     <strong>Custom alert body template.</strong>
   </ng-template>
 
-  <h4>Handle submit</h4>
-  <button (click)="alertWithHandler()">Alert</button>
+  <h3>Handle submit</h3>
+  <button uiButton (click)="alertWithHandler()">Alert</button>
 </div>
 
-<div>
-  <h3>Confirm dialog</h3>
-  <button (click)="confirm()">Confirm</button>
+<div class="demo-panel">
+  <h2>Confirm dialog</h2>
+  <button uiButton (click)="confirm()">Confirm</button>
 </div>
 
-<div>
-  <h3>Prompt dialog</h3>
-  <button (click)="prompt(promptTemplate)">Prompt</button>
+<div class="demo-panel">
+  <h2>Prompt dialog</h2>
+  <button uiButton (click)="prompt(promptTemplate)">Prompt</button>
   <ng-template #promptTemplate let-form>
     <label>
       Model:
-      <input [(ngModel)]="form.model" name="model">
+      <input uiText [(ngModel)]="form.model" name="model">
     </label>
   </ng-template>
 </div>
 
-<div>
-  <h3>Color</h3>
-  <button (click)="alertWithColor('default')">Default alert</button>
-  <button (click)="alertWithColor('primary')">Primary alert</button>
+<div class="demo-panel">
+  <h2>Color</h2>
+  <div class="row">
+    <div>
+      <button uiButton (click)="alertWithColor('default')">Default alert</button>
+    </div>
+    <div>
+      <button uiButton color="primary" (click)="alertWithColor('primary')">Primary alert</button>
+    </div>
+    <div>
+      <button uiButton color="error" (click)="alertWithColor('error')">Error alert</button>
+    </div>
+    <div>
+      <button uiButton color="success" (click)="alertWithColor('success')">Success alert</button>
+    </div>
+    <div>
+      <button uiButton color="warning" (click)="alertWithColor('warning')">Warning alert</button>
+    </div>
+    <div>
+      <button uiButton color="info" (click)="alertWithColor('info')">Info alert</button>
+    </div>
+  </div>
 </div>
