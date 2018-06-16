@@ -1,3 +1,5 @@
+@import "params";
+
 $barSize: 6px;
 
 :host {
@@ -9,19 +11,19 @@ $barSize: 6px;
 }
 
 .v-bar-wrapper {
-  background: rgba(0, 0, 0, .15);
+  background: $lightColor;
   bottom: 1px;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   opacity: 0;
   position: absolute;
   right: 1px;
   top: 1px;
-  transition-duration: 250ms;
+  transition-duration: $transitionSlow;
   transition-property: opacity;
   width: $barSize;
   .bar {
-    background: rgba(0, 0, 0, .4);
-    border-radius: 3px;
+    background: $mainColorLight3;
+    border-radius: $borderRadius;
     cursor: pointer;
     position: absolute;
     width: $barSize;
@@ -32,19 +34,19 @@ $barSize: 6px;
 }
 
 .h-bar-wrapper {
-  background: rgba(0, 0, 0, .15);
+  background: $lightColor;
   bottom: 1px;
-  border-radius: 3px;
+  border-radius: $borderRadius;
   left: 1px;
   opacity: 0;
   position: absolute;
   right: 1px;
-  transition-duration: 250ms;
+  transition-duration: $transitionSlow;
   transition-property: opacity;
   height: $barSize;
   .bar {
-    background: rgba(0, 0, 0, .4);
-    border-radius: 3px;
+    background: $mainColorLight3;
+    border-radius: $borderRadius;
     cursor: pointer;
     position: absolute;
     height: $barSize;
