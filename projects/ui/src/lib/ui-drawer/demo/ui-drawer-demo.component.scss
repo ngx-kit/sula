@@ -1,8 +1,10 @@
+@import "params";
+
 .content {
-  padding: 32px;
+  padding: $grid * 3;
   width: 350px;
 }
 
 .content-vertical {
-  padding: 32px;
+  padding: $grid * 3;
 }

@@ -1,10 +1,10 @@
-<div>
-  Drawer uses KitModal and follows the same behavior as UiModal.
-</div>
+<h1>Drawer</h1>
 
-<div>
-  <h3>Default drawer</h3>
-  <button (click)="display1 = true">Show drawer</button>
+<p>
+  Drawer uses KitModal and follows the same behavior as UiModal.
+</p>
+
+  <button uiButton (click)="display1 = true">Show drawer</button>
 
   <kit-modal (close)="display1 = false">
     <ui-drawer *kitOverlay="display1">
@@ -16,14 +16,13 @@
       </div>
     </ui-drawer>
   </kit-modal>
-</div>
 
-<div>
-  <h3>Position</h3>
-  <button (click)="display2_t = true">Top</button>
-  <button (click)="display2_r = true">Right</button>
-  <button (click)="display2_b = true">Bottom</button>
-  <button (click)="display2_l = true">Left</button>
+<div class="demo-panel">
+  <h2>Position</h2>
+  <button uiButton (click)="display2_t = true">Top</button>&nbsp;
+  <button uiButton (click)="display2_r = true">Right</button>&nbsp;
+  <button uiButton (click)="display2_b = true">Bottom</button>&nbsp;
+  <button uiButton (click)="display2_l = true">Left</button>
 
   <kit-modal (close)="display2_t = false">
     <ui-drawer *kitOverlay="display2_t"

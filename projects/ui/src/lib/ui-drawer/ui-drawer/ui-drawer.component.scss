@@ -1,6 +1,8 @@
+@import "params";
+
 .drawer {
   background: #ffffff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+  box-shadow: $shadow;
   position: fixed;
   &.position {
     &-top {
