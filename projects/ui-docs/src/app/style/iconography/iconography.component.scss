@@ -1,0 +1,11 @@
+@import "params";
+
+.icons-line {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+app-icon-preview {
+  margin-right: $grid * 2;
+}
