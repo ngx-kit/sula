@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { KitNotificationPosition, KitNotificationService } from '@ngx-kit/core';
+import { UiNotificationPosition } from '../meta';
+import { UiNotificationService } from '../ui-notification.service';
 
 @Component({
   templateUrl: './ui-notification-demo.component.html',
@@ -7,23 +8,23 @@ import { KitNotificationPosition, KitNotificationService } from '@ngx-kit/core';
 })
 export class UiNotificationDemoComponent implements OnInit {
 
-  constructor(private notificationService: KitNotificationService) {
+  constructor(private notification: UiNotificationService) {
   }
 
   ngOnInit() {
   }
 
   open(params?: any) {
-    this.notificationService.open({title: 'hello', message: 'there', ...params});
+    this.notification.open({title: 'hello', message: 'there', ...params});
   }
 
   openWithDuration(duration: number) {
-    this.notificationService.config({duration});
-    this.notificationService.open({message: 'Just an another message'});
+    this.notification.config({duration});
+    this.notification.open({message: 'Just an another message'});
   }
 
-  openWithPosition(position: KitNotificationPosition) {
-    this.notificationService.config({position});
-    this.notificationService.open({message: 'Sided message'});
+  openWithPosition(position: UiNotificationPosition) {
+    this.notification.config({position});
+    this.notification.open({message: 'Sided message'});
   }
 }
