@@ -8,6 +8,7 @@ import { UiBreadcrumbsDemoModule } from '../../../../ui/src/lib/ui-breadcrumbs/d
 import { UiButtonDemoModule } from '../../../../ui/src/lib/ui-button/demo/ui-button-demo.module';
 import { UiCheckboxDemoModule } from '../../../../ui/src/lib/ui-checkbox/demo/ui-checkbox-demo.module';
 import { UiCustomSelectDemoModule } from '../../../../ui/src/lib/ui-custom-select/demo/ui-custom-select-demo.module';
+import { UiDatePickerDemoModule } from '../../../../ui/src/lib/ui-date-picker/demo/ui-date-picker-demo.module';
 import { UiDialogDemoModule } from '../../../../ui/src/lib/ui-dialog/demo/ui-dialog-demo.module';
 import { UiDrawerDemoModule } from '../../../../ui/src/lib/ui-drawer/demo/ui-drawer-demo.module';
 import { UiDropdownDemoModule } from '../../../../ui/src/lib/ui-dropdown/demo/ui-dropdown-demo.module';
@@ -39,6 +40,7 @@ import { ComponentsRoutingModule } from './components-routing.module';
     UiButtonDemoModule,
     UiCheckboxDemoModule,
     UiCustomSelectDemoModule,
+    UiDatePickerDemoModule,
     UiDialogDemoModule,
     UiDrawerDemoModule,
     UiDropdownDemoModule,

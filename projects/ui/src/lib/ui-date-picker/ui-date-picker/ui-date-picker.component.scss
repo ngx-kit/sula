@@ -1,0 +1,71 @@
+.focus {
+  box-shadow: #2399e5 0 0 0 1px inset;
+  outline: none;
+  border-radius: 2px;
+}
+
+:host {
+  display: block;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  .title {
+    flex-grow: 1;
+    text-align: center;
+  }
+  button {
+    background: transparent;
+    border: 0;
+    &:focus {
+      @extend .focus;
+    }
+  }
+}
+
+.grid {
+  border: 0;
+  padding: 4px;
+  width: 100%;
+  button {
+    width: 100%;
+  }
+  tr {
+    border: 0;
+  }
+  td, th {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 4px;
+    width: 14.29%;
+  }
+  &:focus {
+    @extend .focus;
+  }
+}
+
+.date {
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 2px;
+  text-align: center;
+  width: 100%;
+  &.outside {
+    color: #b5b5b5;
+  }
+  &.focus {
+    @extend .focus;
+  }
+  &.active {
+    background: #2399e5;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+    color: #ffffff;
+  }
+  &:focus {
+    @extend .focus;
+  }
+}

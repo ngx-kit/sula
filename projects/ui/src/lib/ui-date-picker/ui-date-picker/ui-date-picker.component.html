@@ -1,0 +1,28 @@
+<div class="head">
+  <button (click)="modYear(-1)">&lArr;</button>
+  <button (click)="modMonth(-1)">&larr;</button>
+  <div class="title">{{ monthCursor | async | date:'MMMM, y' }}</div>
+  <button (click)="modMonth(1)">&rarr;</button>
+  <button (click)="modYear(1)">&rArr;</button>
+</div>
+<table class="grid" kitFocus="grid" #grid tabindex="0">
+  <thead>
+  <tr>
+    <th class="weekday" *ngFor="let weekday of weekdays">{{ weekday | date:'EEE' }}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let line of datesGrid | async">
+    <td *ngFor="let item of line">
+      <div class="date"
+            [kitClass]="{active: item.active, focus: item.focus, outside: item.outside}"
+            [attr.aria-label]="item.date | date:'MMMM d, y'"
+            [attr.aria-selected]="item.selected"
+            role="gridcell"
+            (click)="setDate(item.date)">
+        {{ item.date | date:'d' }}
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
