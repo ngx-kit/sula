@@ -1,0 +1,8 @@
+.icon {
+  color: #cccccc;
+  height: 20px;
+  width: 20px;
+  &.active {
+    color: #e8ba03;
+  }
+}

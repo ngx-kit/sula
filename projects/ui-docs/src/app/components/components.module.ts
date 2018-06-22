@@ -17,6 +17,7 @@ import { UiModalDemoModule } from '../../../../ui/src/lib/ui-modal/demo/ui-modal
 import { UiNotificationDemoModule } from '../../../../ui/src/lib/ui-notification/demo/ui-notification-demo.module';
 import { UiPopupDemoModule } from '../../../../ui/src/lib/ui-popup/demo/ui-popup-demo.module';
 import { UiRadioDemoModule } from '../../../../ui/src/lib/ui-radio/demo/ui-radio-demo.module';
+import { UiRatingDemoModule } from '../../../../ui/src/lib/ui-rating/demo/ui-rating-demo.module';
 import { UiScrollDemoModule } from '../../../../ui/src/lib/ui-scroll/demo/ui-scroll-demo.module';
 import { UiSelectDemoModule } from '../../../../ui/src/lib/ui-select/demo/ui-select-demo.module';
 import { UiSliderDemoModule } from '../../../../ui/src/lib/ui-slider/demo/ui-slider-demo.module';
@@ -49,6 +50,7 @@ import { ComponentsRoutingModule } from './components-routing.module';
     UiNotificationDemoModule,
     UiPopupDemoModule,
     UiRadioDemoModule,
+    UiRatingDemoModule,
     UiScrollDemoModule,
     UiSelectDemoModule,
     UiSliderDemoModule,
