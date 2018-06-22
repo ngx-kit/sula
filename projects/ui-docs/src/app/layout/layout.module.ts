@@ -11,7 +11,9 @@ import { NavComponent } from './nav/nav.component';
   imports: [
     CommonModule,
     RouterModule,
+    UiButtonModule,
     UiVerticalMenuModule,
+    UiScrollModule,
   ],
   declarations: [
     HeaderComponent,
