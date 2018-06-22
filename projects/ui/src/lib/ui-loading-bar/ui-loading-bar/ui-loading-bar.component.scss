@@ -1,0 +1,14 @@
+:host {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.bar {
+  background: #2399e5;
+  box-shadow: -7px 2px 11px 0 #2399e5;
+  height: 2px;
+  min-height: 1px;
+}

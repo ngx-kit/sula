@@ -13,7 +13,7 @@
     background: $primaryColor;
     border-radius: $borderRadius;
     color: $whiteColor;
-    transition: $transitionSlow;
+    transition: all $transitionSlow linear;
     &:hover{
       background: $primaryColor;
     }
@@ -21,7 +21,7 @@
   &:hover{
     background: $lightColor;
     border-radius: $borderRadius;
-    transition: $transitionSlow;
+    transition: all $transitionSlow linear;
   }
 }
 

@@ -13,6 +13,7 @@ import { UiDialogDemoComponent } from '../../../../ui/src/lib/ui-dialog/demo/ui-
 import { UiDrawerDemoComponent } from '../../../../ui/src/lib/ui-drawer/demo/ui-drawer-demo.component';
 import { UiDropdownDemoComponent } from '../../../../ui/src/lib/ui-dropdown/demo/ui-dropdown-demo.component';
 import { UiFormDemoComponent } from '../../../../ui/src/lib/ui-form/demo/ui-form-demo.component';
+import { UiLoadingBarDemoComponent } from '../../../../ui/src/lib/ui-loading-bar/demo/ui-loading-bar-demo.component';
 import { UiModalDemoComponent } from '../../../../ui/src/lib/ui-modal/demo/ui-modal-demo.component';
 import { UiNotificationDemoComponent } from '../../../../ui/src/lib/ui-notification/demo/ui-notification-demo.component';
 import { UiPopupDemoComponent } from '../../../../ui/src/lib/ui-popup/demo/ui-popup-demo.component';
@@ -83,6 +84,10 @@ const routes: Routes = [
       {
         path: 'ui-form',
         component: UiFormDemoComponent,
+      },
+      {
+        path: 'ui-loading-bar',
+        component: UiLoadingBarDemoComponent,
       },
       {
         path: 'ui-modal',

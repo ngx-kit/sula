@@ -24,11 +24,11 @@
   &.-active {
     border-radius: $borderRadius;
     color: $primaryColor;
-    transition: $transitionSlow;
+    transition: all $transitionSlow linear;
   }
   &:hover {
     background: $lightColor;
     border-radius: $borderRadius;
-    transition: $transitionSlow;
+    transition: all $transitionSlow linear;
   }
 }

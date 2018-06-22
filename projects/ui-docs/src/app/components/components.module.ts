@@ -13,6 +13,7 @@ import { UiDialogDemoModule } from '../../../../ui/src/lib/ui-dialog/demo/ui-dia
 import { UiDrawerDemoModule } from '../../../../ui/src/lib/ui-drawer/demo/ui-drawer-demo.module';
 import { UiDropdownDemoModule } from '../../../../ui/src/lib/ui-dropdown/demo/ui-dropdown-demo.module';
 import { UiFormDemoModule } from '../../../../ui/src/lib/ui-form/demo/ui-form-demo.module';
+import { UiLoadingBarDemoModule } from '../../../../ui/src/lib/ui-loading-bar/demo/ui-loading-bar-demo.module';
 import { UiModalDemoModule } from '../../../../ui/src/lib/ui-modal/demo/ui-modal-demo.module';
 import { UiNotificationDemoModule } from '../../../../ui/src/lib/ui-notification/demo/ui-notification-demo.module';
 import { UiPopupDemoModule } from '../../../../ui/src/lib/ui-popup/demo/ui-popup-demo.module';
@@ -46,6 +47,7 @@ import { ComponentsRoutingModule } from './components-routing.module';
     UiDrawerDemoModule,
     UiDropdownDemoModule,
     UiFormDemoModule,
+    UiLoadingBarDemoModule,
     UiModalDemoModule,
     UiNotificationDemoModule,
     UiPopupDemoModule,
