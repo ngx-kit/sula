@@ -19,7 +19,6 @@ import { UiNotificationDemoComponent } from '../../../../ui/src/lib/ui-notificat
 import { UiPopupDemoComponent } from '../../../../ui/src/lib/ui-popup/demo/ui-popup-demo.component';
 import { UiRadioDemoComponent } from '../../../../ui/src/lib/ui-radio/demo/ui-radio-demo.component';
 import { UiRatingDemoComponent } from '../../../../ui/src/lib/ui-rating/demo/ui-rating-demo.component';
-import { UiRatingDemoModule } from '../../../../ui/src/lib/ui-rating/demo/ui-rating-demo.module';
 import { UiScrollDemoComponent } from '../../../../ui/src/lib/ui-scroll/demo/ui-scroll-demo.component';
 import { UiSelectDemoComponent } from '../../../../ui/src/lib/ui-select/demo/ui-select-demo.component';
 import { UiSliderDemoComponent } from '../../../../ui/src/lib/ui-slider/demo/ui-slider-demo.component';
