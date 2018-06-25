@@ -1,7 +1,9 @@
+@import "params";
+
 .focus {
-  box-shadow: #2399e5 0 0 0 1px inset;
+  box-shadow: $primaryColor 0 0 0 1px inset;
   outline: none;
-  border-radius: 2px;
+  border-radius: $borderRadius;
 }
 
 :host {
@@ -9,8 +11,13 @@
 }
 
 .head {
+  align-items: center;
   display: flex;
   flex-direction: row;
+  color: $mainColor;
+  font-weight: 600;
+  padding: $grid 0;
+  border-bottom: 1px solid $lightColor;
   .title {
     flex-grow: 1;
     text-align: center;
@@ -18,6 +25,8 @@
   button {
     background: transparent;
     border: 0;
+    cursor: pointer;
+    padding: $grid;
     &:focus {
       @extend .focus;
     }
@@ -26,7 +35,7 @@
 
 .grid {
   border: 0;
-  padding: 4px;
+  padding: $grid / 2;
   width: 100%;
   button {
     width: 100%;
@@ -36,10 +45,16 @@
   }
   td, th {
     background: transparent;
-    border: 0;
     margin: 0;
-    padding: 4px;
+    padding: $grid / 4;
     width: 14.29%;
+  }
+  th {
+    color: $primaryColor;
+    border-bottom: 1px solid $lightColor;
+    padding: $grid;
+    font-size: 14px;
+    font-weight: 300;
   }
   &:focus {
     @extend .focus;
@@ -47,22 +62,29 @@
 }
 
 .date {
-  border-radius: 2px;
+  border-radius: $borderRadius;
   box-sizing: border-box;
   cursor: pointer;
   display: inline-block;
-  padding: 2px;
+  padding: $grid;
   text-align: center;
   width: 100%;
+  &:hover {
+    background: $primaryColorLight2;
+    color: #ffffff;
+  }
   &.outside {
-    color: #b5b5b5;
+    color: $mainColorLight4;
+    &:hover {
+    color: #ffffff;
+    }
   }
   &.focus {
     @extend .focus;
   }
   &.active {
-    background: #2399e5;
-    box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+    background: $primaryColor;
+    box-shadow: $shadow;
     color: #ffffff;
   }
   &:focus {

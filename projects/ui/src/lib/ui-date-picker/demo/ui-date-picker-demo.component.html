@@ -1,14 +1,14 @@
 <h1>Date-picker</h1>
 
 <div>
-  <h3>Default</h3>
   <ui-date-picker [(ngModel)]="model" [style.width.px]="300"></ui-date-picker>
   {{ model | date }}
 </div>
 
-<div>
-  <h3>Date-picker in popup</h3>
-  <input [(ngModel)]="model"
+<div class="demo-panel">
+  <h2>Date-picker in popup</h2>
+  <input uiText [(ngModel)]="model"
+         style="width: 200px;"
          kitOverlayToggle
          #toggle1="toggle"
          aria-haspopup="true">
@@ -21,15 +21,14 @@
                     [style.width.px]="300">
     </ui-date-picker>
   </ui-date-picker-popup>
-</div>
 
-<div>
-  <h3>Date-picker in popup (separated toggle)</h3>
-  <input [(ngModel)]="model"
+  <h3>Separated toggle</h3>
+  <input uiText [(ngModel)]="model"
+         style="width: 200px; margin-right: 20px;"
          kitAnchor
          #anchor2="anchor"
          aria-haspopup="true">
-  <button kitOverlayToggle #toggle2="toggle">Calendar</button>
+  <button uiButton kitOverlayToggle #toggle2="toggle">Calendar</button>
   <ui-date-picker-popup *kitOverlay="toggle2.state"
                         [anchor]="anchor2"
                         [toggle]="toggle2">

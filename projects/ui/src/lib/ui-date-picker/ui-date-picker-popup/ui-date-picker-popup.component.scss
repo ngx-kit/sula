@@ -1,8 +1,9 @@
+@import "params";
+
 .popup {
   background: #ffffff;
-  border: 1px solid #eeeeee;
-  border-radius: 4px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
-  padding: 12px;
+  border-radius: $borderRadius;
+  box-shadow: $shadow;
+  padding: $grid * 1.5;
   transform-origin: top left;
 }
