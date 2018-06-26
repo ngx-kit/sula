@@ -1,8 +1,10 @@
+@import "params";
+
 .icon {
-  color: #cccccc;
+  color: $mainColorLight4;
   height: 20px;
   width: 20px;
   &.active {
-    color: #e8ba03;
+      color: #e8ba03;
   }
 }

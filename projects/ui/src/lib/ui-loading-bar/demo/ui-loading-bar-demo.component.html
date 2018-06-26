@@ -1,15 +1,16 @@
-<div>
-  <h3>Global progress</h3>
-  <button (click)="start()">Start</button>
-  <button (click)="end()">End</button>
+<h1>Loading-bar</h1>
+<div class="demo-panel">
+  <h2>Global progress</h2>
+  <button uiButton (click)="start()">Start</button>&nbsp;
+  <button uiButton (click)="end()">End</button>
 </div>
 
-<div>
-  <h3>Local progress</h3>
-  <div [ngStyle]="{position: 'relative', background: '#eee', height: '50px', marginBottom: '16px', overflow: 'hidden'}">
+<div class="demo-panel">
+  <h2>Local progress</h2>
+  <div [ngStyle]="{position: 'relative', background: '#eeeff2', height: '50px', marginBottom: '16px', overflow: 'hidden'}">
     <ui-loading-bar id="local" [ngStyle]="{position: 'absolute'}"></ui-loading-bar>
   </div>
 
-  <button (click)="startLocal()">Start</button>
-  <button (click)="endLocal()">End</button>
+  <button uiButton (click)="startLocal()">Start</button>&nbsp;
+  <button uiButton (click)="endLocal()">End</button>
 </div>

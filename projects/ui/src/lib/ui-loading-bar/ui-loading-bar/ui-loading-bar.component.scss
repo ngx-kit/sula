@@ -1,3 +1,5 @@
+@import "params";
+
 :host {
   left: 0;
   position: fixed;
@@ -7,8 +9,8 @@
 }
 
 .bar {
-  background: #2399e5;
-  box-shadow: -7px 2px 11px 0 #2399e5;
+  background: $primaryColor;
+  box-shadow: -7px 2px 11px 0 $primaryColor;
   height: 2px;
   min-height: 1px;
 }
