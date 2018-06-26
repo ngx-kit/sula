@@ -1,7 +1,9 @@
 <ui-loading-bar></ui-loading-bar>
-<app-header></app-header>
+<app-header (navToggle)="navClosed = !navClosed"></app-header>
 <div class="body">
-  <app-nav></app-nav>
+  <app-nav [closed]="navClosed"
+           (close)="navClosed = true">
+  </app-nav>
   <ui-scroll>
     <div class="main-wrapper">
       <ng-content></ng-content>

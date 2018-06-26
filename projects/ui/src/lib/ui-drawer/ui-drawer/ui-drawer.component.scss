@@ -7,22 +7,26 @@
   &.position {
     &-top {
       left: 0;
+      max-height: 90%;
       right: 0;
       top: 0;
     }
     &-right {
       bottom: 0;
+      max-width: 90%;
       right: 0;
       top: 0;
     }
     &-bottom {
       bottom: 0;
+      max-height: 90%;
       left: 0;
       right: 0;
     }
     &-left {
       bottom: 0;
       left: 0;
+      max-width: 90%;
       top: 0;
     }
   }

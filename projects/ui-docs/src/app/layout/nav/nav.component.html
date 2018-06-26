@@ -1,4 +1,10 @@
 <ui-scroll>
+  <div class="side-mode">
+    <button (click)="close.emit()"
+            title="Close">
+      <kit-icon name="close"></kit-icon>
+    </button>
+  </div>
   <ui-vertical-menu>
     <a uiVerticalMenuItem
        routerLinkActive="-active"

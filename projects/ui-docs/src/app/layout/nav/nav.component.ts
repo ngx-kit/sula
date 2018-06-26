@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  HostBinding,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -7,11 +16,22 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavComponent implements OnInit {
+  @Input() closed = true;
+
+  @Output() close = new EventEmitter<void>();
+
+  @HostBinding('class.-animate') animateClass = false;
 
   constructor() {
   }
 
-  ngOnInit() {
+  @HostBinding('class.-closed') get closedClass() {
+    return this.closed;
   }
 
+  ngOnInit() {
+    setTimeout(() => {
+      this.animateClass = true;
+    }, 1);
+  }
 }

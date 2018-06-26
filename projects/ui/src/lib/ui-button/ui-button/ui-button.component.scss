@@ -14,14 +14,16 @@
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: $transition;
-  transition-property: background, box-shadow;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   outline: none;
   &:hover {
     box-shadow: $shadow;
+  }
+  &.-animate {
+    transition-duration: $transition;
+    transition-property: background, box-shadow;
   }
   &.color {
     &-default {

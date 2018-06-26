@@ -3,7 +3,11 @@
      [kitClass]="{color: headerColor}">
   <div class="title">{{ header }}</div>
   <div>
-    <button class="close" (click)="close()">X</button>
+    <button class="close"
+            (click)="close()"
+            title="Close">
+      <kit-icon name="close"></kit-icon>
+    </button>
   </div>
 </div>
 <div class="body">

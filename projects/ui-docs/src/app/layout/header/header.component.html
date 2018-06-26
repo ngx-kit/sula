@@ -2,5 +2,12 @@
   Sula <span class="created">powered by Angular and <a href="https://ngx-kit.com/" target="_blank">ngx-kit</a></span>
 </div>
 <div>
-  <button uiButton color="primary" size="m"><kit-icon name="happy"></kit-icon> Get <b>FREE ACCESS</b></button>
+  <button class="nav-toggle"
+          (click)="navToggle.emit()"
+          title="Show navigation">
+    <kit-icon name="menu"></kit-icon>
+  </button>
+  <button uiButton color="primary" size="m">
+    <kit-icon name="happy"></kit-icon>
+    Get <b>FREE ACCESS</b></button>
 </div>
