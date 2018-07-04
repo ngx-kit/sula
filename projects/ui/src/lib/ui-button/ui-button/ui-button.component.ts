@@ -1,13 +1,4 @@
-import {
-  AfterViewInit,
-  ChangeDetectionStrategy,
-  Component,
-  HostBinding,
-  Input,
-  OnChanges,
-  OnInit,
-  Optional,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, Optional } from '@angular/core';
 import { KitClassService } from '@ngx-kit/core';
 import { UiButtonColor, UiButtonSize } from '../meta';
 import { UiButtonGroupComponent } from '../ui-button-group/ui-button-group.component';
@@ -24,7 +15,7 @@ import { UiButtonGroupComponent } from '../ui-button-group/ui-button-group.compo
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class UiButtonComponent implements OnInit, OnChanges {
+export class UiButtonComponent implements OnChanges {
   @Input() color: UiButtonColor = 'default';
 
   @Input() disabled = false;
@@ -35,8 +26,6 @@ export class UiButtonComponent implements OnInit, OnChanges {
 
   @Input() link = false;
 
-  @HostBinding('class.-animate') animateClass = false;
-
   constructor(
     private kitClass: KitClassService,
     @Optional() private group: UiButtonGroupComponent,
@@ -45,13 +34,6 @@ export class UiButtonComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     this.applyClass();
-  }
-
-  ngOnInit() {
-    this.applyClass();
-    setTimeout(() => {
-      this.animateClass = true;
-    }, 1);
   }
 
   private applyClass() {
