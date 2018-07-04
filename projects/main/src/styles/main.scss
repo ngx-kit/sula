@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Source+Sans+Pro:300,400,700');
+@import "params";
+@import "typo";
+
+body {
+  font-family: 'Source Sans Pro', Arial;
+  font-size: 16px;
+  line-height: 1.35rem;
+  color: $mainColor;
+}
+
+button, input, textarea, select {
+  font-family: 'Source Sans Pro', Arial;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  width: 100%;
+}
+
+table th {
+  color: $mainColorLight3;
+  padding: 8px 16px;
+  text-align: left;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+table td {
+  padding: $grid*2 $grid*3;
+  text-align: left;
+}
+
+table tr {
+  border-bottom: 1px solid $mainColorLight4;
+}
+
+tt, code, kbd, samp {
+  font-family: 'Droid Sans Mono', monospace;
+}
