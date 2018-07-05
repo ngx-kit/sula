@@ -13,7 +13,6 @@ import { UiTextModule } from '../../ui-text/ui-text.module';
     UiDatePickerModule,
     UiButtonModule,
     UiTextModule,
-
   ],
   declarations: [
     UiDatePickerDemoComponent,

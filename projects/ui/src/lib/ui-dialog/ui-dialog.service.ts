@@ -67,6 +67,7 @@ export class UiDialogService {
       options: {
         type: UiDialogType.Prompt,
         header,
+        message: '',
         template,
         color,
       },

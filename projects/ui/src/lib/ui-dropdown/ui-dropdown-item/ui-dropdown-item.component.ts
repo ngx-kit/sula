@@ -14,6 +14,6 @@ export class UiDropdownItemComponent {
   }
 
   @HostListener('click') clickHandler() {
-    this.dropdown.toggle.hide();
+    this.dropdown.toggle.close();
   }
 }

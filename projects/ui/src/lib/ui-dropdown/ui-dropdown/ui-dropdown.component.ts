@@ -53,7 +53,7 @@ export class UiDropdownComponent implements OnChanges {
   ngOnChanges() {
     this.outsideClick.skip = [this.elementRef, this.toggle.nativeEl];
     this.outsideClick.outsideClick.subscribe(() => {
-      this.toggle.hide();
+      this.toggle.close();
     });
   }
 }
