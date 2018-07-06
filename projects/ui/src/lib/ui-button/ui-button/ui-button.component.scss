@@ -1,6 +1,5 @@
 @import "params";
 
-
 :host {
   background-image: none;
   border: 1px solid;
@@ -41,6 +40,9 @@
         border-color: $primaryColorLight2;
         pointer-events: none;
       }
+      &:focus {
+        box-shadow: $shadow, $primaryColorLight1 0 0 0 1px inset;
+      }
     }
     &-primary {
       background: $primaryColor;
@@ -58,6 +60,9 @@
         background: $primaryColorLight2;
         border-color: $primaryColorLight2;
         pointer-events: none;
+      }
+      &:focus {
+        box-shadow: $shadow, $primaryColorLight2 0 0 0 2px inset;
       }
     }
     &-error {
@@ -77,6 +82,9 @@
         border-color: $errorColorLight2;
         pointer-events: none;
       }
+      &:focus {
+        box-shadow: $shadow, $errorColorLight2 0 0 0 2px inset;
+      }
     }
     &-success {
       background: $successColor;
@@ -94,6 +102,9 @@
         background: $successColorLight2;
         border-color: $successColorLight2;
         pointer-events: none;
+      }
+      &:focus {
+        box-shadow: $shadow, $successColorLight2 0 0 0 2px inset;
       }
     }
     &-warning {
@@ -113,6 +124,9 @@
         border-color: $warningColorLight2;
         pointer-events: none;
       }
+      &:focus {
+        box-shadow: $shadow, $warningColorLight2 0 0 0 2px inset;
+      }
     }
     &-info {
       background: $infoColor;
@@ -130,6 +144,9 @@
         background: $infoColorLight2;
         border-color: $infoColorLight2;
         pointer-events: none;
+      }
+      &:focus {
+        box-shadow: $shadow, $infoColorLight2 0 0 0 2px inset;
       }
     }
   }
@@ -160,6 +177,9 @@
       color: $primaryColorLight2;
       pointer-events: none;
       transform: none;
+    }
+    &:focus {
+      box-shadow: $primaryColorLight1 0 0 0 2px inset;
     }
   }
 
