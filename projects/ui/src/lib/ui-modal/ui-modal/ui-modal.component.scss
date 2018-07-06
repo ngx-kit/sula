@@ -1,18 +1,25 @@
 @import "params";
 
 :host {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.modal {
   background: #ffffff;
   border-radius: $borderRadius;
   box-shadow: $shadow;
   display: flex;
   flex-direction: column;
-  left: 50%;
   max-height: 90%;
   max-width: 90%;
   min-width: 500px;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .header {
@@ -43,7 +50,7 @@
       background: $primaryColorLight2;
       border-bottom-color: $primaryColorLight1;
       color: $primaryColor;
-      .close{
+      .close {
         color: $primaryColor;
       }
     }
@@ -51,7 +58,7 @@
       background: $errorColorLight2;
       border-bottom-color: $errorColorLight1;
       color: $errorColor;
-      .close{
+      .close {
         color: $errorColor;
       }
     }
@@ -59,7 +66,7 @@
       background: $successColorLight2;
       border-bottom-color: $successColorLight1;
       color: $successColor;
-      .close{
+      .close {
         color: $successColor;
       }
     }
@@ -67,7 +74,7 @@
       background: $warningColorLight2;
       border-bottom-color: $warningColorLight1;
       color: $warningColor;
-      .close{
+      .close {
         color: $warningColor;
       }
     }
@@ -75,7 +82,7 @@
       background: $infoColorLight2;
       border-bottom-color: $infoColorLight1;
       color: $infoColor;
-      .close{
+      .close {
         color: $infoColor;
       }
     }
