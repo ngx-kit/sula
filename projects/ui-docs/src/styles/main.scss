@@ -2,11 +2,11 @@
 @import "params";
 @import "typo";
 @import "loader";
+@import "mq";
 
 html {
   display: flex;
   flex-direction: row;
-  height: 100%;
   width: 100%;
 }
 
@@ -73,6 +73,16 @@ tt, code, kbd, samp {
   font-family: 'Droid Sans Mono', monospace;
 }
 
+.kit-overlay-container {
+  z-index: 1000;
+}
+
 .demo-panel{
   margin-top: 50px;
+}
+
+@include mq($from: tablet) {
+  html {
+    height: 100%;
+  }
 }

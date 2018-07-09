@@ -4,12 +4,12 @@
   "scripts": {
     "ng": "ng",
     "serve": "ng run main:serve",
-    "build": "ng run main:build",
+    "build": "ng run main:build:production",
     "test": "ng run main:test",
     "lint": "ng run main:lint",
     "e2e": "ng run main:e2e",
     "ui-docs:serve": "ng run ui-docs:serve",
-    "ui-docs:build": "ng run ui-docs:build",
+    "ui-docs:build": "ng run ui-docs:build:production",
     "ui-docs:test": "ng run ui-docs:test",
     "ui-docs:lint": "ng run ui-docs:lint",
     "ui-docs:e2e": "ng run ui-docs:e2e"
