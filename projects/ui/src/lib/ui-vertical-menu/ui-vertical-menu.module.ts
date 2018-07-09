@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { KitCollapseModule } from '@ngx-kit/core';
+import { KitCollapseModule, KitIconsModule } from '@ngx-kit/core';
 import { UiVerticalMenuGroupComponent } from './ui-vertical-menu-group/ui-vertical-menu-group.component';
 import { UiVerticalMenuItemComponent } from './ui-vertical-menu-item/ui-vertical-menu-item.component';
 import { UiVerticalMenuSubComponent } from './ui-vertical-menu-sub/ui-vertical-menu-sub.component';
@@ -10,6 +10,7 @@ import { UiVerticalMenuComponent } from './ui-vertical-menu/ui-vertical-menu.com
   imports: [
     CommonModule,
     KitCollapseModule,
+    KitIconsModule,
   ],
   declarations: [
     UiVerticalMenuComponent,
