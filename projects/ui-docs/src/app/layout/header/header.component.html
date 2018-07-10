@@ -1,13 +1,22 @@
+<button class="nav-toggle"
+        (click)="navToggle.emit()"
+        title="Show navigation">
+  <kit-icon name="menu"></kit-icon>
+</button>
 <div class="logo">
-  Sula <span class="created">powered by Angular and <a href="https://ngx-kit.com/" target="_blank">ngx-kit</a></span>
+  Sula <span class="created">Angular UI-Kit powered by <a href="https://ngx-kit.com/" target="_blank">ngx-kit</a></span>
 </div>
 <div>
-  <button class="nav-toggle"
-          (click)="navToggle.emit()"
-          title="Show navigation">
-    <kit-icon name="menu"></kit-icon>
-  </button>
-  <button uiButton color="primary" size="m">
-    <kit-icon name="happy"></kit-icon>
-    Get <b>FREE ACCESS</b></button>
+  <a href="https://twitter.com/ngxkit"
+     target="_blank"
+     class="link"
+     title="ngx-kit twitter">
+    <kit-icon name="logo-twitter"></kit-icon>
+  </a>
+  <a href="https://github.com/ngx-kit/sula"
+     target="_blank"
+     class="link"
+     title="Sula repository">
+    <kit-icon name="logo-github"></kit-icon>
+  </a>
 </div>

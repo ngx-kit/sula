@@ -8,15 +8,17 @@ import { NavigationEnd, Router } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayoutComponent implements OnInit {
-  navClosed = true;
+  displayNav = false;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+  ) {
   }
 
   ngOnInit() {
     this.router.events.subscribe(e => {
       if (e instanceof NavigationEnd) {
-        this.navClosed = true;
+        this.displayNav = false;
       }
     });
   }

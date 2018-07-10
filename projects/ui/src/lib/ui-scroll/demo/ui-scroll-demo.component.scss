@@ -1,5 +1,23 @@
 @import "params";
+@import "mq";
 
-.box{
+.h-scroll {
+  border: 1px solid #d7d7d9;
+  height: 200px;
+  overflow: hidden;
+}
+
+.v-scroll {
+  border: 1px solid #d7d7d9;
+  width: 250px;
+}
+
+.box {
   padding: 0 $grid * 2;
+}
+
+@include mq($from: desktop) {
+  .v-scroll {
+    width: 600px;
+  }
 }

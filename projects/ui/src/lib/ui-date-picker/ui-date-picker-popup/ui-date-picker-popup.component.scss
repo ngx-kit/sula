@@ -1,5 +1,11 @@
 @import "params";
 
+:host[position="top-left"] {
+  .popup {
+    transform-origin: bottom left;
+  }
+}
+
 .popup {
   background: #ffffff;
   border-radius: $borderRadius;

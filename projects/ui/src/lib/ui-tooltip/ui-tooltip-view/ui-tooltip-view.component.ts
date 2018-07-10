@@ -1,6 +1,6 @@
 import { animate, animateChild, query, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
-import { KitClassService, KitOverlayPosition } from '@ngx-kit/core';
+import { KitClassService, KitPinPosition } from '@ngx-kit/core';
 import { UiTooltipColors } from '../meta';
 
 @Component({
@@ -38,5 +38,5 @@ export class UiTooltipViewComponent {
 
   @HostBinding('@host') hostTrigger = true;
 
-  @Input() position: KitOverlayPosition = 'top';
+  @Input() position: KitPinPosition = 'top';
 }

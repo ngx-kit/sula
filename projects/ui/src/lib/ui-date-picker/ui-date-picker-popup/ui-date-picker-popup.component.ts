@@ -1,6 +1,6 @@
 import { animate, animateChild, query, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit } from '@angular/core';
-import { KitAnchor, KitFocusManagerService, KitOverlayToggleDirective } from '@ngx-kit/core';
+import { KitAnchor, KitFocusManagerService, KitOverlayToggleDirective, KitPinPosition } from '@ngx-kit/core';
 
 @Component({
   selector: 'ui-date-picker-popup',
@@ -41,6 +41,8 @@ export class UiDatePickerPopupComponent implements OnInit {
   @Input() anchor: KitAnchor | HTMLElement;
 
   @Input() toggle: KitOverlayToggleDirective;
+
+  @Input() position: KitPinPosition = 'bottom-left';
 
   @HostBinding('attr.aria-label') ariaLabel = 'Datepicker popup';
 

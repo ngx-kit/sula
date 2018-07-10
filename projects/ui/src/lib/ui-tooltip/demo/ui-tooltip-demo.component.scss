@@ -1,11 +1,5 @@
 @import "params";
 
-.row{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  >button{
-    margin-right: $grid;
-    margin-bottom: $grid;
-  }
+button {
+  margin: 0 $grid $grid 0;
 }

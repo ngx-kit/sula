@@ -1,4 +1,5 @@
 @import "params";
+@import "mq";
 
 :host {
   display: flex;
@@ -11,6 +12,35 @@
   flex-direction: row;
   flex-grow: 1;
   overflow: hidden;
+}
+
+app-nav {
+  flex-shrink: 0;
+  &.side {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 90%;
+  }
+}
+
+@include mq($from: mobile) {
+  app-nav.side {
+    width: 75%;
+  }
+}
+
+@include mq($from: tablet) {
+  app-nav.default {
+    width: 225px;
+  }
+}
+
+@include mq($from: desktop) {
+  app-nav.default {
+    width: 300px;
+  }
 }
 
 ui-scroll {

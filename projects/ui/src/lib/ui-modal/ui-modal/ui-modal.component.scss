@@ -1,4 +1,5 @@
 @import "params";
+@import "mq";
 
 :host {
   align-items: center;
@@ -19,7 +20,7 @@
   flex-direction: column;
   max-height: 90%;
   max-width: 90%;
-  min-width: 500px;
+  min-width: 60%;
 }
 
 .header {
@@ -93,4 +94,10 @@
   flex-grow: 1;
   overflow: auto;
   padding: $grid * 4 $grid * 2;
+}
+
+@include mq($from: tablet) {
+  .dialog {
+    min-width: 500px;
+  }
 }

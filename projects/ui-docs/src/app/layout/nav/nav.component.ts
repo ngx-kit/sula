@@ -1,37 +1,35 @@
-import {
-  AfterViewInit,
-  ChangeDetectionStrategy,
-  Component,
-  EventEmitter,
-  HostBinding,
-  Input,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { animate, style, transition, trigger } from '@angular/animations';
+import { ChangeDetectionStrategy, Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [
+    trigger('slide', [
+      transition('void => true', [
+        style({
+          transform: 'translateX(-100%)',
+        }),
+        animate('250ms ease-out', style({
+          transform: 'translateY(0)',
+        })),
+      ]),
+      transition('true => void', [
+        animate('250ms ease-in', style({
+          transform: 'translateX(-100%)',
+        })),
+      ]),
+    ]),
+  ],
 })
-export class NavComponent implements OnInit {
-  @Input() closed = true;
+export class NavComponent {
+  @Input() inOverlay = false;
 
   @Output() close = new EventEmitter<void>();
 
-  @HostBinding('class.-animate') animateClass = false;
-
-  constructor() {
-  }
-
-  @HostBinding('class.-closed') get closedClass() {
-    return this.closed;
-  }
-
-  ngOnInit() {
-    setTimeout(() => {
-      this.animateClass = true;
-    }, 1);
+  @HostBinding('@slide') get slideTrigger() {
+    return this.inOverlay;
   }
 }

@@ -1,9 +1,18 @@
 <ui-loading-bar></ui-loading-bar>
-<app-header (navToggle)="navClosed = !navClosed"></app-header>
+<app-header (navToggle)="displayNav = true"></app-header>
 <div class="body">
-  <app-nav [closed]="navClosed"
-           (close)="navClosed = true">
+  <app-nav *kitMq="{from: 'tablet'}"
+           class="default">
   </app-nav>
+  <ng-container *kitMq="{until: 'tablet'}">
+    <kit-modal (close)="displayNav = false">
+      <app-nav *kitOverlay="displayNav"
+               class="side"
+               [inOverlay]="true"
+               (close)="displayNav = false">
+      </app-nav>
+    </kit-modal>
+  </ng-container>
   <ui-scroll>
     <div class="main-wrapper">
       <ng-content></ng-content>

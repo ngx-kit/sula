@@ -3,21 +3,17 @@
 
 :host {
   background: $whiteColor;
-  bottom: 0;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.04);
   display: flex;
-  flex-shrink: 0;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 90%;
-  z-index: 1;
-  &.-closed {
-    transform: translateX(-100%);
-  }
-  &.-animate {
-    transition: transform $transition;
-  }
+}
+
+.close {
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 2rem;
+  left: 100%;
+  position: absolute;
 }
 
 ui-scroll {
@@ -25,21 +21,3 @@ ui-scroll {
   max-height: none;
 }
 
-@include mq($from: tablet) {
-  :host {
-    position: relative;
-    width: 225px;
-    &.-closed {
-      transform: none;
-    }
-  }
-  .side-mode {
-    display: none;
-  }
-}
-
-@include mq($from: desktop) {
-  :host {
-    width: 300px;
-  }
-}

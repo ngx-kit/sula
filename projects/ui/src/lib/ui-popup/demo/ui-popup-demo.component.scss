@@ -1,8 +1,7 @@
 @import "params";
 
 button {
-  margin-right: $grid;
-  margin-bottom: $grid;
+  margin: 0 $grid $grid 0;
 }
 
 .content {

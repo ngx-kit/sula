@@ -24,6 +24,7 @@ export function uiNotificationInitFactory(overlay: KitOverlayService) {
 })
 export class UiNotificationModule {
   static forRoot(): ModuleWithProviders {
+
     return {
       ngModule: UiNotificationModule,
       providers: [
