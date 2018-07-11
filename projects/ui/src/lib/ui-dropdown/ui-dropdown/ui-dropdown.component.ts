@@ -1,6 +1,6 @@
 import { animate, animateChild, query, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input, OnChanges } from '@angular/core';
-import { KitOutsideClickService, KitOverlayToggleDirective, KitPinPosition } from '@ngx-kit/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+import { KitOverlayToggleDirective, KitPinPosition } from '@ngx-kit/core';
 
 @Component({
   selector: 'ui-dropdown',
@@ -33,27 +33,11 @@ import { KitOutsideClickService, KitOverlayToggleDirective, KitPinPosition } fro
       ]),
     ]),
   ],
-  providers: [
-    KitOutsideClickService,
-  ],
 })
-export class UiDropdownComponent implements OnChanges {
+export class UiDropdownComponent {
   @Input() toggle: KitOverlayToggleDirective;
 
   @Input() position: KitPinPosition = 'bottom-right';
 
   @HostBinding('@host') hostTrigger = true;
-
-  constructor(
-    private elementRef: ElementRef,
-    private outsideClick: KitOutsideClickService,
-  ) {
-  }
-
-  ngOnChanges() {
-    this.outsideClick.skip = [this.elementRef, this.toggle.nativeEl];
-    this.outsideClick.outsideClick.subscribe(() => {
-      this.toggle.close();
-    });
-  }
 }

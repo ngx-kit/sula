@@ -8,6 +8,7 @@ import { UiDropdownComponent } from './ui-dropdown/ui-dropdown.component';
   imports: [
     CommonModule,
     KitPositionModule,
+    KitOutsideClickModule,
   ],
   declarations: [
     UiDropdownComponent,

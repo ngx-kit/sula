@@ -2,7 +2,9 @@
      [position]="position"
      [anchor]="toggle">
   <div class="dropdown"
-       [@fade]="true">
+       [@fade]="true"
+       (kitOutsideClick)="toggle.close()"
+       [skip]="[toggle.nativeEl]">
     <ng-content></ng-content>
   </div>
 </div>

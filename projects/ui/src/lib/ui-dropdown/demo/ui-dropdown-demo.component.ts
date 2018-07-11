@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./ui-dropdown-demo.component.scss'],
 })
 export class UiDropdownDemoComponent {
-  displayDropdown = false;
 }
