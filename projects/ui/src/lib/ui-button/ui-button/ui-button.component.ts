@@ -6,9 +6,7 @@ import { UiButtonGroupComponent } from '../ui-button-group/ui-button-group.compo
 @Component({
   // tslint:disable-next-line
   selector: 'button[uiButton],a[uiButton]',
-  template: `
-    <ng-content></ng-content>
-  `,
+  templateUrl: './ui-button.component.html',
   styleUrls: ['./ui-button.component.scss'],
   providers: [
     KitClassService,
@@ -25,6 +23,8 @@ export class UiButtonComponent implements OnChanges {
   @Input() size: UiButtonSize = 'm';
 
   @Input() link = false;
+
+  @Input() icon: string;
 
   constructor(
     private kitClass: KitClassService,

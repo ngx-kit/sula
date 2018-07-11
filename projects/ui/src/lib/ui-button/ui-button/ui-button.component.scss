@@ -228,4 +228,7 @@
       }
     }
   }
+  .icon + .content:not(:empty) {
+    padding-left: $grid;
+  }
 }
