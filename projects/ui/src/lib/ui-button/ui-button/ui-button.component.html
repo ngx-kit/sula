@@ -1,5 +1,9 @@
-<kit-icon *ngIf="icon"
+<kit-icon *ngIf="icon && !loading"
           [name]="icon"
+          class="icon">
+</kit-icon>
+<kit-icon *ngIf="loading"
+          name="loading-7"
           class="icon">
 </kit-icon>
 <span class="content">
