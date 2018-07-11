@@ -12,6 +12,7 @@ import { UiDatePickerDemoComponent } from '../../../../ui/src/lib/ui-date-picker
 import { UiDialogDemoComponent } from '../../../../ui/src/lib/ui-dialog/demo/ui-dialog-demo.component';
 import { UiDrawerDemoComponent } from '../../../../ui/src/lib/ui-drawer/demo/ui-drawer-demo.component';
 import { UiDropdownDemoComponent } from '../../../../ui/src/lib/ui-dropdown/demo/ui-dropdown-demo.component';
+import { UiFileDemoComponent } from '../../../../ui/src/lib/ui-file/demo/ui-file-demo.component';
 import { UiFormDemoComponent } from '../../../../ui/src/lib/ui-form/demo/ui-form-demo.component';
 import { UiLoadingBarDemoComponent } from '../../../../ui/src/lib/ui-loading-bar/demo/ui-loading-bar-demo.component';
 import { UiModalDemoComponent } from '../../../../ui/src/lib/ui-modal/demo/ui-modal-demo.component';
@@ -79,6 +80,10 @@ const routes: Routes = [
       {
         path: 'ui-dropdown',
         component: UiDropdownDemoComponent,
+      },
+      {
+        path: 'ui-file',
+        component: UiFileDemoComponent,
       },
       {
         path: 'ui-form',

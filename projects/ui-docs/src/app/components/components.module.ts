@@ -12,6 +12,7 @@ import { UiDatePickerDemoModule } from '../../../../ui/src/lib/ui-date-picker/de
 import { UiDialogDemoModule } from '../../../../ui/src/lib/ui-dialog/demo/ui-dialog-demo.module';
 import { UiDrawerDemoModule } from '../../../../ui/src/lib/ui-drawer/demo/ui-drawer-demo.module';
 import { UiDropdownDemoModule } from '../../../../ui/src/lib/ui-dropdown/demo/ui-dropdown-demo.module';
+import { UiFileDemoModule } from '../../../../ui/src/lib/ui-file/demo/ui-file-demo.module';
 import { UiFormDemoModule } from '../../../../ui/src/lib/ui-form/demo/ui-form-demo.module';
 import { UiLoadingBarDemoModule } from '../../../../ui/src/lib/ui-loading-bar/demo/ui-loading-bar-demo.module';
 import { UiModalDemoModule } from '../../../../ui/src/lib/ui-modal/demo/ui-modal-demo.module';
@@ -46,6 +47,7 @@ import { ComponentsRoutingModule } from './components-routing.module';
     UiDialogDemoModule,
     UiDrawerDemoModule,
     UiDropdownDemoModule,
+    UiFileDemoModule,
     UiFormDemoModule,
     UiLoadingBarDemoModule,
     UiModalDemoModule,
