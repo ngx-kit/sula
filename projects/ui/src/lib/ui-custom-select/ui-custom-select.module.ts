@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { KitOverlayModule, KitPositionModule } from '@ngx-kit/core';
+import { KitIconsModule, KitOutsideClickModule, KitOverlayModule, KitPositionModule } from '@ngx-kit/core';
 import { UiCustomSelectComponent } from './ui-custom-select/ui-custom-select.component';
 
 @NgModule({
@@ -8,6 +8,8 @@ import { UiCustomSelectComponent } from './ui-custom-select/ui-custom-select.com
     CommonModule,
     KitOverlayModule,
     KitPositionModule,
+    KitOutsideClickModule,
+    KitIconsModule,
   ],
   declarations: [
     UiCustomSelectComponent,
