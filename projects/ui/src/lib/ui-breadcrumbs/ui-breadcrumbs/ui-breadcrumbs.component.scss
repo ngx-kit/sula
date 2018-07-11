@@ -1,11 +1,5 @@
 @import "params";
 
-:host {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
 .separator {
   color: $mainColor;
   padding: 0 $grid;

@@ -8,11 +8,15 @@
   font-size: 1rem;
   padding: 0;
   text-decoration: none;
-  &:hover{
+  &:hover {
     color: $mainColorLight2;
   }
   &:last-child {
     color: $mainColor;
     cursor: inherit;
   }
+}
+
+.icon {
+  margin-right: $grid / 2;
 }
