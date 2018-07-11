@@ -322,6 +322,19 @@ export const icons = [
     ],
   },
   {
+    name: 'Loadings',
+    icons: [
+      {name: 'loading-1', url: '/assets/icons/loading/loading-1.svg'},
+      {name: 'loading-2', url: '/assets/icons/loading/loading-2.svg'},
+      {name: 'loading-3', url: '/assets/icons/loading/loading-3.svg'},
+      {name: 'loading-4', url: '/assets/icons/loading/loading-4.svg'},
+      {name: 'loading-5', url: '/assets/icons/loading/loading-5.svg'},
+      {name: 'loading-6', url: '/assets/icons/loading/loading-6.svg'},
+      {name: 'loading-7', url: '/assets/icons/loading/loading-7.svg'},
+      {name: 'loading-8', url: '/assets/icons/loading/loading-8.svg'},
+    ],
+  },
+  {
     name: 'Logos',
     icons: [
       {name: 'logo-android', url: '/assets/icons/logos/logo-android.svg'},
