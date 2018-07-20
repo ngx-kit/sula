@@ -3,11 +3,14 @@
 :host {
   background: #ffffff;
   border: 0;
+  box-sizing: border-box;
   cursor: pointer;
   display: block;
-  min-width: 80px;
+  margin: 0;
   padding: $grid $grid * 1.5;
   outline: none;
+  text-align: left;
+  width: 100%;
   &:hover {
     background: $lightColor;
   }
