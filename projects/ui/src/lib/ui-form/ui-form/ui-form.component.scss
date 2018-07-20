@@ -1,9 +1,10 @@
 @import "params";
+@import "mq";
 
 :host {
   &.layout {
     &-inline {
-      align-items: flex-start;
+      align-items: baseline;
       display: flex;
       flex-flow: row wrap;
     }
