@@ -1,0 +1,30 @@
+<h1>Iconography</h1>
+
+<div>
+  <p>
+    Free icons provided by <a href="https://ionicons.com/" target="_blank">Ionicons</a>.
+  </p>
+</div>
+
+<div>
+  <h2>Usage</h2>
+  <p>
+    <code>&lt;kit-icon name="NAME"&gt;&lt;/kit-icon&gt;</code>
+  </p>
+  <p>
+    See more in <a href="https://ngx-kit.com/core/module/kit-icons" target="_blank">ngx-kit icons documentation</a>.
+  </p>
+</div>
+
+
+<div>
+  <h2>Icons</h2>
+  <div *ngFor="let section of icons">
+    <h3>{{ section.name }}</h3>
+    <div class="icons-line">
+      <app-icon-preview *ngFor="let icon of section.icons"
+                        [name]="icon.name">
+      </app-icon-preview>
+    </div>
+  </div>
+</div>

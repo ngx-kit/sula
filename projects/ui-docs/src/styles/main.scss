@@ -50,29 +50,6 @@ table tr {
   border-bottom: 1px solid $mainColorLight4;
 }
 
-code {
-  background: $lightColor;
-  padding: 2px 4px;
-  border-radius: 2px;
-  font-size: 0.75em;
-}
-
-pre {
-  background: $lightColor;
-  margin: 0;
-  overflow-x: auto;
-  padding: 8px;
-}
-
-pre code {
-  background: transparent;
-  padding: 0;
-}
-
-tt, code, kbd, samp {
-  font-family: 'Droid Sans Mono', monospace;
-}
-
 .kit-overlay-container {
   z-index: 1000;
 }

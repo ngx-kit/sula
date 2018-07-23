@@ -3,11 +3,11 @@ import { icons } from 'ui';
 
 @Component({
   selector: 'app-iconography',
-  templateUrl: './iconography.component.html',
-  styleUrls: ['./iconography.component.scss'],
+  templateUrl: './iconography-page.component.html',
+  styleUrls: ['./iconography-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class IconographyComponent implements OnInit {
+export class IconographyPageComponent implements OnInit {
   icons = icons;
 
   constructor() {

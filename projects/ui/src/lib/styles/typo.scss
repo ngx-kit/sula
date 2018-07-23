@@ -23,3 +23,29 @@ abbr{
   border-bottom: .05rem dotted;
   cursor: help;
 }
+
+code {
+  background: $lightColor;
+  color: $mainColor;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 0.75em;
+}
+
+pre {
+  background: $lightColor;
+  color: $mainColor;
+  margin: 0;
+  overflow-x: auto;
+  padding: 8px;
+}
+
+pre code {
+  background: transparent;
+  color: $mainColor;
+  padding: 0;
+}
+
+tt, code, kbd, samp {
+  font-family: 'Droid Sans Mono', monospace;
+}

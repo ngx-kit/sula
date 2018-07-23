@@ -2,11 +2,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-colors',
-  templateUrl: './colors.component.html',
-  styleUrls: ['./colors.component.scss'],
+  templateUrl: './colors-page.component.html',
+  styleUrls: ['./colors-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ColorsComponent implements OnInit {
+export class ColorsPageComponent implements OnInit {
 
   constructor() { }
 

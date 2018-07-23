@@ -6,9 +6,8 @@ import { kitMqBreakpoints } from '@ngx-kit/core';
 import { UiModule } from 'ui';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { LayoutModule } from './layout/layout.module';
-import { StyleModule } from './style/style.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import { StyleModule } from './style/style.module';
     // App
     UiModule,
     LayoutModule,
-    DashboardModule,
-    StyleModule,
+    PagesModule,
     ComponentsModule,
   ],
   providers: [

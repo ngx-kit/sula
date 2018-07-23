@@ -5,12 +5,12 @@
   <kit-icon name="close"></kit-icon>
 </button>
 <ui-scroll>
-  <ui-vertical-menu>
+  <ui-vertical-menu [multiple]="true">
     <a uiVerticalMenuItem
        routerLinkActive="-active"
        [routerLinkActiveOptions]="{exact: true}"
        routerLink="/">
-      Overview
+      Introduction
     </a>
     <ui-vertical-menu-group activeRoute="/style/">
       Style

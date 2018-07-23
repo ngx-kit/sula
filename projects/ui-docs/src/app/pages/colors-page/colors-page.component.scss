@@ -16,6 +16,10 @@
   box-sizing: border-box;
   padding: $grid $grid $grid 0;
   width: 50%;
+  code {
+    background: $whiteColor;
+    box-shadow: $smallShadow;
+  }
 }
 
 .color {
