@@ -36,12 +36,12 @@
       border-color: $infoColor;
       color: #ffffff;
       &:hover {
-        background: $infoColorDark1;
-        border-color: $infoColorDark1;
-      }
-      &:active, &.checked {
         background: $infoColorDark2;
         border-color: $infoColorDark2;
+      }
+      &:active, &.checked {
+        background: $infoColorDark1;
+        border-color: $infoColorDark1;
       }
       &:disabled {
         background: $infoColorLight2;

@@ -17,7 +17,7 @@
   color: $mainColor;
   font-weight: 600;
   padding: $grid 0;
-  border-bottom: 1px solid $lightColor;
+  border-bottom: 1px solid $mainColorLight4;
   .title {
     flex-grow: 1;
     text-align: center;
@@ -51,7 +51,7 @@
   }
   th {
     color: $primaryColor;
-    border-bottom: 1px solid $lightColor;
+    border-bottom: 1px solid $mainColorLight4;
     padding: $grid;
     font-size: 14px;
     font-weight: 300;

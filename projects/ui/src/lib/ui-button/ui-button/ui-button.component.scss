@@ -70,12 +70,12 @@
       border-color: $errorColor;
       color: #ffffff;
       &:hover {
-        background: $errorColorDark1;
-        border-color: $errorColorDark1;
-      }
-      &:active, &.checked {
         background: $errorColorDark2;
         border-color: $errorColorDark2;
+      }
+      &:active, &.checked {
+        background: $errorColorDark1;
+        border-color: $errorColorDark1;
       }
       &:disabled {
         background: $errorColorLight2;
@@ -91,12 +91,12 @@
       border-color: $successColor;
       color: #ffffff;
       &:hover {
-        background: $successColorDark1;
-        border-color: $successColorDark1;
-      }
-      &:active, &.checked {
         background: $successColorDark2;
         border-color: $successColorDark2;
+      }
+      &:active, &.checked {
+        background: $successColorDark1;
+        border-color: $successColorDark1;
       }
       &:disabled {
         background: $successColorLight2;
@@ -112,12 +112,12 @@
       border-color: $warningColor;
       color: #ffffff;
       &:hover {
-        background: $warningColorDark1;
-        border-color: $warningColorDark1;
-      }
-      &:active, &.checked {
         background: $warningColorDark2;
         border-color: $warningColorDark2;
+      }
+      &:active, &.checked {
+        background: $warningColorDark1;
+        border-color: $warningColorDark1;
       }
       &:disabled {
         background: $warningColorLight2;
@@ -133,12 +133,12 @@
       border-color: $infoColor;
       color: #ffffff;
       &:hover {
-        background: $infoColorDark1;
-        border-color: $infoColorDark1;
-      }
-      &:active, &.checked {
         background: $infoColorDark2;
         border-color: $infoColorDark2;
+      }
+      &:active, &.checked {
+        background: $infoColorDark1;
+        border-color: $infoColorDark1;
       }
       &:disabled {
         background: $infoColorLight2;

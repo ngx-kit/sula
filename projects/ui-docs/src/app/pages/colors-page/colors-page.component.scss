@@ -103,41 +103,65 @@ table {
     background: $errorColor;
   }
   .-error1 {
-    background: $errorColorLight1;
+    background: $errorColorDark1;
   }
   .-error2 {
+    background: $errorColorDark2;
+  }
+  .-error3 {
+    background: $errorColorLight1;
+  }
+  .-error4 {
     background: $errorColorLight2;
+  }
+  .-success1 {
+    background: $successColorDark1;
+  }
+  .-success2 {
+    background: $successColorDark2;
   }
   .-success {
     background: $successColor;
   }
-  .-success1 {
+  .-success3 {
     background: $successColorLight1;
   }
-  .-success2 {
+  .-success4 {
     background: $successColorLight2;
+  }
+  .-warning1 {
+    background: $warningColorDark1;
+  }
+  .-warning2 {
+    background: $warningColorDark2;
   }
   .-warning {
     background: $warningColor;
   }
-  .-warning1 {
+  .-warning3 {
     background: $warningColorLight1;
   }
-  .-warning2 {
+  .-warning4 {
     background: $warningColorLight2;
+  }
+  .-info1 {
+    background: $infoColorDark1;
+  }
+  .-info2 {
+    background: $infoColorDark2;
   }
   .-info {
     background: $infoColor;
   }
-  .-info1 {
+  .-info3 {
     background: $infoColorLight1;
   }
-  .-info2 {
+  .-info4 {
     background: $infoColorLight2;
   }
   tr {
     :first-child {
-      max-width: 70px;
+      width: 50px;
     }
     :nth-child(2) {
       display: none;
@@ -150,9 +174,6 @@ table {
 }
 
 @include mq($from: tablet) {
-  .color-box {
-    width: 25%;
-  }
 
   .color {
     height: 130px;
@@ -168,5 +189,11 @@ table {
     th, td {
       padding: $grid * 2 $grid * 3;
     }
+  }
+}
+
+@include mq($from: desktop) {
+  .color-box {
+    width: 25%;
   }
 }

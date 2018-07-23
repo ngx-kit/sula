@@ -24,7 +24,7 @@
   &.color {
     &-default {
       .header {
-        border-bottom-color: $lightColor;
+        border-bottom-color: $mainColorLight4;
       }
     }
     &-primary {
@@ -79,7 +79,7 @@
 }
 
 .footer {
-  border-top: 1px solid $lightColor;
+  border-top: 1px solid $mainColorLight4;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
