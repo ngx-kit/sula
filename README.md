@@ -29,3 +29,8 @@ Install npm modules:
 * Run `ng serve` for a dev server for the main app. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.  
 
 * Check demos in `ui` to find how to use the components. 
+
+## Links
+
+* [Sula GitHub](https://github.com/ngx-kit/sula)
+* [Ngx-kit twitter](https://twitter.com/ngxkit)
