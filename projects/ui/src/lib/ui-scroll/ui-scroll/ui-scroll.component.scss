@@ -11,7 +11,7 @@ $barSize: 6px;
 }
 
 .v-bar-wrapper {
-  background: $lightColor;
+  background: $mainColorLight1;
   bottom: 1px;
   border-radius: $borderRadius;
   opacity: 0;
@@ -22,7 +22,7 @@ $barSize: 6px;
   transition-property: opacity;
   width: $barSize;
   .bar {
-    background: $mainColorLight2;
+    background: $mainColor;
     border-radius: $borderRadius;
     cursor: pointer;
     position: absolute;
@@ -34,7 +34,7 @@ $barSize: 6px;
 }
 
 .h-bar-wrapper {
-  background: $lightColor;
+  background: $mainColorLight1;
   bottom: 1px;
   border-radius: $borderRadius;
   left: 1px;
@@ -45,7 +45,7 @@ $barSize: 6px;
   transition-property: opacity;
   height: $barSize;
   .bar {
-    background: $mainColorLight2;
+    background: $mainColor;
     border-radius: $borderRadius;
     cursor: pointer;
     position: absolute;

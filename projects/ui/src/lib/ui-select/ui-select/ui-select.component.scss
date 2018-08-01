@@ -2,11 +2,12 @@
 
 
 :host {
-  border: 1px solid $mainColorLight4;
+  background: $mainColorLight1;
+  border: 1px solid $mainColor;
   border-radius: $borderRadius;
   box-sizing: border-box;
   cursor: pointer;
-  color: $mainColor;
+  color: $whiteColor;
   display: inline-flex;
   padding: $grid $grid * 2;
   transition: $transition;

@@ -22,7 +22,7 @@ table {
 }
 
 table th {
-  color: $mainColorLight3;
+  color: $lightColor;
   padding: 8px 16px;
   text-align: left;
   white-space: nowrap;
@@ -35,7 +35,7 @@ table td {
 }
 
 table tr {
-  border-bottom: 1px solid $mainColorLight4;
+  border-bottom: 1px solid $mainColor;
 }
 
 tt, code, kbd, samp {

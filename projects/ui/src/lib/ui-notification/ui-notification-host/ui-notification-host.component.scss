@@ -29,7 +29,7 @@
 }
 
 .item {
-  background: $mainColor;
+  background: $lightColor;
   border-radius: $borderRadius;
   box-shadow: $shadow;
   color: $whiteColor;
@@ -43,24 +43,19 @@
   }
   &.color {
     &-primary {
-      background: $primaryColorLight2;
-      color: $primaryColor;
+      background: $primaryColor;
     }
     &-error {
-      background: $errorColorLight2;
-      color: $errorColor;
+      background: $errorColor;
     }
     &-success {
-      background: $successColorLight2;
-      color: $successColor;
+      background: $successColor;
     }
     &-warning {
-      background: $warningColorLight2;
-      color: $warningColor;
+      background: $warningColor;
     }
     &-info {
-      background: $infoColorLight2;
-      color: $infoColor;
+      background: $infoColor;
     }
   }
 }

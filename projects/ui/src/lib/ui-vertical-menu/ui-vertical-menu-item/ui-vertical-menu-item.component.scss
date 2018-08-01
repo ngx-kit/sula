@@ -1,8 +1,7 @@
 @import "params";
 
-
 :host {
-  color: $mainColor;
+  color: $whiteColor;
   font-weight: 600;
   cursor: pointer;
   display: block;
@@ -19,14 +18,14 @@
     }
   }
   &:hover{
-    background: $lightColor;
+    background: $mainColorLight3;
     border-radius: $borderRadius;
     transition: all $transitionSlow linear;
   }
 }
 
 :host-context(ui-vertical-menu-group) {
-  color: $mainColorLight1;
+  color: $whiteColor;
   font-weight: 400;
   margin: $grid / 2 0;
   padding: $grid $grid * 2;

@@ -1,11 +1,12 @@
 @import "params";
 
 :host {
-  border: 1px solid $mainColorLight4;
+  background: $mainColorLight1;
+  border: 1px solid $mainColor;
   border-radius: $borderRadius;
   box-sizing: border-box;
   cursor: pointer;
-  color: $mainColor;
+  color: $whiteColor;
   display: inline-flex;
   padding: $grid $grid * 2;
   transition: all .3s;
@@ -27,15 +28,17 @@
 }
 
 .pointer {
-  color: $mainColor;
+  color: $whiteColor;
   cursor: default;
 }
 
 .popup {
-  background: #ffffff;
+  background: $mainColorLight1;
+  border: 1px solid $mainColor;
   border-radius:$borderRadius;
   box-shadow: $shadow;
   box-sizing: border-box;
+  color: $whiteColor;
   margin-top: $grid / 2;
   width: 100%;
 }
@@ -45,9 +48,9 @@
   display: block;
   padding: $grid $grid * 2;
   &:hover {
-    background: $lightColor;
+    background: $mainColorLight3;
   }
   &:active{
-   color: $primaryColor;
+   background: $primaryColor;
   }
 }

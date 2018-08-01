@@ -47,7 +47,7 @@
     &-primary {
       background: $primaryColor;
       border-color: $primaryColor;
-      color: #ffffff;
+      color: $whiteColor;
       &:hover {
         background: $primaryColorDark2;
         border-color: $primaryColorDark2;
@@ -57,7 +57,7 @@
         border-color: $primaryColorDark1;
       }
       &:disabled {
-        background: $primaryColorLight2;
+        background: $primaryColorLight1;
         border-color: $primaryColorLight2;
         pointer-events: none;
       }
@@ -68,7 +68,7 @@
     &-error {
       background: $errorColor;
       border-color: $errorColor;
-      color: #ffffff;
+      color: $whiteColor;
       &:hover {
         background: $errorColorDark2;
         border-color: $errorColorDark2;
@@ -78,7 +78,7 @@
         border-color: $errorColorDark1;
       }
       &:disabled {
-        background: $errorColorLight2;
+        background: $errorColorLight1;
         border-color: $errorColorLight2;
         pointer-events: none;
       }
@@ -89,7 +89,7 @@
     &-success {
       background: $successColor;
       border-color: $successColor;
-      color: #ffffff;
+      color: $whiteColor;
       &:hover {
         background: $successColorDark2;
         border-color: $successColorDark2;
@@ -99,7 +99,7 @@
         border-color: $successColorDark1;
       }
       &:disabled {
-        background: $successColorLight2;
+        background: $successColorLight1;
         border-color: $successColorLight2;
         pointer-events: none;
       }
@@ -110,7 +110,7 @@
     &-warning {
       background: $warningColor;
       border-color: $warningColor;
-      color: #ffffff;
+      color: $whiteColor;
       &:hover {
         background: $warningColorDark2;
         border-color: $warningColorDark2;
@@ -120,7 +120,7 @@
         border-color: $warningColorDark1;
       }
       &:disabled {
-        background: $warningColorLight2;
+        background: $warningColorLight1;
         border-color: $warningColorLight2;
         pointer-events: none;
       }
@@ -131,7 +131,7 @@
     &-info {
       background: $infoColor;
       border-color: $infoColor;
-      color: #ffffff;
+      color: $whiteColor;
       &:hover {
         background: $infoColorDark2;
         border-color: $infoColorDark2;
@@ -141,7 +141,7 @@
         border-color: $infoColorDark1;
       }
       &:disabled {
-        background: $infoColorLight2;
+        background: $infoColorLight1;
         border-color: $infoColorLight2;
         pointer-events: none;
       }

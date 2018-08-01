@@ -2,13 +2,13 @@
 @import "mq";
 
 .h-scroll {
-  border: 1px solid #d7d7d9;
+  border: 1px solid $mainColor;
   height: 200px;
   overflow: hidden;
 }
 
 .v-scroll {
-  border: 1px solid #d7d7d9;
+  border: 1px solid $mainColor;
   width: 250px;
 }
 

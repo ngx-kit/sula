@@ -1,10 +1,11 @@
 @import "params";
 
 :host {
+  background: $mainColorLight1;
   display: block;
   margin: $grid 0;
   border-radius: $borderRadius;
-  border: 1px solid $mainColorLight4;
+  border: 1px solid $mainColor;
   transition: $transition;
   &:hover {
     box-shadow: $shadow;

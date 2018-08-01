@@ -1,7 +1,8 @@
 @import "params";
 
 .dropdown {
-  background: #ffffff;
+  background: transparent;
+  border: 1px solid $mainColor;
   border-radius:$borderRadius;
   box-shadow: $shadow;
   box-sizing: border-box;

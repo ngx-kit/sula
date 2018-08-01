@@ -13,50 +13,50 @@
   &.color {
     &-default {
       background: transparent;
-      border-color: $primaryColor;
-      color: $primaryColor;
+      border-color: $lightColor;
+      color: $whiteColor;
       .close{
-        color: $primaryColor;
+        color: $whiteColor;
       }
     }
     &-primary {
-      background: $primaryColorLight2;
-      border-color: $primaryColorLight1;
-      color: $primaryColor;
+      background: $primaryColorDark1;
+      border-color: $primaryColorDark2;
+      color: $whiteColor;
       .close{
-        color: $primaryColor;
+        color: $whiteColor;
       }
     }
     &-error {
-      background: $errorColorLight2;
-      border-color: $errorColorLight1;
-      color: $errorColor;
+      background: $errorColorDark1;
+      border-color: $errorColorDark2;
+      color: $whiteColor;
       .close{
-        color: $errorColor;
+        color: $whiteColor;
       }
     }
     &-success {
-      background: $successColorLight2;
-      border-color: $successColorLight1;
-      color: $successColor;
+      background: $successColorDark1;
+      border-color: $successColorDark2;
+      color: $whiteColor;
       .close{
-        color: $successColor;
+        color: $whiteColor;
       }
     }
     &-warning {
-      background: $warningColorLight2;
-      border-color: $warningColorLight1;
-      color: $warningColor;
+      background: $warningColorDark1;
+      border-color: $warningColorDark2;
+      color: $whiteColor;
       .close{
-        color: $warningColor;
+        color: $whiteColor;
       }
     }
     &-info {
-      background: $infoColorLight2;
-      border-color: $infoColorLight1;
-      color: $infoColor;
+      background: $infoColorDark1;
+      border-color: $infoColorDark2;
+      color: $whiteColor;
       .close{
-        color: $infoColor;
+        color: $whiteColor;
       }
     }
   }

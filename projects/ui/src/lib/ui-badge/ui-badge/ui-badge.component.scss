@@ -7,34 +7,34 @@
   text-align: center;
   &.color {
     &-default {
-      background: none;
-      color: $primaryColor;
-      border: 1px solid $primaryColor;
+      background: transparent;
+      color: $whiteColor;
+      border: 1px solid $lightColor;
     }
     &-primary {
       background: $primaryColor;
       border-color: $primaryColor;
-      color: #ffffff;
+      color: $whiteColor;
     }
     &-error {
       background: $errorColor;
       border-color: $errorColor;
-      color: #ffffff;
+      color: $whiteColor;
     }
     &-success {
       background: $successColor;
       border-color: $successColor;
-      color: #ffffff;
+      color: $whiteColor;
     }
     &-warning {
       background: $warningColor;
       border-color: $warningColor;
-      color: #ffffff;
+      color: $whiteColor;
     }
     &-info {
       background: $infoColor;
       border-color: $infoColor;
-      color: #ffffff;
+      color: $whiteColor;
       &:hover {
         background: $infoColorDark2;
         border-color: $infoColorDark2;

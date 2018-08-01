@@ -3,11 +3,11 @@
 :host {
   display: block;
   overflow: hidden;
-  color: $mainColorLight3;
+  color: $lightColor;
 }
 
 .content {
-  border-top: 1px solid $mainColorLight4;
+  border-top: 1px solid $mainColor;
   margin: 0 $grid * 3;
   padding: $grid * 1.5 0;
 }

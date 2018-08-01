@@ -1,9 +1,10 @@
 @import "params";
 
 :host {
-  background: #ffffff;
+  background: $mainColorLight1;
   border: 0;
   box-sizing: border-box;
+  color: $whiteColor;
   cursor: pointer;
   display: block;
   margin: 0;
@@ -12,9 +13,9 @@
   text-align: left;
   width: 100%;
   &:hover {
-    background: $lightColor;
+    background: $mainColorLight3;
   }
   &:active{
-    color: $primaryColor;
+    background: $primaryColor;
   }
 }

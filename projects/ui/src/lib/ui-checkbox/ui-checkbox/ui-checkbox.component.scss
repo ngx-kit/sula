@@ -22,7 +22,8 @@ $borderWidth: 1px;
     &-default {
       &.-checked {
         &::before {
-          border-color: $mainColorLight4;
+          background: $whiteColor;
+          border-color: $mainColor;
         }
         &::after {
           border-color: $mainColor;
@@ -30,8 +31,8 @@ $borderWidth: 1px;
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: $mainColorLight4;
+          border-color: $mainColorLight4;
         }
         &::after {
           border-color: $mainColor;
@@ -39,7 +40,7 @@ $borderWidth: 1px;
       }
 
       &::before {
-        border: $borderWidth solid $mainColorLight4;
+        border: $borderWidth solid $lightColor;
       }
     }
 
@@ -54,8 +55,8 @@ $borderWidth: 1px;
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: $mainColorLight4;
+          border-color: $mainColorLight4;
         }
         &::after {
           border-color: $primaryColor;
@@ -77,8 +78,8 @@ $borderWidth: 1px;
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: $mainColorLight4;
+          border-color: $mainColorLight4;
         }
         &::after {
           border-color: $errorColor;
@@ -100,8 +101,8 @@ $borderWidth: 1px;
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: $mainColorLight4;
+          border-color: $mainColorLight4;
         }
         &::after {
           border-color: $successColor;
@@ -123,8 +124,8 @@ $borderWidth: 1px;
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: $mainColorLight4;
+          border-color: $mainColorLight4;
         }
         &::after {
           border-color: $warningColor;
@@ -146,8 +147,8 @@ $borderWidth: 1px;
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: $mainColorLight4;
+          border-color: $mainColorLight4;
         }
         &::after {
           border-color: $infoColor;
@@ -196,7 +197,7 @@ $borderWidth: 1px;
   }
 
   &::before {
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: $borderRadius;
     box-shadow: none;
     content: "";

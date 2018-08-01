@@ -1,7 +1,8 @@
 @import "params";
 
 .options {
-  background: #ffffff;
+  background: $mainColorLight1;
+  border: 1px solid $mainColor;
   border-radius: $borderRadius;
   box-shadow: $shadow;
   box-sizing: border-box;
@@ -17,16 +18,17 @@ button {
   background: transparent;
   border: 0;
   cursor: pointer;
+  color: $whiteColor;
   display: block;
   outline: none;
   padding: $grid;
   text-align: left;
   width: 100%;
   &:hover {
-    background: $lightColor;
+    background: $mainColorLight3;
   }
   &.-selected {
     background: $primaryColor;
-    color: #ffffff;
+    color: $whiteColor;
   }
 }

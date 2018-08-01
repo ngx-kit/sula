@@ -1,7 +1,7 @@
 @import "params";
 
 .drawer {
-  background: #ffffff;
+  background: $mainColorLight1;
   box-shadow: $shadow;
   position: fixed;
   &.position {

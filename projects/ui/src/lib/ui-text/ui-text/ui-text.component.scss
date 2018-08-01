@@ -1,10 +1,11 @@
 @import "params";
 
 :host {
-  border: 1px solid $mainColorLight4;
+  background: $mainColorLight1;
+  border: 1px solid $mainColor;
   border-radius: $borderRadius;
   box-sizing: border-box;
-  color: $mainColor;
+  color: $whiteColor;
   padding: $grid $grid * 2;
   transition: $transition;
   width: 100%;

@@ -13,7 +13,8 @@
 }
 
 .dialog {
-  background: #ffffff;
+  background: $mainColorLight1;
+  border: 1px solid $mainColor;
   border-radius: $borderRadius;
   box-shadow: $shadow;
   max-height: 90%;
@@ -22,64 +23,50 @@
   display: flex;
   flex-direction: column;
   &.color {
-    &-default {
-      .header {
-        border-bottom-color: $mainColorLight4;
-      }
-    }
     &-primary {
       .header {
-        background: $primaryColorLight2;
-        border-bottom-color: $primaryColorLight1;
-        color: $primaryColor;
+        background: $primaryColor;
       }
     }
     &-error {
       .header {
-        background: $errorColorLight2;
-        border-bottom-color: $errorColorLight1;
-        color: $errorColor;
+        background: $errorColor;
       }
     }
     &-success {
       .header {
-        background: $successColorLight2;
-        border-bottom-color: $successColorLight1;
-        color: $successColor;
+        background: $successColor;
       }
     }
     &-warning {
       .header {
-        background: $warningColorLight2;
-        border-bottom-color: $warningColorLight1;
-        color: $warningColor;
+        background: $warningColor;
       }
     }
     &-info {
       .header {
-        background: $infoColorLight2;
-        border-bottom-color: $infoColorLight1;
-        color: $infoColor;
+        background: $infoColor;
       }
     }
   }
 }
 
 .header {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid $mainColor;
   border-radius: $borderRadius $borderRadius 0 0;
   font-weight: 700;
   padding: $grid * 2;
 }
 
 .body {
+  color: $lightColor;
   flex-grow: 1;
   overflow: auto;
   padding: 16px;
 }
 
 .footer {
-  border-top: 1px solid $mainColorLight4;
+  border-top: 1px solid $mainColor;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

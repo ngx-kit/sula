@@ -1,6 +1,7 @@
 @import "params";
 
 :host {
+  color: $lightColor;
   display: block;
   padding: $grid * 2;
 }

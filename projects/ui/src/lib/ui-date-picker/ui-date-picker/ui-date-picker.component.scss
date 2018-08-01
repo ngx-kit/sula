@@ -7,6 +7,9 @@
 }
 
 :host {
+  background: $mainColorLight1;
+  border: 1px solid $mainColor;
+  border-radius: $borderRadius;
   display: block;
 }
 
@@ -14,10 +17,10 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  color: $mainColor;
+  color: $whiteColor;
   font-weight: 600;
   padding: $grid 0;
-  border-bottom: 1px solid $mainColorLight4;
+  border-bottom: 1px solid $mainColor;
   .title {
     flex-grow: 1;
     text-align: center;
@@ -26,6 +29,7 @@
     background: transparent;
     border: 0;
     cursor: pointer;
+    color: $whiteColor;
     padding: $grid;
     &:focus {
       @extend .focus;
@@ -51,7 +55,7 @@
   }
   th {
     color: $primaryColor;
-    border-bottom: 1px solid $mainColorLight4;
+    border-bottom: 1px solid $mainColor;
     padding: $grid;
     font-size: 14px;
     font-weight: 300;
@@ -70,13 +74,13 @@
   text-align: center;
   width: 100%;
   &:hover {
-    background: $primaryColorLight2;
-    color: #ffffff;
+    background: $mainColorLight3;
+    color: $whiteColor;
   }
   &.outside {
-    color: $mainColorLight4;
+    color: $mainColorLight3;
     &:hover {
-    color: #ffffff;
+    color: $whiteColor;
     }
   }
   &.focus {
@@ -85,7 +89,7 @@
   &.active {
     background: $primaryColor;
     box-shadow: $shadow;
-    color: #ffffff;
+    color: $whiteColor;
   }
   &:focus {
     @extend .focus;

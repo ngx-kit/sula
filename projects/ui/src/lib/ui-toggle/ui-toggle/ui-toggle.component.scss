@@ -21,8 +21,8 @@ $borderWidth: 1px;
     cursor: not-allowed;
   }
   &::before {
-    background-color: $whiteColor;
-    border: $borderWidth solid $mainColorLight4;
+    background-color: transparent;
+    border: $borderWidth solid $lightColor;
     border-radius: $boxSize;
     box-shadow: none;
     content: "";
@@ -81,7 +81,7 @@ $borderWidth: 1px;
         }
       }
       &::before {
-        border: $borderWidth solid $mainColorLight4;
+        border: $borderWidth solid $lightColor;
       }
     }
 

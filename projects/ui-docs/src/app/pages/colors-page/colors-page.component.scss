@@ -23,7 +23,7 @@
 }
 
 .color {
-  border: 1px solid $mainColorLight4;
+  border: 1px solid $mainColor;
   border-radius: $grid/2;
   box-sizing: border-box;
   color: $whiteColor;
@@ -168,7 +168,7 @@ table {
     }
   }
   th, td {
-    border-color: $mainColorLight4;
+    border-color: $mainColor;
     padding: $grid;
   }
 }

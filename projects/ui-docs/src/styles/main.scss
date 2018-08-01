@@ -14,7 +14,7 @@ body {
   font-family: 'Source Sans Pro', Arial;
   font-size: 16px;
   line-height: 1.35rem;
-  color: $mainColor;
+  color: $whiteColor;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
@@ -23,6 +23,7 @@ body {
 }
 
 button, input, textarea, select {
+  color: $whiteColor;
   font-family: 'Source Sans Pro', Arial;
 }
 
@@ -34,7 +35,7 @@ table {
 }
 
 table th {
-  color: $mainColorLight3;
+  color: $lightColor;
   padding: 8px 16px;
   text-align: left;
   white-space: nowrap;
@@ -47,7 +48,7 @@ table td {
 }
 
 table tr {
-  border-bottom: 1px solid $mainColorLight4;
+  border-bottom: 1px solid $mainColor;
 }
 
 .kit-overlay-container {
