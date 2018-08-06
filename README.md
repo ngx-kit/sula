@@ -34,7 +34,7 @@ Install npm modules:
 
 ## Dark theme
 
-[Dark theme branch](./tree/dark-theme)
+[Dark theme branch](https://github.com/ngx-kit/sula/tree/dark-theme)
 
 ## Links
 
