@@ -2,6 +2,8 @@
 
 Starter-pack with simple style-guide, icons and a library of [Angular](https://angular.io) components based on [ngx-kit](https://ngx-kit.com).
 
+Dark theme branch.
+
 ![](./projects/ui-docs/src/assets/sula-preview-dark.png)
 
 ## Demo
@@ -12,7 +14,7 @@ Starter-pack with simple style-guide, icons and a library of [Angular](https://a
 
 Clone the repo:
 
-`git clone https://github.com/ngx-kit/sula.git`
+`git clone -b dark-theme https://github.com/ngx-kit/sula.git`
 
 Install npm modules:
 
