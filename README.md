@@ -32,6 +32,10 @@ Install npm modules:
 
 * Check demos in `ui` to find how to use the components. 
 
+## Dark theme
+
+[Dark theme branch](./tree/dark-theme)
+
 ## Links
 
 * [Sula GitHub](https://github.com/ngx-kit/sula)
