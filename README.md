@@ -2,6 +2,8 @@
 
 Starter-pack with simple style-guide, icons and a library of [Angular](https://angular.io) components based on [ngx-kit](https://ngx-kit.com).
 
+![](./sula-preview.png)
+
 ## Demo
 
 [Sula ui-docs live](https://sula.ngx-kit.com).
