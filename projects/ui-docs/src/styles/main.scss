@@ -60,6 +60,37 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1em;
 }
 
+button, input, textarea, select {
+  font-family: var(--sansSerif);
+}
+
+code, pre {
+  border-radius: 3px;
+  font-family: var(--sansSerif);
+  font-size: 0.85em;
+}
+
+pre {
+  background: #f8f8f8;
+}
+
+code {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0.2em 0.4em;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  font-size: 1em;
+}
+
+pre {
+  padding: 16px;
+  overflow: auto;
+}
+
 //@include mq(var(--from): tablet) {
 //  html {
 //    height: 100%;

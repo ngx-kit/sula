@@ -1,19 +1,9 @@
+[![npm version](https://badge.fury.io/js/%40ngx-kit%2Fsula.svg)](https://www.npmjs.com/@ngx-kit/sula)
+
 # Sula
 
-Angular 6 UI components library.
+Set of components for Angular.
 
-Based on [ngx-kit](https://ngx-kit.com).
+Browse [Sula demo & docs](https://sula.ngx-kit.com).
 
 ![](./projects/ui-docs/src/assets/sula-preview.png)
-
-## Demo
-
-[Sula ui-docs live](https://sula.ngx-kit.com)
-
-## Installation
-
-Add Sula via Angular CLI:
-
-```
-ng add @ngx-kit/sula
-```

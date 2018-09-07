@@ -5,11 +5,37 @@ apiPriority: 1
 
 # Sula — Angular UI Components
 
+Set of components for Angular.
+
+Based on [ngx-kit](https://ngx-kit.com).
+
+![](/assets/sula-preview.png)
+
 
 ## Installation
 
+Add Sula to your project via Angular CLI:
+
 ```
 ng add @ngx-kit/sula
+```
+
+
+## Usage
+
+Import the `NgModule` for each component you want to use.
+
+`UiButtonModule` for example:
+
+```
+import {UiButtonModule} from '@ngx-kit/sula';
+
+@NgModule({
+  ...
+  imports: [UiButtonModule],
+  ...
+})
+export class SomeModule { }
 ```
 
 
