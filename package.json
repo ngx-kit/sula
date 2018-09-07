@@ -4,11 +4,13 @@
   "scripts": {
     "ui-docs:serve": "ng run ui-docs:serve",
     "ui-docs:build": "ng run ui-docs:build:production",
-    "ui:build": "npm run ui:build:packgr && npm run ui:build:release && npm run ui:build:publish",
+    "ui:build": "npm run ui:build:packgr && npm run ui:build:release && npm run schematics:build && npm run ui:build:publish",
     "ui:build:packgr": "ng run ui:build",
     "ui:build:release": "node ./projects/ui/release.js",
     "ui:build:publish": "publish-build.sh",
-    "ui:docgen": "docgen -p ./projects/ui/src -o ./projects/ui-docs/src/content/ui.json"
+    "ui:docgen": "docgen -p ./projects/ui/src -o ./projects/ui-docs/src/content/ui.json",
+    "ui:publish": "npm publish ./tmp/sula-builds --access=public",
+    "schematics:build": "tsc -p ./projects/schematics/tsconfig.json && node ./projects/schematics/release"
   },
   "private": true,
   "dependencies": {

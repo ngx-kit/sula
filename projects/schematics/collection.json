@@ -1,0 +1,11 @@
+{
+  "name": "ngx-kit-sula",
+  "version": "0.1",
+  "schematics": {
+    "ng-add": {
+      "description": "add sula",
+      "factory": "./ng-add",
+      "schema": "./ng-add/schema.json"
+    }
+  }
+}
