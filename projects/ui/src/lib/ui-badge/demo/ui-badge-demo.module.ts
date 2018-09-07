@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 import { UiBadgeModule } from '../ui-badge.module';
 import { UiBadgeDemoComponent } from './ui-badge-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
     UiBadgeModule,
   ],
   declarations: [UiBadgeDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [UiBadgeDemoComponent],
 })
 export class UiBadgeDemoModule {
 }

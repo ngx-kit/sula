@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * @demo
+ */
 @Component({
   templateUrl: './ui-tabs-demo.component.html',
   styleUrls: ['./ui-tabs-demo.component.scss'],

@@ -1,8 +1,22 @@
 {
-  "name": "ui",
-  "version": "0.0.1",
+  "name": "@ngx-kit/sula",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Sula — Angular UI components",
+  "author": {
+    "name": "Sasha Novyk",
+    "email": "alex@nvx.me",
+    "url": "https://nvx.me/"
+  },
+  "license": "MIT",
+  "homepage": "https://sula.ngx-kit.com",
+  "repository": {
+    "url": "https://github.com/ngx-kit/sula.git",
+    "type": "git"
+  },
+  "schematics": "./schematics/collection.json",
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+    "@angular/core": "^6.0.0",
+    "@ngx-kit/core": "0.0.0-KIT-PLACEHOLDER",
+    "typescript": "~2.7.2"
   }
 }

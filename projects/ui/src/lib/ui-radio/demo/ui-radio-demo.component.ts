@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * @demo
+ */
 @Component({
   templateUrl: './ui-radio-demo.component.html',
   styleUrls: ['./ui-radio-demo.component.scss'],

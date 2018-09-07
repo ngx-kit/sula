@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { UiSelectModule } from '../ui-select.module';
 import { UiSelectDemoComponent } from './ui-select-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,8 +14,9 @@ import { UiSelectDemoComponent } from './ui-select-demo.component';
     UiSelectModule,
   ],
   declarations: [UiSelectDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiSelectDemoComponent,
+  ],
 })
 export class UiSelectDemoModule {
 }

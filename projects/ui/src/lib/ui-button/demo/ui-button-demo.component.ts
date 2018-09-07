@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+/**
+ * @demo
+ */
 @Component({
   templateUrl: './ui-button-demo.component.html',
   styleUrls: ['./ui-button-demo.component.scss'],

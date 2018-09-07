@@ -4,6 +4,9 @@ import { UiButtonModule } from 'ui';
 import { UiDropdownModule } from '../ui-dropdown.module';
 import { UiDropdownDemoComponent } from './ui-dropdown-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,6 +14,9 @@ import { UiDropdownDemoComponent } from './ui-dropdown-demo.component';
     UiButtonModule,
   ],
   declarations: [
+    UiDropdownDemoComponent,
+  ],
+  entryComponents: [
     UiDropdownDemoComponent,
   ],
 })

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { UiNotificationPosition } from '../meta';
 import { UiNotificationService } from '../ui-notification.service';
 
+/**
+ * @demo
+ */
 @Component({
   templateUrl: './ui-notification-demo.component.html',
   styleUrls: ['./ui-notification-demo.component.scss'],

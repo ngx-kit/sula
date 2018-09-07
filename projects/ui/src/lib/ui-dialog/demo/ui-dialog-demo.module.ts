@@ -1,11 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { UiDialogModule } from '../ui-dialog.module';
-import { UiDialogDemoComponent } from './ui-dialog-demo.component';
 import { UiButtonModule } from 'ui';
 import { UiTextModule } from '../../ui-text/ui-text.module';
+import { UiDialogModule } from '../ui-dialog.module';
+import { UiDialogDemoComponent } from './ui-dialog-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +18,9 @@ import { UiTextModule } from '../../ui-text/ui-text.module';
     UiTextModule,
   ],
   declarations: [
+    UiDialogDemoComponent,
+  ],
+  entryComponents: [
     UiDialogDemoComponent,
   ],
 })

@@ -1,0 +1,7 @@
+<ng-container *ngComponentOutlet="class"></ng-container>
+
+<div *ngFor="let source of sources">
+  <h4>{{ source.fileName }}</h4>
+  <pre class="code-src"><code [ngClass]="[getLangByExt(source.type), 'language-' + getLangByExt(source.type), 'hljs']"
+                              [innerHtml]="code[source.fileName]"></code></pre>
+</div>

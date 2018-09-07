@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 import { UiTabsModule } from '../ui-tabs.module';
 import { UiTabsDemoComponent } from './ui-tabs-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
     UiTabsModule,
   ],
   declarations: [UiTabsDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiTabsDemoComponent,
+  ],
 })
 export class UiTabsDemoModule {
 }

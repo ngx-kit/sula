@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * @demo
+ */
 @Component({
   selector: 'ui-ui-modal-demo',
   templateUrl: './ui-modal-demo.component.html',

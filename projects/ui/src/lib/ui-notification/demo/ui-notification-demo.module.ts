@@ -1,9 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { UiButtonModule } from 'ui';
 import { UiNotificationModule } from '../ui-notification.module';
 import { UiNotificationDemoComponent } from './ui-notification-demo.component';
-import { UiButtonModule } from 'ui';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,8 +14,9 @@ import { UiButtonModule } from 'ui';
     UiButtonModule,
   ],
   declarations: [UiNotificationDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiNotificationDemoComponent,
+  ],
 })
 export class UiNotificationDemoModule {
 }

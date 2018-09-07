@@ -1,9 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { UiButtonModule } from 'ui';
 import { UiTooltipModule } from '../ui-tooltip.module';
 import { UiTooltipDemoComponent } from './ui-tooltip-demo.component';
-import { UiButtonModule } from 'ui';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,8 +14,9 @@ import { UiButtonModule } from 'ui';
     UiButtonModule,
   ],
   declarations: [UiTooltipDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiTooltipDemoComponent,
+  ],
 })
 export class UiTooltipDemoModule {
 }

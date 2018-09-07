@@ -3,12 +3,18 @@ import { NgModule } from '@angular/core';
 import { UiAccordionModule } from '../ui-accordion.module';
 import { UiAccordionDemoComponent } from './ui-accordion-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
     UiAccordionModule,
   ],
   declarations: [
+    UiAccordionDemoComponent,
+  ],
+  entryComponents: [
     UiAccordionDemoComponent,
   ],
 })

@@ -8,6 +8,9 @@ import { UiTextModule } from '../../ui-text/ui-text.module';
 import { UiFormModule } from '../ui-form.module';
 import { UiFormDemoComponent } from './ui-form-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -21,8 +24,9 @@ import { UiFormDemoComponent } from './ui-form-demo.component';
     UiButtonModule,
   ],
   declarations: [UiFormDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiFormDemoComponent,
+  ],
 })
 export class UiFormDemoModule {
 }

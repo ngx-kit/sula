@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { UiSliderModule } from '../ui-slider.module';
 import { UiSliderDemoComponent } from './ui-slider-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,8 +14,9 @@ import { UiSliderDemoComponent } from './ui-slider-demo.component';
     UiSliderModule,
   ],
   declarations: [UiSliderDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiSliderDemoComponent,
+  ],
 })
 export class UiSliderDemoModule {
 }

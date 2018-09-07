@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+/**
+ * @demo
+ */
 @Component({
   templateUrl: './ui-checkbox-demo.component.html',
   styleUrls: ['./ui-checkbox-demo.component.scss']

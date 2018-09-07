@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
+/**
+ * @demo
+ */
 @Component({
   templateUrl: './ui-form-demo.component.html',
   styleUrls: ['./ui-form-demo.component.scss'],

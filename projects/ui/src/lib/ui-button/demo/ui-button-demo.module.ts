@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { UiButtonModule } from 'ui';
 import { UiButtonDemoComponent } from './ui-button-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,6 +14,9 @@ import { UiButtonDemoComponent } from './ui-button-demo.component';
     UiButtonModule,
   ],
   declarations: [
+    UiButtonDemoComponent,
+  ],
+  entryComponents: [
     UiButtonDemoComponent,
   ],
 })

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * @demo
+ */
 @Component({
   selector: 'ui-ui-slider-demo',
   templateUrl: './ui-slider-demo.component.html',

@@ -5,53 +5,13 @@
   <kit-icon name="close"></kit-icon>
 </button>
 <ui-scroll>
-  <ui-vertical-menu [multiple]="true">
-    <a uiVerticalMenuItem
-       routerLinkActive="-active"
-       [routerLinkActiveOptions]="{exact: true}"
-       routerLink="/">
-      Introduction
-    </a>
-    <ui-vertical-menu-group activeRoute="/style/">
-      Style
-      <ui-vertical-menu-sub *kitCollapse>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/style/colors">Colors</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/style/typography">Typography</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/style/iconography">Iconography</a>
-      </ui-vertical-menu-sub>
-    </ui-vertical-menu-group>
-    <ui-vertical-menu-group activeRoute="/component/">
-      Components
-      <ui-vertical-menu-sub *kitCollapse>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-accordion">Accordion</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-alert">Alert</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-autocomplete">Autocomplete</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-badge">Badge</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-breadcrumbs">Breadcrumbs</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-button">Button</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-checkbox">Checkbox</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-custom-select">Custom-select</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-date-picker">Date-picker</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-dialog">Dialog</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-drawer">Drawer</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-dropdown">Dropdown</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-file">File</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-form">Form</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-loading-bar">Loading-bar</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-modal">Modal</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-notification">Notification</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-popup">Popup</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-rating">Rating</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-radio">Radio</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-scroll">Scroll</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-select">Select</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-slider">Slider</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-tabs">Tabs</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-text">Text</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-toggle">Toggle</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-tooltip">Tooltip</a>
-        <a uiVerticalMenuItem routerLinkActive="-active" routerLink="/component/ui-vertical-menu">Vertical-menu</a>
-      </ui-vertical-menu-sub>
-    </ui-vertical-menu-group>
-  </ui-vertical-menu>
+  <ul>
+    <li *ngFor="let module of modules">
+      <a uiVerticalMenuItem
+         routerLinkActive="-active"
+         [routerLink]="['module', module]">
+        {{ module }}
+      </a>
+    </li>
+  </ul>
 </ui-scroll>

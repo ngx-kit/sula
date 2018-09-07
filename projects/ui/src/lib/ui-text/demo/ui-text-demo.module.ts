@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { UiTextModule } from '../ui-text.module';
 import { UiTextDemoComponent } from './ui-text-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,8 +14,9 @@ import { UiTextDemoComponent } from './ui-text-demo.component';
     UiTextModule,
   ],
   declarations: [UiTextDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiTextDemoComponent,
+  ],
 })
 export class UiTextDemoModule {
 }

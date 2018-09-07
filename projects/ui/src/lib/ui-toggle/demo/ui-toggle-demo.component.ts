@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * @demo
+ */
 @Component({
   templateUrl: './ui-toggle-demo.component.html',
   styleUrls: ['./ui-toggle-demo.component.scss'],

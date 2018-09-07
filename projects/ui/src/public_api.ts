@@ -1,5 +1,3 @@
-export * from './lib/ui.module';
-export * from './lib/icons';
 export * from './lib/ui-accordion/ui-accordion';
 export * from './lib/ui-alert/ui-alert';
 export * from './lib/ui-badge/ui-badge';

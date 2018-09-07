@@ -1,9 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { UiButtonModule } from 'ui';
 import { UiPopupModule } from '../ui-popup.module';
 import { UiPopupDemoComponent } from './ui-popup-demo.component';
-import { UiButtonModule } from 'ui';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,6 +14,9 @@ import { UiButtonModule } from 'ui';
     UiButtonModule,
   ],
   declarations: [
+    UiPopupDemoComponent,
+  ],
+  entryComponents: [
     UiPopupDemoComponent,
   ],
 })

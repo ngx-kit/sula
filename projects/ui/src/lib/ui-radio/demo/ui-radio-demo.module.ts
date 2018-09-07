@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { UiRadioModule } from '../ui-radio.module';
 import { UiRadioDemoComponent } from './ui-radio-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,8 +14,9 @@ import { UiRadioDemoComponent } from './ui-radio-demo.component';
     UiRadioModule,
   ],
   declarations: [UiRadioDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiRadioDemoComponent,
+  ],
 })
 export class UiRadioDemoModule {
 }

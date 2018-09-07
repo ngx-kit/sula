@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { UiToggleModule } from '../ui-toggle.module';
 import { UiToggleDemoComponent } from './ui-toggle-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,8 +14,9 @@ import { UiToggleDemoComponent } from './ui-toggle-demo.component';
     UiToggleModule,
   ],
   declarations: [UiToggleDemoComponent],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiToggleDemoComponent,
+  ],
 })
 export class UiToggleDemoModule {
 }

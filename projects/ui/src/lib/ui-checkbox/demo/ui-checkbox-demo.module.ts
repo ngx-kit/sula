@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { UiCheckboxModule } from '../ui-checkbox.module';
 import { UiCheckboxDemoComponent } from './ui-checkbox-demo.component';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -13,8 +16,9 @@ import { UiCheckboxDemoComponent } from './ui-checkbox-demo.component';
   declarations: [
     UiCheckboxDemoComponent,
   ],
-  exports: [],
-  providers: [],
+  entryComponents: [
+    UiCheckboxDemoComponent,
+  ],
 })
 export class UiCheckboxDemoModule {
 }

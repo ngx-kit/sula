@@ -1,9 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { UiButtonModule } from 'ui';
 import { UiDrawerModule } from '../ui-drawer.module';
 import { UiDrawerDemoComponent } from './ui-drawer-demo.component';
-import { UiButtonModule } from 'ui';
 
+/**
+ * @demo
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -11,6 +14,9 @@ import { UiButtonModule } from 'ui';
     UiButtonModule,
   ],
   declarations: [
+    UiDrawerDemoComponent,
+  ],
+  entryComponents: [
     UiDrawerDemoComponent,
   ],
 })

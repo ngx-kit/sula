@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * @demo
+ */
 @Component({
   selector: 'ui-ui-tooltip-demo',
   templateUrl: './ui-tooltip-demo.component.html',
