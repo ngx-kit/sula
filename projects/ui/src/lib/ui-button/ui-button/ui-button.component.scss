@@ -1,10 +1,11 @@
-@import "params";
-
 :host {
+  background: var(--background);
   background-image: none;
   border: 1px solid;
-  border-radius: $borderRadius;
+  border-color: var(--borderColor);
+  border-radius: var(--borderRadius);
   box-sizing: border-box;
+  color: var(--color);
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
@@ -14,152 +15,151 @@
   outline: none;
   text-align: center;
   text-decoration: none;
-  transition-duration: $transition;
+  transition-duration: var(--transition);
   transition-property: background, box-shadow;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   &:hover {
-    box-shadow: $shadow;
+    background: var(--xHoverBackground, var(--hoverBackground));
+    box-shadow: var(--shadow);
+    border-color: var(--hoverBorderColor);
+    color: var(--hoverColor);
+  }
+  &:active, &.checked {
+    background: var(--activeBackground);
+    border-color: var(--activeBorderColor);
+    color: var(--activeColor);
+  }
+  &:disabled {
+    background: var(--disabledBackground);
+    border-color: var(--disabledBorderColor);
+    color: var(--disabledColor);
+    pointer-events: none;
+  }
+  &:focus {
+    box-shadow: var(--focusBoxShadow);
   }
   &.color {
     &-default {
-      background: none;
-      color: $primaryColor;
-      border-color: $primaryColor;
-      &:hover {
-        border-color: $primaryColorDark2;
-        color: $primaryColorDark2;
-      }
-      &:active, &.checked {
-        color: $primaryColorDark1;
-        border-color: $primaryColorDark1;
-      }
-      &:disabled {
-        color: $primaryColorLight2;
-        border-color: $primaryColorLight2;
-        pointer-events: none;
-      }
-      &:focus {
-        box-shadow: $shadow, $primaryColorLight1 0 0 0 1px inset;
-      }
+      --background: none;
+      --color: var(--primaryColor);
+      --borderColor: var(--primaryColor);
+      --hoverBorderColor: var(--primaryColorDark2);
+      --hoverColor: var(--primaryColorDark2);
+      --activeColor: var(--primaryColorDark1);
+      --activeBorderColor: var(--primaryColorDark1);
+      --disabledColor: var(--primaryColorLight2);
+      --disabledBorderColor: var(--primaryColorLight2);
+      --focusBoxShadow: var(--shadow), var(--primaryColorLight1) 0 0 0 1px inset;
     }
     &-primary {
-      background: $primaryColor;
-      border-color: $primaryColor;
-      color: #ffffff;
-      &:hover {
-        background: $primaryColorDark2;
-        border-color: $primaryColorDark2;
-      }
-      &:active, &.checked {
-        background: $primaryColorDark1;
-        border-color: $primaryColorDark1;
-      }
-      &:disabled {
-        background: $primaryColorLight2;
-        border-color: $primaryColorLight2;
-        pointer-events: none;
-      }
-      &:focus {
-        box-shadow: $shadow, $primaryColorLight2 0 0 0 2px inset;
-      }
+      --background: var(--primaryColor);
+      --color: var(--whiteColor);
+      --borderColor: var(--primaryColor);
+      --hoverBackground: var(--primaryColorDark2);
+      --hoverBorderColor: var(--primaryColorDark2);
+      --activeBackground: var(--primaryColorDark1);
+      --activeBorderColor: var(--primaryColorDark1);
+      --disabledBackground: var(--primaryColorLight2);
+      --disabledBorderColor: var(--primaryColorLight2);
+      --focusBoxShadow: var(--shadow), var(--primaryColorLight2) 0 0 0 2px inset;
     }
     &-error {
-      background: $errorColor;
-      border-color: $errorColor;
+      background: var(--errorColor);
+      border-color: var(--errorColor);
       color: #ffffff;
       &:hover {
-        background: $errorColorDark2;
-        border-color: $errorColorDark2;
+        background: var(--errorColorDark2);
+        border-color: var(--errorColorDark2);
       }
       &:active, &.checked {
-        background: $errorColorDark1;
-        border-color: $errorColorDark1;
+        background: var(--errorColorDark1);
+        border-color: var(--errorColorDark1);
       }
       &:disabled {
-        background: $errorColorLight2;
-        border-color: $errorColorLight2;
+        background: var(--errorColorLight2);
+        border-color: var(--errorColorLight2);
         pointer-events: none;
       }
       &:focus {
-        box-shadow: $shadow, $errorColorLight2 0 0 0 2px inset;
+        box-shadow: var(--shadow), var(--errorColorLight2) 0 0 0 2px inset;
       }
     }
     &-success {
-      background: $successColor;
-      border-color: $successColor;
+      background: var(--successColor);
+      border-color: var(--successColor);
       color: #ffffff;
       &:hover {
-        background: $successColorDark2;
-        border-color: $successColorDark2;
+        background: var(--successColorDark2);
+        border-color: var(--successColorDark2);
       }
       &:active, &.checked {
-        background: $successColorDark1;
-        border-color: $successColorDark1;
+        background: var(--successColorDark1);
+        border-color: var(--successColorDark1);
       }
       &:disabled {
-        background: $successColorLight2;
-        border-color: $successColorLight2;
+        background: var(--successColorLight2);
+        border-color: var(--successColorLight2);
         pointer-events: none;
       }
       &:focus {
-        box-shadow: $shadow, $successColorLight2 0 0 0 2px inset;
+        box-shadow: var(--shadow), var(--successColorLight2) 0 0 0 2px inset;
       }
     }
     &-warning {
-      background: $warningColor;
-      border-color: $warningColor;
+      background: var(--warningColor);
+      border-color: var(--warningColor);
       color: #ffffff;
       &:hover {
-        background: $warningColorDark2;
-        border-color: $warningColorDark2;
+        background: var(--warningColorDark2);
+        border-color: var(--warningColorDark2);
       }
       &:active, &.checked {
-        background: $warningColorDark1;
-        border-color: $warningColorDark1;
+        background: var(--warningColorDark1);
+        border-color: var(--warningColorDark1);
       }
       &:disabled {
-        background: $warningColorLight2;
-        border-color: $warningColorLight2;
+        background: var(--warningColorLight2);
+        border-color: var(--warningColorLight2);
         pointer-events: none;
       }
       &:focus {
-        box-shadow: $shadow, $warningColorLight2 0 0 0 2px inset;
+        box-shadow: var(--shadow), var(--warningColorLight2) 0 0 0 2px inset;
       }
     }
     &-info {
-      background: $infoColor;
-      border-color: $infoColor;
+      background: var(--infoColor);
+      border-color: var(--infoColor);
       color: #ffffff;
       &:hover {
-        background: $infoColorDark2;
-        border-color: $infoColorDark2;
+        background: var(--infoColorDark2);
+        border-color: var(--infoColorDark2);
       }
       &:active, &.checked {
-        background: $infoColorDark1;
-        border-color: $infoColorDark1;
+        background: var(--infoColorDark1);
+        border-color: var(--infoColorDark1);
       }
       &:disabled {
-        background: $infoColorLight2;
-        border-color: $infoColorLight2;
+        background: var(--infoColorLight2);
+        border-color: var(--infoColorLight2);
         pointer-events: none;
       }
       &:focus {
-        box-shadow: $shadow, $infoColorLight2 0 0 0 2px inset;
+        box-shadow: var(--shadow), var(--infoColorLight2) 0 0 0 2px inset;
       }
     }
   }
 
   &.link {
     background: none;
-    color: $primaryColor;
+    color: var(--primaryColor);
     border: none;
     &:hover {
       background: none;
       box-shadow: none;
       border: none;
-      color: $primaryColorDark2;
+      color: var(--primaryColorDark2);
       text-decoration: underline;
       transform: none;
     }
@@ -167,34 +167,34 @@
       background: none;
       box-shadow: none;
       border: none;
-      color: $primaryColorDark1;
+      color: var(--primaryColorDark1);
       transform: none;
     }
     &:disabled {
       background: none;
       box-shadow: none;
       border: none;
-      color: $primaryColorLight2;
+      color: var(--primaryColorLight2);
       pointer-events: none;
       transform: none;
     }
     &:focus {
-      box-shadow: $primaryColorLight1 0 0 0 2px inset;
+      box-shadow: var(--primaryColorLight1) 0 0 0 2px inset;
     }
   }
 
   &.size {
     &-s {
       font-size: .85rem;
-      padding: $grid / 4 $grid / 2;
+      padding: calc(var(--grid) / 4) calc(var(--grid) / 2);
     }
     &-m {
       font-size: 1rem;
-      padding: $grid $grid * 2;
+      padding: var(--grid) calc(var(--grid) * 2);
     }
     &-l {
       font-size: 1.15rem;
-      padding: $grid * 1.5 $grid * 3;
+      padding: calc(var(--grid) * 1.5) calc(var(--grid) * 3);
     }
   }
 
@@ -205,12 +205,12 @@
         transform: none;
       }
       &:first-child {
-        border-bottom-left-radius: $borderRadius;
-        border-top-left-radius: $borderRadius;
+        border-bottom-left-radius: var(--borderRadius);
+        border-top-left-radius: var(--borderRadius);
       }
       &:last-child {
-        border-bottom-right-radius: $borderRadius;
-        border-top-right-radius: $borderRadius;
+        border-bottom-right-radius: var(--borderRadius);
+        border-top-right-radius: var(--borderRadius);
       }
     }
     &-column {
@@ -219,16 +219,16 @@
         transform: none;
       }
       &:first-child {
-        border-top-left-radius: $borderRadius;
-        border-top-right-radius: $borderRadius;
+        border-top-left-radius: var(--borderRadius);
+        border-top-right-radius: var(--borderRadius);
       }
       &:last-child {
-        border-bottom-left-radius: $borderRadius;
-        border-bottom-right-radius: $borderRadius;
+        border-bottom-left-radius: var(--borderRadius);
+        border-bottom-right-radius: var(--borderRadius);
       }
     }
   }
   .icon + .content:not(:empty) {
-    padding-left: $grid;
+    padding-left: var(--grid);
   }
 }

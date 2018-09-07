@@ -1,6 +1,3 @@
-@import "params";
-@import "mq";
-
 .h-scroll {
   border: 1px solid #d7d7d9;
   height: 200px;
@@ -13,11 +10,11 @@
 }
 
 .box {
-  padding: 0 $grid * 2;
+  padding: 0 calc(var(--grid) * 2);
 }
 
-@include mq($from: desktop) {
-  .v-scroll {
-    width: 600px;
-  }
-}
+//@include mq($from: desktop) {
+//  .v-scroll {
+//    width: 600px;
+//  }
+//}

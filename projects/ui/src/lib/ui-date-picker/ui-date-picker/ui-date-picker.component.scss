@@ -1,9 +1,7 @@
-@import "params";
-
 .focus {
-  box-shadow: $primaryColor 0 0 0 1px inset;
+  box-shadow: var(--primaryColor) 0 0 0 1px inset;
   outline: none;
-  border-radius: $borderRadius;
+  border-radius: var(--borderRadius);
 }
 
 :host {
@@ -14,10 +12,10 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  color: $mainColor;
+  color: var(--mainColor);
   font-weight: 600;
-  padding: $grid 0;
-  border-bottom: 1px solid $mainColorLight4;
+  padding: var(--grid) 0;
+  border-bottom: 1px solid var(--mainColorLight4);
   .title {
     flex-grow: 1;
     text-align: center;
@@ -26,7 +24,7 @@
     background: transparent;
     border: 0;
     cursor: pointer;
-    padding: $grid;
+    padding: var(--grid);
     &:focus {
       @extend .focus;
     }
@@ -35,7 +33,7 @@
 
 .grid {
   border: 0;
-  padding: $grid / 2;
+  padding: calc(var(--grid) / 2);
   width: 100%;
   button {
     width: 100%;
@@ -46,13 +44,13 @@
   td, th {
     background: transparent;
     margin: 0;
-    padding: $grid / 4;
+    padding: calc(var(--grid) / 4);
     width: 14.29%;
   }
   th {
-    color: $primaryColor;
-    border-bottom: 1px solid $mainColorLight4;
-    padding: $grid;
+    color: var(--primaryColor);
+    border-bottom: 1px solid var(--mainColorLight4);
+    padding: var(--grid);
     font-size: 14px;
     font-weight: 300;
   }
@@ -62,19 +60,19 @@
 }
 
 .date {
-  border-radius: $borderRadius;
+  border-radius: var(--borderRadius);
   box-sizing: border-box;
   cursor: pointer;
   display: inline-block;
-  padding: $grid;
+  padding: var(--grid);
   text-align: center;
   width: 100%;
   &:hover {
-    background: $primaryColorLight2;
+    background: var(--primaryColorLight2);
     color: #ffffff;
   }
   &.outside {
-    color: $mainColorLight4;
+    color: var(--mainColorLight4);
     &:hover {
     color: #ffffff;
     }
@@ -83,8 +81,8 @@
     @extend .focus;
   }
   &.active {
-    background: $primaryColor;
-    box-shadow: $shadow;
+    background: var(--primaryColor);
+    box-shadow: var(--shadow);
     color: #ffffff;
   }
   &:focus {

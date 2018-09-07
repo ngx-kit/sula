@@ -1,11 +1,9 @@
-@import "params";
-
 .dropdown {
   background: #ffffff;
-  border-radius:$borderRadius;
-  box-shadow: $shadow;
+  border-radius:var(--borderRadius);
+  box-shadow: var(--shadow);
   box-sizing: border-box;
-  margin-top: $grid / 2;
+  margin-top: calc(var(--grid) / 2);
   min-width: 120px;
   transform-origin: top;
 }

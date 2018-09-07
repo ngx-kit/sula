@@ -2,12 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UiAccordionDemoComponent } from '../../../../ui/src/lib/ui-accordion/demo/ui-accordion-demo.component';
 import { UiAlertDemoComponent } from '../../../../ui/src/lib/ui-alert/demo/ui-alert-demo.component';
-import { UiAutocompleteDemoComponent } from '../../../../ui/src/lib/ui-autocomplete/demo/ui-autocomplete-demo.component';
 import { UiBadgeDemoComponent } from '../../../../ui/src/lib/ui-badge/demo/ui-badge-demo.component';
 import { UiBreadcrumbsDemoComponent } from '../../../../ui/src/lib/ui-breadcrumbs/demo/ui-breadcrumbs-demo.component';
 import { UiButtonDemoComponent } from '../../../../ui/src/lib/ui-button/demo/ui-button-demo.component';
 import { UiCheckboxDemoComponent } from '../../../../ui/src/lib/ui-checkbox/demo/ui-checkbox-demo.component';
-import { UiCustomSelectDemoComponent } from '../../../../ui/src/lib/ui-custom-select/demo/ui-custom-select-demo.component';
 import { UiDatePickerDemoComponent } from '../../../../ui/src/lib/ui-date-picker/demo/ui-date-picker-demo.component';
 import { UiDialogDemoComponent } from '../../../../ui/src/lib/ui-dialog/demo/ui-dialog-demo.component';
 import { UiDrawerDemoComponent } from '../../../../ui/src/lib/ui-drawer/demo/ui-drawer-demo.component';
@@ -42,10 +40,6 @@ const routes: Routes = [
         component: UiAlertDemoComponent,
       },
       {
-        path: 'ui-autocomplete',
-        component: UiAutocompleteDemoComponent,
-      },
-      {
         path: 'ui-badge',
         component: UiBadgeDemoComponent,
       },
@@ -60,10 +54,6 @@ const routes: Routes = [
       {
         path: 'ui-checkbox',
         component: UiCheckboxDemoComponent,
-      },
-      {
-        path: 'ui-custom-select',
-        component: UiCustomSelectDemoComponent,
       },
       {
         path: 'ui-date-picker',

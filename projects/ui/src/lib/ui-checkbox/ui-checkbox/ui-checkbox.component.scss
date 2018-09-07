@@ -1,8 +1,3 @@
-@import "params";
-
-$boxSize: 16px;
-$borderWidth: 1px;
-
 :host {
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
@@ -14,154 +9,156 @@ $borderWidth: 1px;
 }
 
 .check {
+  --boxSize: 16px;
+  --borderWidth: 1px;
   cursor: pointer;
-  margin-left: $boxSize + 8px;
+  margin-left: calc(var(--boxSize) + 8px);
   position: relative;
-  transition: $transition;
+  transition: var(--transition);
   &.color {
     &-default {
       &.-checked {
         &::before {
-          border-color: $mainColorLight4;
+          border-color: var(--mainColorLight4);
         }
         &::after {
-          border-color: $mainColor;
+          border-color: var(--mainColor);
         }
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: var(--lightColor);
+          border-color: var(--lightColor);
         }
         &::after {
-          border-color: $mainColor;
+          border-color: var(--mainColor);
         }
       }
 
       &::before {
-        border: $borderWidth solid $mainColorLight4;
+        border: var(--borderWidth) solid var(--mainColorLight4);
       }
     }
 
     &-primary {
       &.-checked {
         &::before {
-          background: $primaryColor;
+          background: var(--primaryColor);
         }
         &::after {
-          border-color: $whiteColor;
+          border-color: var(--whiteColor);
         }
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: var(--lightColor);
+          border-color: var(--lightColor);
         }
         &::after {
-          border-color: $primaryColor;
+          border-color: var(--primaryColor);
         }
       }
       &::before {
-        border: $borderWidth solid $primaryColor;
+        border: var(--borderWidth) solid var(--primaryColor);
       }
     }
 
     &-error {
       &.-checked {
         &::before {
-          background: $errorColor;
+          background: var(--errorColor);
         }
         &::after {
-          border-color: $whiteColor;
+          border-color: var(--whiteColor);
         }
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: var(--lightColor);
+          border-color: var(--lightColor);
         }
         &::after {
-          border-color: $errorColor;
+          border-color: var(--errorColor);
         }
       }
       &::before {
-        border: $borderWidth solid $errorColor;
+        border: var(--borderWidth) solid var(--errorColor);
       }
     }
 
     &-success {
       &.-checked {
         &::before {
-          background: $successColor;
+          background: var(--successColor);
         }
         &::after {
-          border-color: $whiteColor;
+          border-color: var(--whiteColor);
         }
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: var(--lightColor);
+          border-color: var(--lightColor);
         }
         &::after {
-          border-color: $successColor;
+          border-color: var(--successColor);
         }
       }
       &::before {
-        border: $borderWidth solid $successColor;
+        border: var(--borderWidth) solid var(--successColor);
       }
     }
 
     &-warning {
       &.-checked {
         &::before {
-          background: $warningColor;
+          background: var(--warningColor);
         }
         &::after {
-          border-color: $whiteColor;
+          border-color: var(--whiteColor);
         }
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: var(--lightColor);
+          border-color: var(--lightColor);
         }
         &::after {
-          border-color: $warningColor;
+          border-color: var(--warningColor);
         }
       }
       &::before {
-        border: $borderWidth solid $warningColor;
+        border: var(--borderWidth) solid var(--warningColor);
       }
     }
 
     &-info {
       &.-checked {
         &::before {
-          background: $infoColor;
+          background: var(--infoColor);
         }
         &::after {
-          border-color: $whiteColor;
+          border-color: var(--whiteColor);
         }
       }
       &.-disabled {
         &::before {
-          background: $lightColor;
-          border-color: $lightColor;
+          background: var(--lightColor);
+          border-color: var(--lightColor);
         }
         &::after {
-          border-color: $infoColor;
+          border-color: var(--infoColor);
         }
       }
       &::before {
-        border: $borderWidth solid $infoColor;
+        border: var(--borderWidth) solid var(--infoColor);
       }
     }
   }
 
   &:hover {
     &::before {
-      box-shadow: $shadow;
+      box-shadow: var(--shadow);
     }
   }
 
@@ -170,19 +167,19 @@ $borderWidth: 1px;
       border-bottom: 2px solid;
       border-right: 2px solid;
       content: "";
-      height: $boxSize / 2;
-      left: $boxSize / 3 + $borderWidth;
-      margin-left: - $boxSize - 8px;
+      height: calc(var(--boxSize) / 2);
+      left: calc(var(--boxSize) / 3 + var(--borderWidth));
+      margin-left: calc(-1 * var(--boxSize) - 8px);
       position: absolute;
       top: 48%;
       transform: translateY(-50%) rotate(45deg) scale(1);
-      width: $boxSize / 4;
+      width: calc(var(--boxSize) / 4);
     }
   }
 
   &.-focused {
     &::before {
-      box-shadow: $shadow;
+      box-shadow: var(--shadow);
     }
   }
 
@@ -197,18 +194,18 @@ $borderWidth: 1px;
 
   &::before {
     background-color: #ffffff;
-    border-radius: $borderRadius;
+    border-radius: var(--borderRadius);
     box-shadow: none;
     content: "";
     display: inline-block;
-    height: $boxSize;
+    height: var(--boxSize);
     left: 0;
-    margin-left: - $boxSize - 8px;
+    margin-left: calc(-1 * var(--boxSize) - 8px);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     transition: all 250ms cubic-bezier(.27, .01, .38, 1.06);
-    width: $boxSize;
+    width: var(--boxSize);
   }
 }
 

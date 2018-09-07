@@ -1,5 +1,3 @@
-@import "params";
-
 :host[position="top-left"] {
   .popup {
     transform-origin: bottom left;
@@ -8,8 +6,8 @@
 
 .popup {
   background: #ffffff;
-  border-radius: $borderRadius;
-  box-shadow: $shadow;
-  padding: $grid * 1.5;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow);
+  padding: calc(var(--grid) * 1.5);
   transform-origin: top left;
 }

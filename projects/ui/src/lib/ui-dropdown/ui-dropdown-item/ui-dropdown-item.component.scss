@@ -1,5 +1,3 @@
-@import "params";
-
 :host {
   background: #ffffff;
   border: 0;
@@ -7,14 +5,14 @@
   cursor: pointer;
   display: block;
   margin: 0;
-  padding: $grid $grid * 1.5;
+  padding: var(--grid) calc(var(--grid) * 1.5);
   outline: none;
   text-align: left;
   width: 100%;
   &:hover {
-    background: $lightColor;
+    background: var(--lightColor);
   }
   &:active{
-    color: $primaryColor;
+    color: var(--primaryColor);
   }
 }

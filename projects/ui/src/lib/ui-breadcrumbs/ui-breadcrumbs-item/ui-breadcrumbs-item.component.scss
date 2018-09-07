@@ -1,22 +1,20 @@
-@import "params";
-
 :host {
   background: transparent;
   border: 0;
-  color: $mainColorLight3;
+  color: var(--mainColorLight3);
   cursor: pointer;
   font-size: 1rem;
   padding: 0;
   text-decoration: none;
   &:hover {
-    color: $mainColorLight2;
+    color: var(--mainColorLight2);
   }
   &:last-child {
-    color: $mainColor;
+    color: var(--mainColor);
     cursor: inherit;
   }
 }
 
 .icon {
-  margin-right: $grid / 2;
+  margin-right: calc(var(--grid) / 2);
 }

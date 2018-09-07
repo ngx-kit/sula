@@ -1,34 +1,31 @@
-@import "params";
-
-
 :host {
-  color: $mainColor;
+  color: var(--mainColor);
   font-weight: 600;
   cursor: pointer;
   display: block;
-  padding: $grid * 2;
+  padding: calc(var(--grid) * 2);
   text-decoration: none;
 
   &.-active {
-    background: $primaryColor;
-    border-radius: $borderRadius;
-    color: $whiteColor;
-    transition: all $transitionSlow linear;
+    background: var(--primaryColor);
+    border-radius: var(--borderRadius);
+    color: var(--whiteColor);
+    transition: all var(--transitionSlow) linear;
     &:hover{
-      background: $primaryColor;
+      background: var(--primaryColor);
     }
   }
   &:hover{
-    background: $lightColor;
-    border-radius: $borderRadius;
-    transition: all $transitionSlow linear;
+    background: var(--lightColor);
+    border-radius: var(--borderRadius);
+    transition: all var(--transitionSlow) linear;
   }
 }
 
 :host-context(ui-vertical-menu-group) {
-  color: $mainColorLight1;
+  color: var(--mainColorLight1);
   font-weight: 400;
-  margin: $grid / 2 0;
-  padding: $grid $grid * 2;
+  margin: calc(var(--grid) / 2) 0;
+  padding: var(--grid) calc(var(--grid) * 2);
 
 }

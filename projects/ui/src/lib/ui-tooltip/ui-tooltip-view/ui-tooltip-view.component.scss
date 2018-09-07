@@ -1,42 +1,39 @@
-@import "params";
-
-$offset: 2px;
-
 span {
-  background: $mainColor;
-  border-radius: $borderRadius;
-  box-shadow: $shadow;
+  --offset: 2px;
+  background: var(--mainColor);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow);
   color: #ffffff;
-  padding: $grid / 2 $grid;
+  padding: calc(var(--grid) / 2) var(--grid);
   &.color {
     &-primary {
-      background: $primaryColor;
+      background: var(--primaryColor);
     }
     &-error {
-      background: $errorColor;
+      background: var(--errorColor);
     }
     &-success {
-      background: $successColor;
+      background: var(--successColor);
     }
     &-warning {
-      background: $warningColor;
+      background: var(--warningColor);
     }
     &-info {
-      background: $infoColor;
+      background: var(--infoColor);
     }
   }
   &.position {
     &-top-center, &-top-left, &-top-right {
-      margin-bottom: $offset;
+      margin-bottom: var(--offset);
     }
     &-right-center, &-right-top, &-right-bottom {
-      margin-left: $offset;
+      margin-left: var(--offset);
     }
     &-bottom-center, &-bottom-left, &-bottom-right {
-      margin-top: $offset;
+      margin-top: var(--offset);
     }
     &-left-center, &-left-top, &-left-bottom {
-      margin-right: $offset;
+      margin-right: var(--offset);
     }
   }
 }

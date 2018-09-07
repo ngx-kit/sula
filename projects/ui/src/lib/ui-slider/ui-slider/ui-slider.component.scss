@@ -1,44 +1,44 @@
-@import "params";
-
-$height: 6px;
-$pointer: 20px;
-$pad: 4px;
+:host {
+  --height: 6px;
+  --pointer: 20px;
+  --pad: 4px;
+}
 
 .slider {
-  height: $height;
-  padding: $grid / 2 0;
+  height: var(--height);
+  padding: calc(var(--grid) / 2) 0;
   position: relative;
 }
 
 .bg {
-  background: $lightColor;
-  border-radius: $borderRadius;
-  height: $height;
+  background: var(--lightColor);
+  border-radius: var(--borderRadius);
+  height: var(--height);
 }
 
 .fill {
-  background: $primaryColor;
-  border-radius: $borderRadius;
-  bottom: $pad;
-  height: $height;
+  background: var(--primaryColor);
+  border-radius: var(--borderRadius);
+  bottom: var(--pad);
+  height: var(--height);
   left: 0;
   position: absolute;
-  top: $pad;
+  top: var(--pad);
 }
 
 .pointer {
-  background: $whiteColor;
-  border: 1px solid $mainColorLight4;
-  border-radius: $borderRadius;
+  background: var(--whiteColor);
+  border: 1px solid var(--mainColorLight4);
+  border-radius: var(--borderRadius);
   box-sizing: border-box;
   cursor: pointer;
-  height: $pointer;
+  height: var(--pointer);
   position: absolute;
-  top: ($height - $pointer) / 2 + $pad;
+  top: calc((var(--height) - var(--pointer)) / 2 + var(--pad));
   transform: translateX(-50%);
-  width: $pointer / 2;
+  width: calc(var(--pointer) / 2);
   &:focus {
-    box-shadow: $shadow;
+    box-shadow: var(--shadow);
     outline: none;
   }
 }

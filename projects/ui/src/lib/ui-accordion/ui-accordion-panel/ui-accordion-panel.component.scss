@@ -1,12 +1,10 @@
-@import "params";
-
 :host {
   display: block;
-  margin: $grid 0;
-  border-radius: $borderRadius;
-  border: 1px solid $mainColorLight4;
-  transition: $transition;
+  margin: var(--grid) 0;
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--mainColorLight4);
+  transition: var(--transition);
   &:hover {
-    box-shadow: $shadow;
+    box-shadow: var(--shadow);
   }
 }

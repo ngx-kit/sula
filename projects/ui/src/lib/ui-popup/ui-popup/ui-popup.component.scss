@@ -1,58 +1,55 @@
-@import "params";
-
-$offset: 8px;
-
 .popup {
+  --offset: 8px;
   background: #ffffff;
-  border-radius: $borderRadius;
-  box-shadow: $shadow;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow);
   &.position {
     &-top-center {
-      margin-bottom: $offset;
+      margin-bottom: var(--offset);
       transform-origin: bottom;
     }
     &-top-right {
-      margin-bottom: $offset;
+      margin-bottom: var(--offset);
       transform-origin: bottom right;
     }
     &-top-left {
-      margin-bottom: $offset;
+      margin-bottom: var(--offset);
       transform-origin: bottom left;
     }
     &-right-center {
-      margin-left: $offset;
+      margin-left: var(--offset);
       transform-origin: left;
     }
     &-right-top {
-      margin-left: $offset;
+      margin-left: var(--offset);
       transform-origin: left top;
     }
     &-right-bottom {
-      margin-left: $offset;
+      margin-left: var(--offset);
       transform-origin: left bottom;
     }
     &-bottom-center {
-      margin-top: $offset;
+      margin-top: var(--offset);
       transform-origin: top;
     }
     &-bottom-right {
-      margin-top: $offset;
+      margin-top: var(--offset);
       transform-origin: top right;
     }
     &-bottom-left {
-      margin-top: $offset;
+      margin-top: var(--offset);
       transform-origin: top left;
     }
     &-left-center {
-      margin-right: $offset;
+      margin-right: var(--offset);
       transform-origin: right;
     }
     &-left-top {
-      margin-right: $offset;
+      margin-right: var(--offset);
       transform-origin: right top;
     }
     &-left-bottom {
-      margin-right: $offset;
+      margin-right: var(--offset);
       transform-origin: right bottom;
     }
   }

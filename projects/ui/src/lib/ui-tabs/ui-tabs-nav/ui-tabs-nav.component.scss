@@ -1,8 +1,6 @@
-@import "params";
-
 :host {
-  border-bottom: 1px solid $mainColorLight4;
-  color: $mainColor;
+  border-bottom: 1px solid var(--mainColorLight4);
+  color: var(--mainColor);
   display: flex;
   flex-direction: row;
   list-style: none;

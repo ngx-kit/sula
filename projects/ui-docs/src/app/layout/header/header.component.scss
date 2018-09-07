@@ -1,13 +1,10 @@
-@import "params";
-@import "mq";
-
 :host {
   align-items: center;
-  background: $mainColor;
-  color: $whiteColor;
+  background: var(--mainColor);
+  color: var(--whiteColor);
   display: flex;
   flex-shrink: 0;
-  padding: $grid * 2.5 $grid * 3;
+  padding: calc(var(--grid) * 2.5) calc(var(--grid) * 3);
 }
 
 .nav-toggle {
@@ -15,7 +12,7 @@
   border: 0;
   color: #ffffff;
   font-size: 2rem;
-  margin-right: $grid * 2;
+  margin-right: calc(var(--grid) * 2);
 }
 
 .logo {
@@ -35,17 +32,17 @@
   border: 0;
   color: #ffffff;
   font-size: 1.8rem;
-  margin-left: $grid * 2;
+  margin-left: calc(var(--grid) * 2);
 }
-
-@include mq($from: tablet) {
-  .nav-toggle {
-    display: none;
-  }
-  .created {
-    color: $primaryColor;
-    display: inline;
-    font-size: 16px;
-    font-weight: 400;
-  }
-}
+//
+//@include mq($from: tablet) {
+//  .nav-toggle {
+//    display: none;
+//  }
+//  .created {
+//    color: $primaryColor;
+//    display: inline;
+//    font-size: 16px;
+//    font-weight: 400;
+//  }
+//}

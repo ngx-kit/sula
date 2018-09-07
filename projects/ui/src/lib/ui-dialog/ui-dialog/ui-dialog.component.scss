@@ -1,6 +1,3 @@
-@import "params";
-@import "mq";
-
 :host {
   position: fixed;
   top: 0;
@@ -14,8 +11,8 @@
 
 .dialog {
   background: #ffffff;
-  border-radius: $borderRadius;
-  box-shadow: $shadow;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow);
   max-height: 90%;
   max-width: 90%;
   min-width: 60%;
@@ -24,42 +21,42 @@
   &.color {
     &-default {
       .header {
-        border-bottom-color: $mainColorLight4;
+        border-bottom-color: var(--mainColorLight4);
       }
     }
     &-primary {
       .header {
-        background: $primaryColorLight2;
-        border-bottom-color: $primaryColorLight1;
-        color: $primaryColor;
+        background: var(--primaryColorLight2);
+        border-bottom-color: var(--primaryColorLight1);
+        color: var(--primaryColor);
       }
     }
     &-error {
       .header {
-        background: $errorColorLight2;
-        border-bottom-color: $errorColorLight1;
-        color: $errorColor;
+        background: var(--errorColorLight2);
+        border-bottom-color: var(--errorColorLight1);
+        color: var(--errorColor);
       }
     }
     &-success {
       .header {
-        background: $successColorLight2;
-        border-bottom-color: $successColorLight1;
-        color: $successColor;
+        background: var(--successColorLight2);
+        border-bottom-color: var(--successColorLight1);
+        color: var(--successColor);
       }
     }
     &-warning {
       .header {
-        background: $warningColorLight2;
-        border-bottom-color: $warningColorLight1;
-        color: $warningColor;
+        background: var(--warningColorLight2);
+        border-bottom-color: var(--warningColorLight1);
+        color: var(--warningColor);
       }
     }
     &-info {
       .header {
-        background: $infoColorLight2;
-        border-bottom-color: $infoColorLight1;
-        color: $infoColor;
+        background: var(--infoColorLight2);
+        border-bottom-color: var(--infoColorLight1);
+        color: var(--infoColor);
       }
     }
   }
@@ -67,9 +64,9 @@
 
 .header {
   border-bottom: 1px solid;
-  border-radius: $borderRadius $borderRadius 0 0;
+  border-radius: var(--borderRadius) var(--borderRadius) 0 0;
   font-weight: 700;
-  padding: $grid * 2;
+  padding: calc(var(--grid) * 2);
 }
 
 .body {
@@ -79,15 +76,15 @@
 }
 
 .footer {
-  border-top: 1px solid $mainColorLight4;
+  border-top: 1px solid var(--mainColorLight4);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding: $grid * 2;
+  padding: calc(var(--grid) * 2);
 }
 
-@include mq($from: tablet) {
-  .dialog {
-    min-width: 400px;
-  }
-}
+//@include mq($from: tablet) {
+//  .dialog {
+//    min-width: 400px;
+//  }
+//}

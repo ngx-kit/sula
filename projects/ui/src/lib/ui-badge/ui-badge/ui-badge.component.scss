@@ -1,5 +1,3 @@
-@import "params";
-
 :host {
   border-radius: 1rem;
   line-height: 1;
@@ -8,44 +6,44 @@
   &.color {
     &-default {
       background: none;
-      color: $primaryColor;
-      border: 1px solid $primaryColor;
+      color: var(--primaryColor);
+      border: 1px solid var(--primaryColor);
     }
     &-primary {
-      background: $primaryColor;
-      border-color: $primaryColor;
+      background: var(--primaryColor);
+      border-color: var(--primaryColor);
       color: #ffffff;
     }
     &-error {
-      background: $errorColor;
-      border-color: $errorColor;
+      background: var(--errorColor);
+      border-color: var(--errorColor);
       color: #ffffff;
     }
     &-success {
-      background: $successColor;
-      border-color: $successColor;
+      background: var(--successColor);
+      border-color: var(--successColor);
       color: #ffffff;
     }
     &-warning {
-      background: $warningColor;
-      border-color: $warningColor;
+      background: var(--warningColor);
+      border-color: var(--warningColor);
       color: #ffffff;
     }
     &-info {
-      background: $infoColor;
-      border-color: $infoColor;
+      background: var(--infoColor);
+      border-color: var(--infoColor);
       color: #ffffff;
       &:hover {
-        background: $infoColorDark2;
-        border-color: $infoColorDark2;
+        background: var(--infoColorDark2);
+        border-color: var(--infoColorDark2);
       }
       &:active, &.checked {
-        background: $infoColorDark1;
-        border-color: $infoColorDark1;
+        background: var(--infoColorDark1);
+        border-color: var(--infoColorDark1);
       }
       &:disabled {
-        background: $infoColorLight2;
-        border-color: $infoColorLight2;
+        background: var(--infoColorLight2);
+        border-color: var(--infoColorLight2);
         pointer-events: none;
       }
     }
@@ -54,15 +52,15 @@
   &.size {
     &-s {
       font-size: .8rem;
-      padding: $grid / 4 $grid / 2;
+      padding: calc(var(--grid) / 4) calc(var(--grid) / 2);
     }
     &-m {
       font-size: .9rem;
-      padding: $grid / 4 $grid;
+      padding: calc(var(--grid) / 4) var(--grid);
     }
     &-l {
       font-size: 1.1rem;
-      padding: $grid / 2 $grid;
+      padding: calc(var(--grid) / 2) var(--grid);
     }
   }
   &.position {

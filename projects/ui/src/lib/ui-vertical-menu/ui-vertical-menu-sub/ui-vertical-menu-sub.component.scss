@@ -1,11 +1,8 @@
-@import "params";
-
-
 :host {
   display: block;
   overflow: hidden;
 }
 
 .wrapper {
-  margin-left: $grid * 3;
+  margin-left: calc(var(--grid) * 3);
 }

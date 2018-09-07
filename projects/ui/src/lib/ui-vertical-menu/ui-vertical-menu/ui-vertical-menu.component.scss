@@ -1,8 +1,6 @@
-@import "params";
-
 :host {
   box-sizing: border-box;
   display: block;
-  padding: $grid;
+  padding: var(--grid);
   width: 100%;
 }

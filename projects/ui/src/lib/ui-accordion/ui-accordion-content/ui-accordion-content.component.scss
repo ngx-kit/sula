@@ -1,13 +1,11 @@
-@import "params";
-
 :host {
   display: block;
   overflow: hidden;
-  color: $mainColorLight3;
+  color: var(--mainColorLight3);
 }
 
 .content {
-  border-top: 1px solid $mainColorLight4;
-  margin: 0 $grid * 3;
-  padding: $grid * 1.5 0;
+  border-top: 1px solid var(--mainColorLight4);
+  margin: 0 calc(var(--grid) * 3);
+  padding: calc(var(--grid) * 1.5) 0;
 }

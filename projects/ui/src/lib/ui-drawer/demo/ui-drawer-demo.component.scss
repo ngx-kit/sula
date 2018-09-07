@@ -1,14 +1,12 @@
-@import "params";
-
 .content {
-  padding: $grid * 3;
+  padding: calc(var(--grid) * 3);
   width: 350px;
 }
 
 .content-vertical {
-  padding: $grid * 3;
+  padding: calc(var(--grid) * 3);
 }
 
 button {
-  margin: 0 $grid $grid 0;
+  margin: 0 var(--grid) var(--grid) 0;
 }

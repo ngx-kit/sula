@@ -1,18 +1,16 @@
-@import "params";
-
 :host {
   border-bottom: 1px solid transparent;
   cursor: pointer;
-  padding: $grid $grid * 2;
+  padding: var(--grid) calc(var(--grid) * 2);
   transition-duration: .25s;
   transition-property: background, border;
   user-select: none;
   margin-bottom: -1px;
   &:hover {
-    color: $primaryColor;
+    color: var(--primaryColor);
   }
   &.active {
-    border-bottom-color: $primaryColor;
-    color: $primaryColor;
+    border-bottom-color: var(--primaryColor);
+    color: var(--primaryColor);
   }
 }

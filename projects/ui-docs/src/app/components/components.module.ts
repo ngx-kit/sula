@@ -2,12 +2,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { UiAccordionDemoModule } from '../../../../ui/src/lib/ui-accordion/demo/ui-accordion-demo.module';
 import { UiAlertDemoModule } from '../../../../ui/src/lib/ui-alert/demo/ui-alert-demo.module';
-import { UiAutocompleteDemoModule } from '../../../../ui/src/lib/ui-autocomplete/demo/ui-autocomplete-demo.module';
 import { UiBadgeDemoModule } from '../../../../ui/src/lib/ui-badge/demo/ui-badge-demo.module';
 import { UiBreadcrumbsDemoModule } from '../../../../ui/src/lib/ui-breadcrumbs/demo/ui-breadcrumbs-demo.module';
 import { UiButtonDemoModule } from '../../../../ui/src/lib/ui-button/demo/ui-button-demo.module';
 import { UiCheckboxDemoModule } from '../../../../ui/src/lib/ui-checkbox/demo/ui-checkbox-demo.module';
-import { UiCustomSelectDemoModule } from '../../../../ui/src/lib/ui-custom-select/demo/ui-custom-select-demo.module';
 import { UiDatePickerDemoModule } from '../../../../ui/src/lib/ui-date-picker/demo/ui-date-picker-demo.module';
 import { UiDialogDemoModule } from '../../../../ui/src/lib/ui-dialog/demo/ui-dialog-demo.module';
 import { UiDrawerDemoModule } from '../../../../ui/src/lib/ui-drawer/demo/ui-drawer-demo.module';
@@ -37,12 +35,10 @@ import { ComponentsRoutingModule } from './components-routing.module';
     // Demos
     UiAccordionDemoModule,
     UiAlertDemoModule,
-    UiAutocompleteDemoModule,
     UiBadgeDemoModule,
     UiBreadcrumbsDemoModule,
     UiButtonDemoModule,
     UiCheckboxDemoModule,
-    UiCustomSelectDemoModule,
     UiDatePickerDemoModule,
     UiDialogDemoModule,
     UiDrawerDemoModule,

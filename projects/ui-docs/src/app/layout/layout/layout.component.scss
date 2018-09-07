@@ -1,6 +1,3 @@
-@import "params";
-@import "mq";
-
 :host {
   display: flex;
   flex-direction: column;
@@ -34,31 +31,31 @@ ui-scroll {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1000px;
-  padding: $grid * 2;
+  padding: calc(var(--grid) * 2);
 }
-
-@include mq($from: mobile) {
-  app-nav.side {
-    width: 75%;
-  }
-
-  .main-wrapper {
-    padding: $grid * 3;
-  }
-}
-
-@include mq($from: tablet) {
-  app-nav.default {
-    width: 225px;
-  }
-
-  .main-wrapper {
-    padding: $grid * 3 $grid * 5 $grid * 5 $grid * 5;
-  }
-}
-
-@include mq($from: desktop) {
-  app-nav.default {
-    width: 300px;
-  }
-}
+//
+//@include mq($from: mobile) {
+//  app-nav.side {
+//    width: 75%;
+//  }
+//
+//  .main-wrapper {
+//    padding: $grid * 3;
+//  }
+//}
+//
+//@include mq($from: tablet) {
+//  app-nav.default {
+//    width: 225px;
+//  }
+//
+//  .main-wrapper {
+//    padding: $grid * 3 $grid * 5 $grid * 5 $grid * 5;
+//  }
+//}
+//
+//@include mq($from: desktop) {
+//  app-nav.default {
+//    width: 300px;
+//  }
+//}

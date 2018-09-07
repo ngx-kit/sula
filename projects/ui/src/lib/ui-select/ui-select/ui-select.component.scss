@@ -1,24 +1,21 @@
-@import "params";
-
-
 :host {
-  border: 1px solid $mainColorLight4;
-  border-radius: $borderRadius;
+  border: 1px solid var(--mainColorLight4);
+  border-radius: var(--borderRadius);
   box-sizing: border-box;
   cursor: pointer;
-  color: $mainColor;
+  color: var(--mainColor);
   display: inline-flex;
-  padding: $grid $grid * 2;
-  transition: $transition;
+  padding: var(--grid) calc(var(--grid) * 2);
+  transition: var(--transition);
   width: 100%;
   &:hover {
-    box-shadow: $shadow;
+    box-shadow: var(--shadow);
     outline: none;
   }
   &:focus {
     outline: none;
   }
   &:active{
-    border-color: $primaryColor;
+    border-color: var(--primaryColor);
   }
 }

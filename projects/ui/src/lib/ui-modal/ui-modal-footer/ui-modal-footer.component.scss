@@ -1,9 +1,7 @@
-@import "params";
-
 :host {
-  border-top: 1px solid $mainColorLight4;
+  border-top: 1px solid var(--mainColorLight4);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding: $grid * 2;
+  padding: calc(var(--grid) * 2);
 }

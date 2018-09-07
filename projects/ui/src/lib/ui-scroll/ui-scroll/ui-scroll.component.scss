@@ -1,8 +1,5 @@
-@import "params";
-
-$barSize: 6px;
-
 :host {
+  --barSize: 6px;
   display: flex;
   max-height: 100%;
   max-width: 100%;
@@ -11,22 +8,22 @@ $barSize: 6px;
 }
 
 .v-bar-wrapper {
-  background: $lightColor;
+  background: var(--lightColor);
   bottom: 1px;
-  border-radius: $borderRadius;
+  border-radius: var(--borderRadius);
   opacity: 0;
   position: absolute;
   right: 1px;
   top: 1px;
-  transition-duration: $transitionSlow;
+  transition-duration: var(--transitionSlow);
   transition-property: opacity;
-  width: $barSize;
+  width: var(--barSize);
   .bar {
-    background: $mainColorLight2;
-    border-radius: $borderRadius;
+    background: var(--mainColorLight2);
+    border-radius: var(--borderRadius);
     cursor: pointer;
     position: absolute;
-    width: $barSize;
+    width: var(--barSize);
   }
   &.-active {
     opacity: 1;
@@ -34,22 +31,22 @@ $barSize: 6px;
 }
 
 .h-bar-wrapper {
-  background: $lightColor;
+  background: var(--lightColor);
   bottom: 1px;
-  border-radius: $borderRadius;
+  border-radius: var(--borderRadius);
   left: 1px;
   opacity: 0;
   position: absolute;
   right: 1px;
-  transition-duration: $transitionSlow;
+  transition-duration: var(--transitionSlow);
   transition-property: opacity;
-  height: $barSize;
+  height: var(--barSize);
   .bar {
-    background: $mainColorLight2;
-    border-radius: $borderRadius;
+    background: var(--mainColorLight2);
+    border-radius: var(--borderRadius);
     cursor: pointer;
     position: absolute;
-    height: $barSize;
+    height: var(--barSize);
   }
   &.-active {
     opacity: 1;

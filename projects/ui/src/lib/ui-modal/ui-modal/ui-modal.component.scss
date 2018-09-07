@@ -1,6 +1,3 @@
-@import "params";
-@import "mq";
-
 :host {
   align-items: center;
   bottom: 0;
@@ -14,8 +11,8 @@
 
 .modal {
   background: #ffffff;
-  border-radius: $borderRadius;
-  box-shadow: $shadow;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   max-height: 90%;
@@ -25,12 +22,12 @@
 
 .header {
   align-items: center;
-  border-bottom: 1px solid $lightColor;
-  border-radius: $borderRadius $borderRadius 0 0;
+  border-bottom: 1px solid var(--lightColor);
+  border-radius: var(--borderRadius) var(--borderRadius) 0 0;
   display: flex;
   font-weight: 700;
   flex-direction: row;
-  padding: $grid * 2;
+  padding: calc(var(--grid) * 2);
   .title {
     flex-grow: 1;
   }
@@ -38,53 +35,53 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    color: $mainColor;
+    color: var(--mainColor);
     font-size: 1.5em;
     line-height: 1em;
     outline: none;
   }
   &.color {
     &-default {
-      border-bottom-color: $mainColorLight4;
+      border-bottom-color: var(--mainColorLight4);
     }
     &-primary {
-      background: $primaryColorLight2;
-      border-bottom-color: $primaryColorLight1;
-      color: $primaryColor;
+      background: var(--primaryColorLight2);
+      border-bottom-color: var(--primaryColorLight1);
+      color: var(--primaryColor);
       .close {
-        color: $primaryColor;
+        color: var(--primaryColor);
       }
     }
     &-error {
-      background: $errorColorLight2;
-      border-bottom-color: $errorColorLight1;
-      color: $errorColor;
+      background: var(--errorColorLight2);
+      border-bottom-color: var(--errorColorLight1);
+      color: var(--errorColor);
       .close {
-        color: $errorColor;
+        color: var(--errorColor);
       }
     }
     &-success {
-      background: $successColorLight2;
-      border-bottom-color: $successColorLight1;
-      color: $successColor;
+      background: var(--successColorLight2);
+      border-bottom-color: var(--successColorLight1);
+      color: var(--successColor);
       .close {
-        color: $successColor;
+        color: var(--successColor);
       }
     }
     &-warning {
-      background: $warningColorLight2;
-      border-bottom-color: $warningColorLight1;
-      color: $warningColor;
+      background: var(--warningColorLight2);
+      border-bottom-color: var(--warningColorLight1);
+      color: var(--warningColor);
       .close {
-        color: $warningColor;
+        color: var(--warningColor);
       }
     }
     &-info {
-      background: $infoColorLight2;
-      border-bottom-color: $infoColorLight1;
-      color: $infoColor;
+      background: var(--infoColorLight2);
+      border-bottom-color: var(--infoColorLight1);
+      color: var(--infoColor);
       .close {
-        color: $infoColor;
+        color: var(--infoColor);
       }
     }
   }
@@ -93,11 +90,11 @@
 .body {
   flex-grow: 1;
   overflow: auto;
-  padding: $grid * 4 $grid * 2;
+  padding: calc(var(--grid) * 4) calc(var(--grid) * 2);
 }
 
-@include mq($from: tablet) {
-  .dialog {
-    min-width: 500px;
-  }
-}
+//@include mq($from: tablet) {
+//  .dialog {
+//    min-width: 500px;
+//  }
+//}

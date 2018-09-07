@@ -1,12 +1,10 @@
-@import "params";
-
 :host {
   display: block;
   text-align: center;
 }
 
 .brand {
-  color: $whiteColor;
-  background: $primaryColor;
-  padding: $grid;
+  color: var(--whiteColor);
+  background: var(--primaryColor);
+  padding: var(--grid);
 }

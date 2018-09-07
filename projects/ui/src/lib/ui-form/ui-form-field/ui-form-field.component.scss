@@ -1,8 +1,6 @@
-@import "params";
-
 :host {
   display: block;
-  margin-bottom: $grid;
+  margin-bottom: var(--grid);
 }
 
 :host-context([uiForm].layout-aligned,ui-form-field.layout-aligned) {
@@ -14,11 +12,11 @@
     flex-direction: row-reverse;
     width: 150px;
     .required {
-      margin-right: $grid / 2;
+      margin-right: calc(var(--grid) / 2);
     }
   }
   .control {
-    padding-left: $grid;
+    padding-left: var(--grid);
   }
 }
 
@@ -27,22 +25,22 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 0;
-  margin-right: $grid * 2;
+  margin-right: calc(var(--grid) * 2);
   label {
     display: flex;
     flex-direction: row-reverse;
     .required {
-      margin-right: $grid / 2;
+      margin-right: calc(var(--grid) / 2);
     }
   }
   .control {
-    padding-left: $grid;
+    padding-left: var(--grid);
   }
 }
 
 label {
   .required {
-    color: $errorColor;
+    color: var(--errorColor);
   }
 }
 
@@ -51,6 +49,6 @@ label {
   display: flex;
   flex-direction: column;
   .error {
-    color: $errorColor;
+    color: var(--errorColor);
   }
 }

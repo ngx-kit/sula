@@ -1,6 +1,4 @@
-@import "params";
-
 .separator {
-  color: $mainColor;
-  padding: 0 $grid;
+  color: var(--mainColor);
+  padding: 0 var(--grid);
 }

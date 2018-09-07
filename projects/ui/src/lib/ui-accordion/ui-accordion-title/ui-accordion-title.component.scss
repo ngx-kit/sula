@@ -1,11 +1,9 @@
-@import "params";
-
 :host {
   background: transparent;
   cursor: pointer;
-  color: $mainColor;
+  color: var(--mainColor);
   display: block;
-  padding: $grid * 1.5 $grid * 3;
+  padding: calc(var(--grid) * 1.5) calc(var(--grid) * 3);
   transition-duration: .25s;
   transition-property: background;
   user-select: none;

@@ -1,8 +1,6 @@
-@import "params";
-
 :host {
   display: block;
-  margin: $grid / 2 0;
+  margin: calc(var(--grid) / 2) 0;
 }
 
 .title {
@@ -10,7 +8,7 @@
   display: flex;
   flex-direction: row;
   font-weight: 600;
-  padding: $grid * 2;
+  padding: calc(var(--grid) * 2);
 
   .wrapper {
     flex-grow: 1;
@@ -22,13 +20,13 @@
     outline: none;
   }
   &.-active {
-    border-radius: $borderRadius;
-    color: $primaryColor;
-    transition: all $transitionSlow linear;
+    border-radius: var(--borderRadius);
+    color: var(--primaryColor);
+    transition: all var(--transitionSlow) linear;
   }
   &:hover {
-    background: $lightColor;
-    border-radius: $borderRadius;
-    transition: all $transitionSlow linear;
+    background: var(--lightColor);
+    border-radius: var(--borderRadius);
+    transition: all var(--transitionSlow) linear;
   }
 }

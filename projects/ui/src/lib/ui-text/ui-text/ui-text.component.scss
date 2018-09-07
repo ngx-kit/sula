@@ -1,25 +1,23 @@
-@import "params";
-
 :host {
-  border: 1px solid $mainColorLight4;
-  border-radius: $borderRadius;
+  border: 1px solid var(--mainColorLight4);
+  border-radius: var(--borderRadius);
   box-sizing: border-box;
-  color: $mainColor;
-  padding: $grid $grid * 2;
-  transition: $transition;
+  color: var(--mainColor);
+  padding: var(--grid) calc(var(--grid) * 2);
+  transition: var(--transition);
   width: 100%;
   &:hover {
-    box-shadow: $shadow;
+    box-shadow: var(--shadow);
     outline: none;
   }
   &:focus {
-    border-color: $primaryColor;
+    border-color: var(--primaryColor);
     outline: none;
   }
   &.-has-errors {
-    border-color: $errorColor;
+    border-color: var(--errorColor);
     &:hover, &:focus {
-      border-color: $errorColor;
+      border-color: var(--errorColor);
     }
   }
 }
