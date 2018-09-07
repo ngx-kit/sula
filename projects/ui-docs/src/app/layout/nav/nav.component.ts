@@ -30,6 +30,8 @@ export class NavComponent implements OnInit {
 
   @Output() close = new EventEmitter<void>();
 
+  docs: string[];
+
   modules: string[];
 
   constructor(
@@ -38,7 +40,13 @@ export class NavComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('mm?', this.content.content);
+    this.docs = this.content.getDocFiles()
+      .map(doc => doc.meta && doc.meta.title ? doc.meta.title : doc.name)
+      .sort((x, y) => {
+        const xPrior = x.meta && x.meta.apiPriority ? x.meta.apiPriority : 0;
+        const yPrior = y.meta && y.meta.apiPriority ? y.meta.apiPriority : 0;
+        return x < y ? 1 : -1;
+      });
     this.modules = Object
       .keys(this.content.content.filesMap.lib)
       .filter(k => typeof this.content.content.filesMap.lib[k] === 'object');

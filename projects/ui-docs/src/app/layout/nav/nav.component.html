@@ -5,13 +5,23 @@
   <kit-icon name="close"></kit-icon>
 </button>
 <ui-scroll>
-  <ul>
-    <li *ngFor="let module of modules">
-      <a uiVerticalMenuItem
-         routerLinkActive="-active"
-         [routerLink]="['module', module]">
-        {{ module }}
-      </a>
-    </li>
-  </ul>
+  <ui-vertical-menu>
+    <a *ngFor="let doc of docs"
+       uiVerticalMenuItem
+       routerLinkActive="-active"
+       [routerLink]="['docs', doc.toLowerCase()]">
+      {{ doc }}
+    </a>
+    <ui-vertical-menu-group>
+      Modules
+      <ui-vertical-menu-sub>
+        <a *ngFor="let module of modules"
+           uiVerticalMenuItem
+           routerLinkActive="-active"
+           [routerLink]="['module', module]">
+          {{ module }}
+        </a>
+      </ui-vertical-menu-sub>
+    </ui-vertical-menu-group>
+  </ui-vertical-menu>
 </ui-scroll>

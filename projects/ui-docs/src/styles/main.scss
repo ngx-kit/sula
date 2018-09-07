@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Source+Sans+Pro:300,400,700');
-@import "root";
 @import "loader";
 @import "mq";
 
@@ -10,9 +9,9 @@ html {
 }
 
 body {
-  font-family: 'Source Sans Pro', Arial;
+  font-family: var(--sansSerif);
   font-size: 16px;
-  line-height: 1.35rem;
+  line-height: 1.35em;
   color: var(--mainColor);
   display: flex;
   flex-direction: row;
@@ -22,7 +21,7 @@ body {
 }
 
 button, input, textarea, select {
-  font-family: 'Source Sans Pro', Arial;
+  font-family: var(--sansSerif);
 }
 
 table {
@@ -41,7 +40,7 @@ table th {
 }
 
 table td {
-  padding: calc(var(--grid)*2) calc(var(--grid)*3);
+  padding: calc(var(--grid) * 2) calc(var(--grid) * 3);
   text-align: left;
 }
 
@@ -55,6 +54,10 @@ table tr {
 
 .demo-panel {
   margin-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1em;
 }
 
 //@include mq(var(--from): tablet) {

@@ -1,0 +1,13 @@
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+  margin-top: calc(var(--grid) * 6);
+}
+
+.declar {
+  margin-bottom: calc(var(--grid) * 4);
+  padding-bottom: calc(var(--grid) * 4);
+}

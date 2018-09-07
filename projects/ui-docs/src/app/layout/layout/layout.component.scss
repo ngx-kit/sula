@@ -1,30 +1,32 @@
 :host {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 70px 1fr;
+  height: 100%;
+  position: fixed;
+  width: 100%;
 }
 
-.body {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
+.header {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.side {
+  grid-row: 2;
+  grid-column: 1;
+  min-height: 0;
+}
+
+.content {
+  grid-row: 2;
+  grid-column: 2;
+  min-height: 0;
   overflow: hidden;
-}
-
-app-nav {
-  flex-shrink: 0;
-  &.side {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 90%;
+  .content-wrapper {
+    margin: 0 auto;
+    max-width: 900px;
   }
-}
-
-ui-scroll {
-  flex-grow: 1;
-  max-height: none;
 }
 
 .main-wrapper {
@@ -33,6 +35,7 @@ ui-scroll {
   max-width: 1000px;
   padding: calc(var(--grid) * 2);
 }
+
 //
 //@include mq($from: mobile) {
 //  app-nav.side {

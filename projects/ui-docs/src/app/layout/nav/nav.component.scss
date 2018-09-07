@@ -1,7 +1,6 @@
 :host {
   background: var(--whiteColor);
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.04);
-  display: flex;
 }
 
 .close {
@@ -13,8 +12,19 @@
   position: absolute;
 }
 
-ui-scroll {
-  flex-grow: 1;
-  max-height: none;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  h3 {
+    margin: var(--grid) 0 0 0;
+    padding: var(--grid);
+    font-size: 0.9rem;
+    color: var(--mainColorLight2);
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    padding: calc(var(--grid) / 2) var(--grid);
+  }
 }
-

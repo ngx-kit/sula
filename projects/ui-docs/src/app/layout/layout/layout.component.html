@@ -1,21 +1,27 @@
 <ui-loading-bar></ui-loading-bar>
-<app-header (navToggle)="displayNav = true"></app-header>
-<div class="body">
-  <app-nav *kitMq="{from: 'tablet'}"
-           class="default">
-  </app-nav>
-  <ng-container *kitMq="{until: 'tablet'}">
-    <kit-modal (close)="displayNav = false">
-      <app-nav *kitOverlay="displayNav"
-               class="side"
-               [inOverlay]="true"
-               (close)="displayNav = false">
-      </app-nav>
-    </kit-modal>
-  </ng-container>
+
+<app-header class="header"
+            (navToggle)="displayNav = true">
+</app-header>
+
+<app-nav *kitMq="{from: 'tablet'}"
+         class="side">
+</app-nav>
+
+<div class="content">
   <ui-scroll>
-    <div class="main-wrapper">
+    <div class="content-wrapper">
       <ng-content></ng-content>
     </div>
   </ui-scroll>
 </div>
+
+<ng-container *kitMq="{until: 'tablet'}">
+  <kit-modal (close)="displayNav = false">
+    <app-nav *kitOverlay="displayNav"
+             class="side"
+             [inOverlay]="true"
+             (close)="displayNav = false">
+    </app-nav>
+  </kit-modal>
+</ng-container>
