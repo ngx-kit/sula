@@ -73,12 +73,7 @@
             "tsConfig": "projects/ui-docs/tsconfig.app.json",
             "assets": [
               "projects/ui-docs/src/favicon.ico",
-              "projects/ui-docs/src/assets",
-              {
-                "glob": "**/*",
-                "input": "projects/ui/src/assets",
-                "output": "/assets/"
-              }
+              "projects/ui-docs/src/assets"
             ],
             "styles": [
               "projects/ui/src/themes/main.css",
