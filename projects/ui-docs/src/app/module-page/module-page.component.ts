@@ -32,7 +32,6 @@ export class ModulePageComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.name = params['name'];
-//      this.seo.setTitle(`${this.content.section}/${this.name}`);
       this.files = this.content.getModuleFiles(this.name);
       console.log('FIL:ES', this.files);
       // Pick md
@@ -45,7 +44,6 @@ export class ModulePageComponent implements OnInit {
       const demoFiles = this.files
         .filter(tsFilter)
         .filter(demoFilterFactory(true));
-      console.log('DEMOE FIELDS', demoFiles);
       this.demoFile = demoFiles && demoFiles[0] ? demoFiles[0] : undefined;
       // Gather sources
       this.demoSources = this.demoFile

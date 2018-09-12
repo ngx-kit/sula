@@ -74,4 +74,8 @@ export class UiScrollComponent implements AfterContentInit {
   updateHBar() {
     this.scroll.updateHBar();
   }
+
+  scrollTop() {
+    this.vWrapper.nativeElement.scrollTop = 0;
+  }
 }

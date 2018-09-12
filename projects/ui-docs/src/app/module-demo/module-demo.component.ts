@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, ViewChild } from '@angular/core';
 import { DocGen } from '@ngx-kit/docgen/meta';
 import { MdRenderService } from '@nvxme/ngx-md-render';
 import { highlightAuto } from 'highlight.js';
+import { UiTabsComponent } from 'ui';
 import { demoComponentsRef } from '../../../../ui/src/lib/demo.module';
 
 @Component({
@@ -25,6 +26,8 @@ export class ModuleDemoComponent implements OnChanges {
 
   readme: string;
 
+  @ViewChild('tabs') tabs: UiTabsComponent;
+
   constructor(private md: MdRenderService) {
   }
 
@@ -41,6 +44,8 @@ export class ModuleDemoComponent implements OnChanges {
           [file.fileName]: highlightAuto(file.text, [this.getLangByExt(file.type)]).value,
         }), {});
       }
+      // Switch to preview tab
+      this.tabs.active = 1;
     }
   }
 

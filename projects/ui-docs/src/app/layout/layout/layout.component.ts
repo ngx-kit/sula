@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { UiScrollComponent } from 'ui';
 
 @Component({
   selector: 'app-layout',
@@ -10,6 +11,8 @@ import { NavigationEnd, Router } from '@angular/router';
 export class LayoutComponent implements OnInit {
   displayNav = false;
 
+  @ViewChild('contentScroll') contentScroll: UiScrollComponent;
+
   constructor(
     private router: Router,
   ) {
@@ -19,6 +22,8 @@ export class LayoutComponent implements OnInit {
     this.router.events.subscribe(e => {
       if (e instanceof NavigationEnd) {
         this.displayNav = false;
+        // Scroll content to top
+        this.contentScroll.scrollTop();
       }
     });
   }
