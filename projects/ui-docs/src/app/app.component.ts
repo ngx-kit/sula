@@ -13,6 +13,7 @@ export class AppComponent {
     this.icons.add([
       {name: 'menu', url: '/assets/icons/ios-menu.svg'},
       {name: 'mail', url: '/assets/icons/ios-mail.svg'},
+      {name: 'close', url: '/assets/icons/ios-close.svg'},
       {name: 'logo-github', url: '/assets/icons/logo-github.svg'},
       {name: 'logo-npm', url: '/assets/icons/logo-npm.svg'},
       {name: 'logo-twitter', url: '/assets/icons/logo-twitter.svg'},

@@ -12,9 +12,9 @@
        [routerLink]="['docs', doc.toLowerCase()]">
       {{ doc }}
     </a>
-    <ui-vertical-menu-group>
+    <ui-vertical-menu-group [active]="true">
       Modules
-      <ui-vertical-menu-sub>
+      <ui-vertical-menu-sub *kitCollapse>
         <a *ngFor="let module of modules"
            uiVerticalMenuItem
            routerLinkActive="-active"
