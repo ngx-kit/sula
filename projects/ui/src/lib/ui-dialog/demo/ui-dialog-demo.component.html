@@ -1,6 +1,4 @@
-<h1>Dialog</h1>
-
-<div class="demo-panel">
+<div>
   <h2>Alert dialog</h2>
   <button uiButton (click)="alert()">Alert</button>
 
@@ -14,12 +12,12 @@
   <button uiButton (click)="alertWithHandler()">Alert</button>
 </div>
 
-<div class="demo-panel">
+<div>
   <h2>Confirm dialog</h2>
   <button uiButton (click)="confirm()">Confirm</button>
 </div>
 
-<div class="demo-panel">
+<div>
   <h2>Prompt dialog</h2>
   <button uiButton (click)="prompt(promptTemplate)">Prompt</button>
   <ng-template #promptTemplate let-form>
@@ -30,7 +28,7 @@
   </ng-template>
 </div>
 
-<div class="demo-panel">
+<div>
   <h2>Color</h2>
   <button uiButton (click)="alertWithColor('default')">Default alert</button>
   <button uiButton color="primary" (click)="alertWithColor('primary')">Primary alert</button>

@@ -1,9 +1,4 @@
-<h1>Drawer</h1>
-
-<p>
-  Drawer uses KitModal and follows the same behavior as UiModal.
-</p>
-
+<div>
   <button uiButton (click)="display1 = true">Show drawer</button>
 
   <kit-modal (close)="display1 = false">
@@ -16,8 +11,9 @@
       </div>
     </ui-drawer>
   </kit-modal>
+</div>
 
-<div class="demo-panel">
+<div>
   <h2>Position</h2>
   <button uiButton (click)="display2_t = true">Top</button>
   <button uiButton (click)="display2_r = true">Right</button>
