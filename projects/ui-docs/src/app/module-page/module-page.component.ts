@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DocGen } from '@ngx-kit/docgen/meta';
 import { ContentService } from '../../content/content';
@@ -7,7 +7,7 @@ import { ContentService } from '../../content/content';
   selector: 'app-module-page',
   templateUrl: './module-page.component.html',
   styleUrls: ['./module-page.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ModulePageComponent implements OnInit {
   name: string;
@@ -33,7 +33,6 @@ export class ModulePageComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.name = params['name'];
       this.files = this.content.getModuleFiles(this.name);
-      console.log('FIL:ES', this.files);
       // Pick md
       this.mdFiles = this.files.filter(file => file.type === 'md') as DocGen.MdFile[];
       // Pick ts
@@ -47,7 +46,9 @@ export class ModulePageComponent implements OnInit {
       this.demoFile = demoFiles && demoFiles[0] ? demoFiles[0] : undefined;
       // Gather sources
       this.demoSources = this.demoFile
-        ? this.files.filter(demoSourcesFilterFactory(true))
+        ? this.files
+          .filter(demoSourcesFilterFactory(true))
+          .sort((x: DocGen.File, y: DocGen.File) => x.type === 'html' ? -1 : 1)
         : [];
       this.cdr.detectChanges();
     });
@@ -67,7 +68,7 @@ function demoFilterFactory(isDemo: boolean) {
 }
 
 function demoSourcesFilterFactory(isDemo: boolean) {
-  return (file: DocGen.TsFile) => {
+  return (file: DocGen.File) => {
     const curr = file.fileName.indexOf('/demo/') !== -1;
     return curr === isDemo;
   };
