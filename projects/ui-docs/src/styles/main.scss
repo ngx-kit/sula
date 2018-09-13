@@ -2,17 +2,11 @@
 @import "loader";
 @import "mq";
 
-html {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
 body {
   font-family: var(--sansSerif);
   font-size: 16px;
   line-height: 1.35em;
-  color: var(--mainColor);
+  color: var(--mainTextColor);
   display: flex;
   flex-direction: row;
   flex-grow: 1;
@@ -32,7 +26,7 @@ table {
 }
 
 table th {
-  color: var(--mainColorLight3);
+  color: var(--mainTextLightColor);
   padding: 8px 16px;
   text-align: left;
   white-space: nowrap;
@@ -66,12 +60,7 @@ code, pre {
   font-size: 0.85em;
 }
 
-pre {
-  background: #f8f8f8;
-}
-
 code {
-  background-color: #f4f4f4;
   margin: 0;
   padding: 0.2em 0.4em;
 }
@@ -86,9 +75,3 @@ pre {
   padding: 16px;
   overflow: auto;
 }
-
-//@include mq(var(--from): tablet) {
-//  html {
-//    height: 100%;
-//  }
-//}

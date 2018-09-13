@@ -1,9 +1,9 @@
 span {
   --offset: 2px;
-  background: var(--mainColor);
+  background: var(--altPanelBgColor);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow);
-  color: #ffffff;
+  color: var(--altPanelTextColor);
   padding: calc(var(--grid) / 2) var(--grid);
   &.color {
     &-primary {

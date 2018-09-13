@@ -4,24 +4,56 @@
   --transition: 150ms;
   --transitionSlow: 300ms;
 
+  /* Shadows */
   --shadow: 0 9px 30px 0 rgba(35, 39, 42, .1);
   --smallShadow: 0 2px 6px 0 rgba(35, 39, 42, 0.15);
 
+  /* Main colors */
   --whiteColor: #ffffff;
+  --mainBgColor: #ffffff;
+  --mainBdColor: #eaeaea;
+  --mainTextColor: #24252f;
+  --mainTextLightColor: #a4a4a4;
+  --mainHoverBgColor: #f0f0f0;
+  --mainHoverTextColor: #24252f;
+
+  /* Trans colors */
+  --toBackgroundColor1: rgba(230, 230, 230, .1);
+  --toBackgroundColor2: rgba(230, 230, 230, .2);
+  --toTextColor1: rgba(0, 0, 0, .25);
+  --toTextColor2: rgba(0, 0, 0, .45);
+
+  /* Header colors */
+  --headerBgColor: #24252f;
+  --headerTextColor: #ffffff;
+
+  /* Navigation panel color */
+  --navBgColor: #ffffff;
+  --navTextColor: var(--mainTextColor);
+
+  /* Panels color */
+  --panelBgColor: #ffffff;
+  --panelBdColor: #d7d7d9;
+  --panelTextColor: var(--mainTextColor);
+
+  /* Alt panels colors (notif, tooltip..) */
+  --altPanelBgColor: #393b45;
+  --altPanelTextColor: #ffffff;
+
+  /* Input elements colors */
+  --inputBgColor: #ffffff;
+  --inputBdColor: #d7d7d9;
+  --inputTextColor: var(--mainTextColor);
+
+  /* Scroll colors */
+  --scrollBgColor: #eaeaea;
+  --scrollBarColor: #9a9a9a;
 
   --primaryColor: #7288d8;
   --primaryColorDark1: #49578a;
   --primaryColorDark2: #5e70b1;
   --primaryColorLight1: #8b9ddf;
   --primaryColorLight2: #cbd3f0;
-
-  --mainColor: #24252f;
-  --mainColorLight1: #4b4c54;
-  --mainColorLight2: #5f6067;
-  --mainColorLight3: #afafb3;
-  --mainColorLight4: #d7d7d9;
-
-  --lightColor: #eeeff2;
 
   --errorColor: #f04747;
   --errorColorDark2: #db4141;
@@ -46,4 +78,23 @@
   --infoColorDark2: #00a0de;
   --infoColorLight1: #73d3f9;
   --infoColorLight2: #b9e9fc;
+}
+
+html {
+  background: var(--mainBgColor);
+  color: var(--mainTextColor);
+}
+
+a {
+  color: var(--primaryColor);
+}
+
+pre {
+  background: var(--mainHoverBgColor);
+  color: var(--mainHoverTextColor);
+}
+
+code {
+  background: var(--mainHoverBgColor);
+  color: var(--mainHoverTextColor);
 }

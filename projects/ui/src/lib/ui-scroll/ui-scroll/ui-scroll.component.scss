@@ -8,7 +8,7 @@
 }
 
 .v-bar-wrapper {
-  background: var(--lightColor);
+  background: var(--scrollBgColor);
   bottom: 1px;
   border-radius: var(--borderRadius);
   opacity: 0;
@@ -19,7 +19,7 @@
   transition-property: opacity;
   width: var(--barSize);
   .bar {
-    background: var(--mainColorLight2);
+    background: var(--scrollBarColor);
     border-radius: var(--borderRadius);
     cursor: pointer;
     position: absolute;
@@ -31,7 +31,7 @@
 }
 
 .h-bar-wrapper {
-  background: var(--lightColor);
+  background: var(--scrollBgColor);
   bottom: 1px;
   border-radius: var(--borderRadius);
   left: 1px;
@@ -42,7 +42,7 @@
   transition-property: opacity;
   height: var(--barSize);
   .bar {
-    background: var(--mainColorLight2);
+    background: var(--scrollBarColor);
     border-radius: var(--borderRadius);
     cursor: pointer;
     position: absolute;

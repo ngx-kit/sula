@@ -1,11 +1,11 @@
 :host {
   display: block;
   overflow: hidden;
-  color: var(--mainColorLight3);
+  color: var(--panelTextColor);
 }
 
 .content {
-  border-top: 1px solid var(--mainColorLight4);
+  border-top: 1px solid var(--panelBdColor);
   margin: 0 calc(var(--grid) * 3);
   padding: calc(var(--grid) * 1.5) 0;
 }

@@ -20,6 +20,7 @@ export * from './lib/ui-select/ui-select';
 export * from './lib/ui-slider/ui-slider';
 export * from './lib/ui-tabs/ui-tabs';
 export * from './lib/ui-text/ui-text';
+export * from './lib/ui-theme/ui-theme';
 export * from './lib/ui-toggle/ui-toggle';
 export * from './lib/ui-tooltip/ui-tooltip';
 export * from './lib/ui-vertical-menu/ui-vertical-menu';

@@ -11,7 +11,7 @@
 }
 
 .bg {
-  background: var(--lightColor);
+  background: var(--inputBdColor);
   border-radius: var(--borderRadius);
   height: var(--height);
 }
@@ -27,8 +27,8 @@
 }
 
 .pointer {
-  background: var(--whiteColor);
-  border: 1px solid var(--mainColorLight4);
+  background: var(--inputBgColor);
+  border: 1px solid var(--inputBdColor);
   border-radius: var(--borderRadius);
   box-sizing: border-box;
   cursor: pointer;

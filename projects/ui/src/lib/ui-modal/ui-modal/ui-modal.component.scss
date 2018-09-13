@@ -10,9 +10,10 @@
 }
 
 .modal {
-  background: #ffffff;
+  background: var(--mainBgColor);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow);
+  color: var(--mainTextColor);
   display: flex;
   flex-direction: column;
   max-height: 90%;
@@ -22,7 +23,7 @@
 
 .header {
   align-items: center;
-  border-bottom: 1px solid var(--lightColor);
+  border-bottom: 1px solid var(--mainBdColor);
   border-radius: var(--borderRadius) var(--borderRadius) 0 0;
   display: flex;
   font-weight: 700;
@@ -35,14 +36,14 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    color: var(--mainColor);
+    color: var(--mainTextColor);
     font-size: 1.5em;
     line-height: 1em;
     outline: none;
   }
   &.color {
     &-default {
-      border-bottom-color: var(--mainColorLight4);
+      border-bottom-color: var(--mainBdColor);
     }
     &-primary {
       background: var(--primaryColorLight2);
@@ -93,8 +94,8 @@
   padding: calc(var(--grid) * 4) calc(var(--grid) * 2);
 }
 
-//@include mq($from: tablet) {
-//  .dialog {
-//    min-width: 500px;
-//  }
-//}
+@media screen and (min-width: 740px) {
+  .modal {
+    min-width: 500px;
+  }
+}

@@ -1,7 +1,7 @@
 :host {
   background: transparent;
   border: 0;
-  color: var(--mainColorLight3);
+  color: var(--mainTextLightColor);
   cursor: pointer;
   font-size: 1rem;
   padding: 0;
@@ -10,7 +10,7 @@
     color: var(--mainColorLight2);
   }
   &:last-child {
-    color: var(--mainColor);
+    color: var(--mainTextColor);
     cursor: inherit;
   }
 }

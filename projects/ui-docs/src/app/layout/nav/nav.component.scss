@@ -1,5 +1,6 @@
 :host {
-  background: var(--whiteColor);
+  background: var(--navBgColor);
+  color: var(--navTextColor);
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.04);
 }
 
@@ -20,7 +21,7 @@ ul {
     margin: var(--grid) 0 0 0;
     padding: var(--grid);
     font-size: 0.9rem;
-    color: var(--mainColorLight2);
+    color: var(--mainBdColor);
   }
   a {
     display: block;

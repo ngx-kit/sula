@@ -1,7 +1,8 @@
 :host {
-  background: #ffffff;
+  background: var(--mainBgColor);
   border: 0;
   box-sizing: border-box;
+  color: var(--mainTextColor);
   cursor: pointer;
   display: block;
   margin: 0;
@@ -10,7 +11,8 @@
   text-align: left;
   width: 100%;
   &:hover {
-    background: var(--lightColor);
+    background: var(--mainHoverBgColor);
+    color: var(--mainHoverTextColor);
   }
   &:active{
     color: var(--primaryColor);

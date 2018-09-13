@@ -1,8 +1,9 @@
 .popup {
   --offset: 8px;
-  background: #ffffff;
+  background: var(--mainBgColor);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow);
+  color: var(--mainTextColor);
   &.position {
     &-top-center {
       margin-bottom: var(--offset);

@@ -1,8 +1,10 @@
 :host {
   display: block;
   margin: var(--grid) 0;
+  background: var(--panelBgColor);
   border-radius: var(--borderRadius);
-  border: 1px solid var(--mainColorLight4);
+  border: 1px solid var(--panelBdColor);
+  color: var(--panelTextColor);
   transition: var(--transition);
   &:hover {
     box-shadow: var(--shadow);

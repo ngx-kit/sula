@@ -1,8 +1,9 @@
 :host {
-  border: 1px solid var(--mainColorLight4);
+  background: var(--inputBgColor);
+  border: 1px solid var(--inputBdColor);
   border-radius: var(--borderRadius);
   box-sizing: border-box;
-  color: var(--mainColor);
+  color: var(--inputTextColor);
   padding: var(--grid) calc(var(--grid) * 2);
   transition: var(--transition);
   width: 100%;

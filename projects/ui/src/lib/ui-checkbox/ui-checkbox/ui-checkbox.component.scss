@@ -19,24 +19,14 @@
     &-default {
       &.-checked {
         &::before {
-          border-color: var(--mainColorLight4);
+          border-color: var(--inputBdColor);
         }
         &::after {
-          border-color: var(--mainColor);
+          border-color: var(--mainTextColor);
         }
       }
-      &.-disabled {
-        &::before {
-          background: var(--lightColor);
-          border-color: var(--lightColor);
-        }
-        &::after {
-          border-color: var(--mainColor);
-        }
-      }
-
       &::before {
-        border: var(--borderWidth) solid var(--mainColorLight4);
+        border: var(--borderWidth) solid var(--inputBdColor);
       }
     }
 
@@ -47,15 +37,6 @@
         }
         &::after {
           border-color: var(--whiteColor);
-        }
-      }
-      &.-disabled {
-        &::before {
-          background: var(--lightColor);
-          border-color: var(--lightColor);
-        }
-        &::after {
-          border-color: var(--primaryColor);
         }
       }
       &::before {
@@ -72,15 +53,6 @@
           border-color: var(--whiteColor);
         }
       }
-      &.-disabled {
-        &::before {
-          background: var(--lightColor);
-          border-color: var(--lightColor);
-        }
-        &::after {
-          border-color: var(--errorColor);
-        }
-      }
       &::before {
         border: var(--borderWidth) solid var(--errorColor);
       }
@@ -93,15 +65,6 @@
         }
         &::after {
           border-color: var(--whiteColor);
-        }
-      }
-      &.-disabled {
-        &::before {
-          background: var(--lightColor);
-          border-color: var(--lightColor);
-        }
-        &::after {
-          border-color: var(--successColor);
         }
       }
       &::before {
@@ -118,15 +81,6 @@
           border-color: var(--whiteColor);
         }
       }
-      &.-disabled {
-        &::before {
-          background: var(--lightColor);
-          border-color: var(--lightColor);
-        }
-        &::after {
-          border-color: var(--warningColor);
-        }
-      }
       &::before {
         border: var(--borderWidth) solid var(--warningColor);
       }
@@ -139,15 +93,6 @@
         }
         &::after {
           border-color: var(--whiteColor);
-        }
-      }
-      &.-disabled {
-        &::before {
-          background: var(--lightColor);
-          border-color: var(--lightColor);
-        }
-        &::after {
-          border-color: var(--infoColor);
         }
       }
       &::before {
@@ -185,6 +130,12 @@
 
   &.-disabled {
     cursor: not-allowed;
+    &::before {
+      opacity: .5;
+    }
+    &::after {
+      opacity: .5;
+    }
     &:hover {
       &::before {
         box-shadow: none;
@@ -193,7 +144,7 @@
   }
 
   &::before {
-    background-color: #ffffff;
+    background-color: var(--inputBgColor);
     border-radius: var(--borderRadius);
     box-shadow: none;
     content: "";

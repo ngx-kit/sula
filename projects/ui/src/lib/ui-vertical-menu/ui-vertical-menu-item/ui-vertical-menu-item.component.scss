@@ -1,5 +1,5 @@
 :host {
-  color: var(--mainColor);
+  color: inherit;
   font-weight: 600;
   cursor: pointer;
   display: block;
@@ -16,14 +16,14 @@
     }
   }
   &:hover{
-    background: var(--lightColor);
+    background: var(--toTextColor1);
     border-radius: var(--borderRadius);
     transition: all var(--transitionSlow) linear;
   }
 }
 
 :host-context(ui-vertical-menu-group) {
-  color: var(--mainColorLight1);
+  color: inherit;
   font-weight: 400;
   margin: calc(var(--grid) / 2) 0;
   padding: var(--grid) calc(var(--grid) * 2);

@@ -5,9 +5,10 @@
 }
 
 .popup {
-  background: #ffffff;
+  background: var(--mainBgColor);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow);
+  color: var(--mainTextColor);
   padding: calc(var(--grid) * 1.5);
   transform-origin: top left;
 }

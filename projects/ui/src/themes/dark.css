@@ -1,0 +1,46 @@
+.theme-dark {
+  /* Shadows */
+  --shadow: 0 9px 30px 0 rgba(6, 8, 10, 0.4);
+  --smallShadow: 0 2px 6px 0 rgba(11, 14, 17, 0.55);
+
+  /* Main colors */
+  --whiteColor: #ffffff;
+  --mainBgColor: #34363f;
+  --mainBdColor: #4b4e5b;
+  --mainTextColor: #f2f2f2;
+  --mainTextLightColor: #a3a3a3;
+  --mainHoverBgColor: #444652;
+  --mainHoverTextColor: #f2f2f2;
+
+  /* Trans colors */
+  --toBackgroundColor1: rgba(0, 0, 0, .25);
+  --toBackgroundColor2: rgba(0, 0, 0, .45);
+  --toTextColor1: rgba(230, 230, 230, .1);
+  --toTextColor2: rgba(230, 230, 230, .2);
+
+  /* Header colors */
+  --headerBgColor: #1e2025;
+  --headerTextColor: var(--mainTextColor);
+
+  /* Navigation panel colors */
+  --navBgColor: #2b2d34;
+  --navTextColor: var(--mainTextColor);
+
+  /* Panels colors */
+  --panelBgColor: #393b45;
+  --panelBdColor: #24252b;
+  --panelTextColor: var(--mainTextColor);
+
+  /* Alt panels colors (notif, tooltip..) */
+  --altPanelBgColor: #0d0e14;
+  --altPanelTextColor: #ffffff;
+
+  /* Input elements colors */
+  --inputBgColor: #494b54;
+  --inputBdColor: #515462;
+  --inputTextColor: var(--mainTextColor);
+
+  /* Scroll colors */
+  --scrollBgColor: #34363f;
+  --scrollBarColor: #5c6274;
+}

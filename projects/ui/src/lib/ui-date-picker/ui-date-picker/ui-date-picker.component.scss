@@ -12,10 +12,10 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  color: var(--mainColor);
+  color: var(--mainTextColor);
   font-weight: 600;
   padding: var(--grid) 0;
-  border-bottom: 1px solid var(--mainColorLight4);
+  border-bottom: 1px solid var(--mainBdColor);
   .title {
     flex-grow: 1;
     text-align: center;
@@ -23,6 +23,7 @@
   button {
     background: transparent;
     border: 0;
+    color: var(--mainTextColor);
     cursor: pointer;
     padding: var(--grid);
     &:focus {
@@ -49,7 +50,7 @@
   }
   th {
     color: var(--primaryColor);
-    border-bottom: 1px solid var(--mainColorLight4);
+    border-bottom: 1px solid var(--mainBdColor);
     padding: var(--grid);
     font-size: 14px;
     font-weight: 300;
@@ -72,7 +73,7 @@
     color: #ffffff;
   }
   &.outside {
-    color: var(--mainColorLight4);
+    color: var(--mainTextLightColor);
     &:hover {
     color: #ffffff;
     }

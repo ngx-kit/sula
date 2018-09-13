@@ -1,6 +1,7 @@
 .drawer {
-  background: #ffffff;
+  background: var(--mainBgColor);
   box-shadow: var(--shadow);
+  color: var(--mainTextColor);
   position: fixed;
   &.position {
     &-top {

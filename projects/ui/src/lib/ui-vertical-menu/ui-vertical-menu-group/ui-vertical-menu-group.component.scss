@@ -16,16 +16,12 @@
   .arrow {
     background: transparent;
     border: 0;
+    color: var(--mainTextColor);
     cursor: pointer;
     outline: none;
   }
-  &.-active {
-    border-radius: var(--borderRadius);
-    color: var(--primaryColor);
-    transition: all var(--transitionSlow) linear;
-  }
   &:hover {
-    background: var(--lightColor);
+    background: var(--toTextColor1);
     border-radius: var(--borderRadius);
     transition: all var(--transitionSlow) linear;
   }

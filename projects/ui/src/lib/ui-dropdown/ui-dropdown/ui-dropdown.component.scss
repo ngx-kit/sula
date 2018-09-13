@@ -1,8 +1,9 @@
 .dropdown {
-  background: #ffffff;
+  background: var(--mainBgColor);
   border-radius:var(--borderRadius);
   box-shadow: var(--shadow);
   box-sizing: border-box;
+  color: var(--mainTextColor);
   margin-top: calc(var(--grid) / 2);
   min-width: 120px;
   transform-origin: top;

@@ -1,7 +1,7 @@
 :host {
   background: transparent;
   cursor: pointer;
-  color: var(--mainColor);
+  color: var(--mainTextColor);
   display: block;
   padding: calc(var(--grid) * 1.5) calc(var(--grid) * 3);
   transition-duration: .25s;
