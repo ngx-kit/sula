@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DocGen } from '@ngx-kit/docgen/meta';
 import { ContentService } from '../../content/content';
@@ -17,18 +17,20 @@ export class DocsPageComponent implements OnInit {
   constructor(
     public content: ContentService,
     private route: ActivatedRoute,
+    private cdr: ChangeDetectorRef,
   ) {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      const name: string = params['name'];
-//      this.seo.setTitle(`${this.content.section}/${name}`);
-      this.file = this.content.getDocFiles()
-        .find(d => {
-          const dName = d.meta && d.meta.title ? d.meta.title : d.name;
-          return dName.toLowerCase() === name.toLowerCase();
-        });
-    });
+    this.route.params
+      .subscribe(params => {
+        const name: string = params['name'];
+        this.file = this.content.getDocFiles()
+          .find(d => {
+            const dName = d.meta && d.meta.title ? d.meta.title : d.name;
+            return dName.toLowerCase() === name.toLowerCase();
+          });
+        this.cdr.detectChanges();
+      });
   }
 }

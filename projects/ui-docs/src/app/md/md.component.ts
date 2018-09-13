@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnChanges } from '@angular/core';
 import { MdRenderService } from '@nvxme/ngx-md-render';
 
 @Component({
@@ -12,7 +12,9 @@ export class MdComponent implements OnChanges {
 
   @Input() content: string;
 
-  constructor(private md: MdRenderService) {
+  constructor(
+    private md: MdRenderService,
+    ) {
   }
 
   ngOnChanges() {

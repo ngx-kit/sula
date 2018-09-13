@@ -45,7 +45,7 @@ export class NavComponent implements OnInit {
       .sort((x, y) => {
         const xPrior = x.meta && x.meta.apiPriority ? x.meta.apiPriority : 0;
         const yPrior = y.meta && y.meta.apiPriority ? y.meta.apiPriority : 0;
-        return x < y ? 1 : -1;
+        return x < y ? -1 : 1;
       });
     this.modules = Object
       .keys(this.content.content.filesMap.lib)
