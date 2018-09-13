@@ -46,40 +46,40 @@
       border-bottom-color: var(--mainBdColor);
     }
     &-primary {
-      background: var(--primaryColorLight2);
-      border-bottom-color: var(--primaryColorLight1);
+      background: var(--primaryLightColor);
+      border-bottom-color: var(--primaryLightColor);
       color: var(--primaryColor);
       .close {
         color: var(--primaryColor);
       }
     }
     &-error {
-      background: var(--errorColorLight2);
-      border-bottom-color: var(--errorColorLight1);
+      background: var(--errorLightColor);
+      border-bottom-color: var(--errorLightColor);
       color: var(--errorColor);
       .close {
         color: var(--errorColor);
       }
     }
     &-success {
-      background: var(--successColorLight2);
-      border-bottom-color: var(--successColorLight1);
+      background: var(--successLightColor);
+      border-bottom-color: var(--successLightColor);
       color: var(--successColor);
       .close {
         color: var(--successColor);
       }
     }
     &-warning {
-      background: var(--warningColorLight2);
-      border-bottom-color: var(--warningColorLight1);
+      background: var(--warningLightColor);
+      border-bottom-color: var(--warningLightColor);
       color: var(--warningColor);
       .close {
         color: var(--warningColor);
       }
     }
     &-info {
-      background: var(--infoColorLight2);
-      border-bottom-color: var(--infoColorLight1);
+      background: var(--infoLightColor);
+      border-bottom-color: var(--infoLightColor);
       color: var(--infoColor);
       .close {
         color: var(--infoColor);

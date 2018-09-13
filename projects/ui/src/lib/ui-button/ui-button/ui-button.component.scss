@@ -20,134 +20,87 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+
   &:hover {
-    background: var(--xHoverBackground, var(--hoverBackground));
+    background: var(--hoverBackground);
     box-shadow: var(--shadow);
     border-color: var(--hoverBorderColor);
-    color: var(--hoverColor);
+    color: var(--color);
   }
+
   &:active, &.checked {
     background: var(--activeBackground);
     border-color: var(--activeBorderColor);
-    color: var(--activeColor);
+    color: var(--color);
   }
+
   &:disabled {
-    background: var(--disabledBackground);
-    border-color: var(--disabledBorderColor);
-    color: var(--disabledColor);
-    pointer-events: none;
+    opacity: .5;
+    cursor: not-allowed;
   }
+
   &:focus {
     box-shadow: var(--focusBoxShadow);
   }
+
   &.color {
     &-default {
       --background: none;
       --color: var(--primaryColor);
       --borderColor: var(--primaryColor);
-      --hoverBorderColor: var(--primaryColorDark2);
-      --hoverColor: var(--primaryColorDark2);
-      --activeColor: var(--primaryColorDark1);
-      --activeBorderColor: var(--primaryColorDark1);
-      --disabledColor: var(--primaryColorLight2);
-      --disabledBorderColor: var(--primaryColorLight2);
-      --focusBoxShadow: var(--shadow), var(--primaryColorLight1) 0 0 0 1px inset;
+      --hoverBorderColor: var(--primaryHoverColor);
+      --activeBorderColor: var(--primaryActiveColor);
+      --focusBoxShadow: var(--shadow), var(--primaryLightColor) 0 0 0 1px inset;
     }
     &-primary {
       --background: var(--primaryColor);
-      --color: var(--whiteColor);
+      --color: var(--primaryTextColor);
       --borderColor: var(--primaryColor);
-      --hoverBackground: var(--primaryColorDark2);
-      --hoverBorderColor: var(--primaryColorDark2);
-      --activeBackground: var(--primaryColorDark1);
-      --activeBorderColor: var(--primaryColorDark1);
-      --disabledBackground: var(--primaryColorLight2);
-      --disabledBorderColor: var(--primaryColorLight2);
-      --focusBoxShadow: var(--shadow), var(--primaryColorLight2) 0 0 0 2px inset;
+      --hoverBackground: var(--primaryHoverColor);
+      --hoverBorderColor: var(--primaryHoverColor);
+      --activeBackground: var(--primaryActiveColor);
+      --activeBorderColor: var(--primaryActiveColor);
+      --focusBoxShadow: var(--shadow), var(--primaryLightColor) 0 0 0 2px inset;
     }
     &-error {
-      background: var(--errorColor);
-      border-color: var(--errorColor);
-      color: #ffffff;
-      &:hover {
-        background: var(--errorColorDark2);
-        border-color: var(--errorColorDark2);
-      }
-      &:active, &.checked {
-        background: var(--errorColorDark1);
-        border-color: var(--errorColorDark1);
-      }
-      &:disabled {
-        background: var(--errorColorLight2);
-        border-color: var(--errorColorLight2);
-        pointer-events: none;
-      }
-      &:focus {
-        box-shadow: var(--shadow), var(--errorColorLight2) 0 0 0 2px inset;
-      }
+      --background: var(--errorColor);
+      --color: var(--errorTextColor);
+      --borderColor: var(--errorColor);
+      --hoverBackground: var(--errorHoverColor);
+      --hoverBorderColor: var(--errorHoverColor);
+      --activeBackground: var(--errorActiveColor);
+      --activeBorderColor: var(--errorActiveColor);
+      --focusBoxShadow: var(--shadow), var(--errorLightColor) 0 0 0 2px inset;
     }
     &-success {
-      background: var(--successColor);
-      border-color: var(--successColor);
-      color: #ffffff;
-      &:hover {
-        background: var(--successColorDark2);
-        border-color: var(--successColorDark2);
-      }
-      &:active, &.checked {
-        background: var(--successColorDark1);
-        border-color: var(--successColorDark1);
-      }
-      &:disabled {
-        background: var(--successColorLight2);
-        border-color: var(--successColorLight2);
-        pointer-events: none;
-      }
-      &:focus {
-        box-shadow: var(--shadow), var(--successColorLight2) 0 0 0 2px inset;
-      }
+      --background: var(--successColor);
+      --color: var(--successTextColor);
+      --borderColor: var(--successColor);
+      --hoverBackground: var(--successHoverColor);
+      --hoverBorderColor: var(--successHoverColor);
+      --activeBackground: var(--successActiveColor);
+      --activeBorderColor: var(--successActiveColor);
+      --focusBoxShadow: var(--shadow), var(--successLightColor) 0 0 0 2px inset;
     }
     &-warning {
-      background: var(--warningColor);
-      border-color: var(--warningColor);
-      color: #ffffff;
-      &:hover {
-        background: var(--warningColorDark2);
-        border-color: var(--warningColorDark2);
-      }
-      &:active, &.checked {
-        background: var(--warningColorDark1);
-        border-color: var(--warningColorDark1);
-      }
-      &:disabled {
-        background: var(--warningColorLight2);
-        border-color: var(--warningColorLight2);
-        pointer-events: none;
-      }
-      &:focus {
-        box-shadow: var(--shadow), var(--warningColorLight2) 0 0 0 2px inset;
-      }
+      --background: var(--warningColor);
+      --color: var(--warningTextColor);
+      --borderColor: var(--warningColor);
+      --hoverBackground: var(--warningHoverColor);
+      --hoverBorderColor: var(--warningHoverColor);
+      --activeBackground: var(--warningActiveColor);
+      --activeBorderColor: var(--warningActiveColor);
+      --focusBoxShadow: var(--shadow), var(--warningLightColor) 0 0 0 2px inset;
     }
     &-info {
-      background: var(--infoColor);
-      border-color: var(--infoColor);
-      color: #ffffff;
-      &:hover {
-        background: var(--infoColorDark2);
-        border-color: var(--infoColorDark2);
-      }
-      &:active, &.checked {
-        background: var(--infoColorDark1);
-        border-color: var(--infoColorDark1);
-      }
-      &:disabled {
-        background: var(--infoColorLight2);
-        border-color: var(--infoColorLight2);
-        pointer-events: none;
-      }
-      &:focus {
-        box-shadow: var(--shadow), var(--infoColorLight2) 0 0 0 2px inset;
-      }
+      --background: var(--infoColor);
+      --color: var(--infoTextColor);
+      --borderColor: var(--infoColor);
+      --hoverBackground: var(--infoHoverColor);
+      --hoverBorderColor: var(--infoHoverColor);
+      --activeBackground: var(--infoActiveColor);
+      --activeBorderColor: var(--infoActiveColor);
+      --focusBoxShadow: var(--shadow), var(--infoLightColor) 0 0 0 2px inset;
     }
   }
 
@@ -159,7 +112,7 @@
       background: none;
       box-shadow: none;
       border: none;
-      color: var(--primaryColorDark2);
+      color: var(--primaryHoverColor);
       text-decoration: underline;
       transform: none;
     }
@@ -167,19 +120,19 @@
       background: none;
       box-shadow: none;
       border: none;
-      color: var(--primaryColorDark1);
+      color: var(--primaryActiveColor);
       transform: none;
     }
     &:disabled {
       background: none;
       box-shadow: none;
       border: none;
-      color: var(--primaryColorLight2);
+      color: var(--primaryLightColor);
       pointer-events: none;
       transform: none;
     }
     &:focus {
-      box-shadow: var(--primaryColorLight1) 0 0 0 2px inset;
+      box-shadow: var(--primaryLightColor) 0 0 0 2px inset;
     }
   }
 

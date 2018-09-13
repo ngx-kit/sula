@@ -41,23 +41,23 @@
   }
   &.color {
     &-primary {
-      background: var(--primaryColorLight2);
+      background: var(--primaryLightColor);
       color: var(--primaryColor);
     }
     &-error {
-      background: var(--errorColorLight2);
+      background: var(--errorLightColor);
       color: var(--errorColor);
     }
     &-success {
-      background: var(--successColorLight2);
+      background: var(--successLightColor);
       color: var(--successColor);
     }
     &-warning {
-      background: var(--warningColorLight2);
+      background: var(--warningLightColor);
       color: var(--warningColor);
     }
     &-info {
-      background: var(--infoColorLight2);
+      background: var(--infoLightColor);
       color: var(--infoColor);
     }
   }

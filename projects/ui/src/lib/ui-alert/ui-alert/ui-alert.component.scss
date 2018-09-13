@@ -7,57 +7,9 @@
   display: block;
   margin: 8px 0;
   padding: calc(var(--grid) * 1.5) calc(var(--grid) * 3);
-  border: 1px solid;
-  &.color {
-    &-default {
-      background: transparent;
-      border-color: var(--primaryColor);
-      color: var(--primaryColor);
-      .close{
-        color: var(--primaryColor);
-      }
-    }
-    &-primary {
-      background: var(--primaryColorLight2);
-      border-color: var(--primaryColorLight1);
-      color: var(--primaryColor);
-      .close{
-        color: var(--primaryColor);
-      }
-    }
-    &-error {
-      background: var(--errorColorLight2);
-      border-color: var(--errorColorLight1);
-      color: var(--errorColor);
-      .close{
-        color: var(--errorColor);
-      }
-    }
-    &-success {
-      background: var(--successColorLight2);
-      border-color: var(--successColorLight1);
-      color: var(--successColor);
-      .close{
-        color: var(--successColor);
-      }
-    }
-    &-warning {
-      background: var(--warningColorLight2);
-      border-color: var(--warningColorLight1);
-      color: var(--warningColor);
-      .close{
-        color: var(--warningColor);
-      }
-    }
-    &-info {
-      background: var(--infoColorLight2);
-      border-color: var(--infoColorLight1);
-      color: var(--infoColor);
-      .close{
-        color: var(--infoColor);
-      }
-    }
-  }
+  border: 1px solid var(--borderColor);
+  background: var(--backgroundColor);
+  color: var(--textColor);
 }
 
 .title {
@@ -70,9 +22,43 @@
 .close {
   background: transparent;
   border: 0;
+  color: var(--textColor);
   cursor: pointer;
   float: right;
   font-weight: 700;
   margin: 0 0 0 calc(var(--grid) * 2);
   padding: 0;
+}
+
+.color {
+  &-default {
+    --backgroundColor: transparent;
+    --borderColor: var(--primaryColor);
+    --textColor: var(--primaryColor);
+  }
+  &-primary {
+    --backgroundColor: var(--primaryLightColor);
+    --borderColor: var(--primaryColor);
+    --textColor: var(--primaryColor);
+  }
+  &-error {
+    --backgroundColor: var(--errorLightColor);
+    --borderColor: var(--errorColor);
+    --textColor: var(--errorColor);
+  }
+  &-success {
+    --backgroundColor: var(--successLightColor);
+    --borderColor: var(--successColor);
+    --textColor: var(--successColor);
+  }
+  &-warning {
+    --backgroundColor: var(--warningLightColor);
+    --borderColor: var(--warningColor);
+    --textColor: var(--warningColor);
+  }
+  &-info {
+    --backgroundColor: var(--infoLightColor);
+    --borderColor: var(--infoColor);
+    --textColor: var(--infoColor);
+  }
 }

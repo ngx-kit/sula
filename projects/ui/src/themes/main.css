@@ -50,34 +50,34 @@
   --scrollBarColor: #9a9a9a;
 
   --primaryColor: #7288d8;
-  --primaryColorDark1: #49578a;
-  --primaryColorDark2: #5e70b1;
-  --primaryColorLight1: #8b9ddf;
-  --primaryColorLight2: #cbd3f0;
+  --primaryTextColor: #ffffff;
+  --primaryHoverColor: #6275b9;
+  --primaryActiveColor: #4f5d93;
+  --primaryLightColor: #cbd3f0;
 
   --errorColor: #f04747;
-  --errorColorDark2: #db4141;
-  --errorColorDark1: #c53b3b;
-  --errorColorLight1: #f8abab;
-  --errorColorLight2: #fcdddd;
+  --errorTextColor: #ffffff;
+  --errorHoverColor: #df4242;
+  --errorActiveColor: #df4242;
+  --errorLightColor: #fcdddd;
 
   --successColor: #43b581;
-  --successColorDark1: #37956a;
-  --successColorDark2: #3da576;
-  --successColorLight1: #87cfae;
-  --successColorLight2: #bae4d1;
+  --successTextColor: #ffffff;
+  --successHoverColor: #3da576;
+  --successActiveColor: #37956a;
+  --successLightColor: #bae4d1;
 
   --warningColor: #faa61a;
-  --warningColorDark1: #cd8816;
-  --warningColorDark2: #e49718;
-  --warningColorLight1: #fcce82;
-  --warningColorLight2: #fde6c0;
+  --warningTextColor: #ffffff;
+  --warningHoverColor: #e89a18;
+  --warningActiveColor: #d38c17;
+  --warningLightColor: #fde6c0;
 
   --infoColor: #00b0f4;
-  --infoColorDark1: #0091c8;
-  --infoColorDark2: #00a0de;
-  --infoColorLight1: #73d3f9;
-  --infoColorLight2: #b9e9fc;
+  --infoTextColor: #ffffff;
+  --infoHoverColor: #00a4e3;
+  --infoActiveColor: #0098d1;
+  --infoLightColor: #b9e9fc;
 }
 
 html {

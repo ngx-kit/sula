@@ -27,36 +27,36 @@
     }
     &-primary {
       .header {
-        background: var(--primaryColorLight2);
-        border-bottom-color: var(--primaryColorLight1);
+        background: var(--primaryLightColor);
+        border-bottom-color: var(--primaryLightColor);
         color: var(--primaryColor);
       }
     }
     &-error {
       .header {
-        background: var(--errorColorLight2);
-        border-bottom-color: var(--errorColorLight1);
+        background: var(--errorLightColor);
+        border-bottom-color: var(--errorLightColor);
         color: var(--errorColor);
       }
     }
     &-success {
       .header {
-        background: var(--successColorLight2);
-        border-bottom-color: var(--successColorLight1);
+        background: var(--successLightColor);
+        border-bottom-color: var(--successLightColor);
         color: var(--successColor);
       }
     }
     &-warning {
       .header {
-        background: var(--warningColorLight2);
-        border-bottom-color: var(--warningColorLight1);
+        background: var(--warningLightColor);
+        border-bottom-color: var(--warningLightColor);
         color: var(--warningColor);
       }
     }
     &-info {
       .header {
-        background: var(--infoColorLight2);
-        border-bottom-color: var(--infoColorLight1);
+        background: var(--infoLightColor);
+        border-bottom-color: var(--infoLightColor);
         color: var(--infoColor);
       }
     }

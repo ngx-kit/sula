@@ -34,16 +34,16 @@
       border-color: var(--infoColor);
       color: #ffffff;
       &:hover {
-        background: var(--infoColorDark2);
-        border-color: var(--infoColorDark2);
+        background: var(--infoHoverColor);
+        border-color: var(--infoHoverColor);
       }
       &:active, &.checked {
-        background: var(--infoColorDark1);
-        border-color: var(--infoColorDark1);
+        background: var(--infoActiveColor);
+        border-color: var(--infoActiveColor);
       }
       &:disabled {
-        background: var(--infoColorLight2);
-        border-color: var(--infoColorLight2);
+        background: var(--infoLightColor);
+        border-color: var(--infoLightColor);
         pointer-events: none;
       }
     }
