@@ -1,17 +1,17 @@
 {
   "name": "@ngx-kit/sula",
-  "version": "6.0.0-beta.1",
+  "version": "6.0.0-beta.2",
   "scripts": {
     "ui-docs:serve": "ng run ui-docs:serve",
     "ui-docs:build": "ng run ui-docs:build:production",
     "ui-docs:docker:build": "docker build -t dhub.nvx.me:443/ngx-kit-sula .",
     "ui-docs:docker:push": "docker push dhub.nvx.me:443/ngx-kit-sula",
     "ui-docs:deploy": "npm run ui:docgen && npm run ui-docs:build && npm run ui-docs:docker:build && npm run ui-docs:docker:push",
+    "ui-docs:docgen": "docgen -p ./projects/ui/src -o ./projects/ui-docs/src/content/ui.json",
     "ui:build": "npm run ui:build:packgr && npm run ui:build:release && npm run schematics:build && npm run ui:build:publish",
     "ui:build:packgr": "ng run ui:build",
     "ui:build:release": "node ./projects/ui/release.js",
     "ui:build:publish": "publish-build.sh",
-    "ui:docgen": "docgen -p ./projects/ui/src -o ./projects/ui-docs/src/content/ui.json",
     "ui:publish": "npm publish ./tmp/sula-builds --access=public",
     "schematics:build": "tsc -p ./projects/schematics/tsconfig.json && node ./projects/schematics/release"
   },
