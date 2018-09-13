@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { UiThemeService } from 'ui';
 
 @Component({
   selector: 'app-header',
@@ -10,10 +11,16 @@ export class HeaderComponent implements OnInit {
 
   @Output() navToggle = new EventEmitter<void>();
 
-  constructor() {
+  constructor(
+    private theme: UiThemeService,
+  ) {
   }
 
   ngOnInit() {
   }
 
+  toggleTheme(isDark: boolean) {
+    this.theme.theme = isDark ? 'dark' : null;
+    console.log('IS DARK', isDark);
+  }
 }

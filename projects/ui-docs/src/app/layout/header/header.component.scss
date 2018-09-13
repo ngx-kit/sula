@@ -2,8 +2,8 @@
 
 :host {
   align-items: center;
-  background: var(--mainColor);
-  color: var(--whiteColor);
+  background: var(--headerBgColor);
+  color: var(--headerTextColor);
   display: flex;
   flex-shrink: 0;
   padding: calc(var(--grid) * 2.5) calc(var(--grid) * 3);
@@ -13,6 +13,7 @@
   background-color: transparent;
   border: 0;
   color: #ffffff;
+
   font-size: 2rem;
   margin-right: calc(var(--grid) * 2);
 }

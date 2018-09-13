@@ -7,6 +7,15 @@
   Sula <span class="created">Angular UI components</span>
 </div>
 <div>
+  <label>
+    <input type="checkbox"
+           uiToggle
+           ngModel
+           (ngModelChange)="toggleTheme($event)">
+    Dark Theme
+  </label>
+</div>
+<div>
   <a href="mailto:alex@nvx.me"
      class="link"
      title="Write to me">
