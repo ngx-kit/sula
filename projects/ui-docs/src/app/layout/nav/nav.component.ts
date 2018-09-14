@@ -41,12 +41,13 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     this.docs = this.content.getDocFiles()
-      .map(doc => doc.meta && doc.meta.title ? doc.meta.title : doc.name)
       .sort((x, y) => {
         const xPrior = x.meta && x.meta.apiPriority ? x.meta.apiPriority : 0;
         const yPrior = y.meta && y.meta.apiPriority ? y.meta.apiPriority : 0;
-        return x < y ? -1 : 1;
-      });
+        console.log({xPrior, yPrior});
+        return xPrior < yPrior ? -1 : 1;
+      })
+      .map(doc => doc.meta && doc.meta.title ? doc.meta.title : doc.name);
     this.modules = Object
       .keys(this.content.content.filesMap.lib)
       .filter(k => typeof this.content.content.filesMap.lib[k] === 'object');
