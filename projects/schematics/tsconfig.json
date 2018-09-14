@@ -11,7 +11,7 @@
     "noImplicitThis": true,
     "noUnusedParameters": false,
     "noUnusedLocals": true,
-    "outDir": "../../dist/ui/schematics",
+    "outDir": ".",
     "rootDir": ".",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
@@ -28,7 +28,7 @@
     ],
     "baseUrl": "",
     "typeRoots": [
-      "../node_modules/@types"
+      "../../../node_modules/@types"
     ],
     "types": [
       "jasmine",
