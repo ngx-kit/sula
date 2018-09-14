@@ -9,7 +9,7 @@ Sula uses [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using
 
 By default main set of variables injecting via `angular.json`:
 
-```json
+```
 ...
 "styles": [
   "node_modules/@ngx-kit/sula/themes/main.css",
@@ -22,7 +22,7 @@ By default main set of variables injecting via `angular.json`:
 
 Sula delivers built-in dark theme, to enable inject it via `angular.json`:
 
-```json
+```
 ...
 "styles": [
   "node_modules/@ngx-kit/sula/themes/main.css",
@@ -33,7 +33,7 @@ Sula delivers built-in dark theme, to enable inject it via `angular.json`:
 
 And activate it with `UiThemeService`:
 
-```typescript
+```
 constructor(
   private theme: UiThemeService,
 ) {
@@ -46,7 +46,7 @@ constructor(
 
 You can create your own theme:
 
-```css
+```
 .theme-custom {
   // Redefine vars here
   --mainBgColor: #34363f;
@@ -59,7 +59,7 @@ Check out list of variables in [main.css file](https://github.com/ngx-kit/sula/b
 
 Add to `angular.json`:
 
-```json
+```
 ...
 "styles": [
   "node_modules/@ngx-kit/sula/themes/main.css",
@@ -70,7 +70,7 @@ Add to `angular.json`:
 
 And activate with the theme service:
 
-```typescript
+```
 constructor(
   private theme: UiThemeService,
 ) {
