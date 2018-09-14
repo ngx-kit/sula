@@ -1,6 +1,6 @@
 {
   "name": "@ngx-kit/sula",
-  "version": "6.0.0-beta.2",
+  "version": "6.0.0-beta.3",
   "scripts": {
     "clean": "rimraf ./dist && rimraf ./tmp",
     "ui-docs:serve": "ng run ui-docs:serve",
