@@ -4,10 +4,10 @@
   "scripts": {
     "ui-docs:serve": "ng run ui-docs:serve",
     "ui-docs:build": "ng run ui-docs:build:production",
+    "ui-docs:docgen": "docgen -p ./projects/ui/src -o ./projects/ui-docs/src/content/ui.json",
     "ui-docs:docker:build": "docker build -t dhub.nvx.me:443/ngx-kit-sula .",
     "ui-docs:docker:push": "docker push dhub.nvx.me:443/ngx-kit-sula",
-    "ui-docs:deploy": "npm run ui:docgen && npm run ui-docs:build && npm run ui-docs:docker:build && npm run ui-docs:docker:push",
-    "ui-docs:docgen": "docgen -p ./projects/ui/src -o ./projects/ui-docs/src/content/ui.json",
+    "ui-docs:deploy": "npm run ui-docs:docgen && npm run ui-docs:build && npm run ui-docs:docker:build && npm run ui-docs:docker:push",
     "ui:build": "npm run ui:build:packgr && npm run ui:build:release && npm run schematics:build && npm run ui:build:publish",
     "ui:build:packgr": "ng run ui:build",
     "ui:build:release": "node ./projects/ui/release.js",
