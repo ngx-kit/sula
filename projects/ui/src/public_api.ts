@@ -8,6 +8,7 @@ export * from './lib/ui-date-picker/ui-date-picker';
 export * from './lib/ui-dialog/ui-dialog';
 export * from './lib/ui-drawer/ui-drawer';
 export * from './lib/ui-dropdown/ui-dropdown';
+export * from './lib/ui-file/ui-file';
 export * from './lib/ui-form/ui-form';
 export * from './lib/ui-loading-bar/ui-loading-bar';
 export * from './lib/ui-modal/ui-modal';
