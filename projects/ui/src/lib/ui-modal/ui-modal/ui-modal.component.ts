@@ -46,13 +46,17 @@ export class UiModalComponent implements OnInit {
 
   constructor(
     private ref: KitModalRef<UiModalComponent>,
-    private fm: KitFocusManagerService,
+    private _fm: KitFocusManagerService,
   ) {
   }
 
   ngOnInit() {
-    this.fm.autoCapture = true;
-    this.fm.init();
+    this._fm.autoCapture = true;
+    this._fm.init();
+  }
+
+  get fm() {
+    return this._fm;
   }
 
   @HostListener('click', ['$event']) clickHandler(event: any) {
