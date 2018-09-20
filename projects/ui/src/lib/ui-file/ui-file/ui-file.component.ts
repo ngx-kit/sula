@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { forkJoin, Observable } from 'rxjs';
 import { UiFileSelect } from '../meta';
 import { UiFileHolderDirective } from '../ui-file-holder/ui-file-holder.directive';
@@ -14,6 +14,8 @@ export class UiFileComponent {
   @Output() select = new EventEmitter<UiFileSelect[]>();
 
   @Output() error = new EventEmitter<string>();
+
+  @Input() readAs: 'DataURL' | 'Text' | 'ArrayBuffer' | 'BinaryString' = 'DataURL';
 
   constructor(
     private holder: UiFileHolderDirective,
@@ -50,7 +52,19 @@ export class UiFileComponent {
       reader.onerror = () => {
         observer.error('Read data error');
       };
-      reader.readAsDataURL(file);
+      switch (this.readAs) {
+        case 'DataURL':
+          reader.readAsDataURL(file);
+          break;
+        case 'Text':
+          reader.readAsText(file);
+          break;
+        case 'ArrayBuffer':
+          reader.readAsArrayBuffer(file);
+          break;
+        case 'BinaryString':
+          reader.readAsBinaryString(file);
+      }
     });
   }
 }
