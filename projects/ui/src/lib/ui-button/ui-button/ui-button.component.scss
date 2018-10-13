@@ -106,13 +106,13 @@
 
   &.link {
     background: none;
-    color: var(--primaryColor);
+    color: var(--linkColor);
     border: none;
     &:hover {
       background: none;
       box-shadow: none;
       border: none;
-      color: var(--primaryHoverColor);
+      color: var(--linkHoverColor);
       text-decoration: underline;
       transform: none;
     }
@@ -120,7 +120,7 @@
       background: none;
       box-shadow: none;
       border: none;
-      color: var(--primaryActiveColor);
+      color: var(--linkActiveColor);
       transform: none;
     }
     &:disabled {

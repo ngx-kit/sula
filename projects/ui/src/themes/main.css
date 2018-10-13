@@ -17,6 +17,11 @@
   --mainHoverBgColor: #f0f0f0;
   --mainHoverTextColor: #24252f;
 
+  /* Link colors */
+  --linkColor: #7288d8;
+  --linkHoverColor: #6275b9;
+  --linkActiveColor: #4f5d93;
+
   /* Trans colors */
   --toBackgroundColor1: rgba(230, 230, 230, .1);
   --toBackgroundColor2: rgba(230, 230, 230, .2);
