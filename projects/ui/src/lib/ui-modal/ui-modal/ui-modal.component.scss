@@ -16,15 +16,11 @@
   color: var(--mainTextColor);
   display: flex;
   flex-direction: column;
-  max-height: 90%;
-  max-width: 90%;
-  min-width: 60%;
 }
 
 .header {
   align-items: center;
   border-bottom: 1px solid var(--mainBdColor);
-  border-radius: var(--borderRadius) var(--borderRadius) 0 0;
   display: flex;
   font-weight: 700;
   flex-direction: row;
@@ -94,8 +90,49 @@
   padding: calc(var(--grid) * 4) calc(var(--grid) * 2);
 }
 
-@media screen and (min-width: 740px) {
-  .modal {
+.size-s, .size-m, .size-l, .size-full {
+  border-radius: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.size {
+  &-full {
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 270px) {
+  .size-s {
+    border-radius: var(--borderRadius);
+    max-width: 400px;
+    min-width: 250px;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .size-m {
+    border-radius: var(--borderRadius);
+    max-width: 800px;
     min-width: 500px;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .size-l {
+    border-radius: var(--borderRadius);
+    max-width: 1200px;
+    min-width: 800px;
+    position: relative;
   }
 }

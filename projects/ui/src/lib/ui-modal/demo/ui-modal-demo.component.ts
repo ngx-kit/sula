@@ -6,19 +6,36 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ui-ui-modal-demo',
   templateUrl: './ui-modal-demo.component.html',
-  styleUrls: ['./ui-modal-demo.component.scss']
+  styleUrls: ['./ui-modal-demo.component.scss'],
 })
 export class UiModalDemoComponent implements OnInit {
   display1 = false;
+
   display2 = false;
+
   display3 = false;
+
   display4 = false;
+
   display5 = false;
+
   display6 = false;
+
   display7 = false;
+
   display8 = false;
 
-  constructor() { }
+  // sizes
+  display9 = false;
+
+  display10 = false;
+
+  display11 = false;
+
+  display12 = false;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -116,3 +116,56 @@
     </ui-modal-footer>
   </ui-modal>
 </kit-modal>
+
+<div>
+  <h2>
+    Modals sizes
+  </h2>
+  <button uiButton (click)="display9 = true">Small modal (s)</button>
+  <kit-modal (close)="display9 = false">
+    <ui-modal *kitOverlay="display9"
+              size="s"
+              header="Small modal">
+      Small modal body
+      <ui-modal-footer>
+        <button uiButton (click)="display9 = false">Cancel</button>
+      </ui-modal-footer>
+    </ui-modal>
+  </kit-modal>
+
+  <button uiButton (click)="display10 = true">Medium modal (m)</button>
+  <kit-modal (close)="display10 = false">
+    <ui-modal *kitOverlay="display10"
+              size="m"
+              header="Medium modal">
+      Medium modal body
+      <ui-modal-footer>
+        <button uiButton (click)="display10 = false">Cancel</button>
+      </ui-modal-footer>
+    </ui-modal>
+  </kit-modal>
+
+  <button uiButton (click)="display11 = true">Large modal (l)</button>
+  <kit-modal (close)="display11 = false">
+    <ui-modal *kitOverlay="display11"
+              size="l"
+              header="Large modal">
+      Large modal body
+      <ui-modal-footer>
+        <button uiButton (click)="display11 = false">Cancel</button>
+      </ui-modal-footer>
+    </ui-modal>
+  </kit-modal>
+
+  <button uiButton (click)="display12 = true">Full-screen modal (full)</button>
+  <kit-modal (close)="display12 = false">
+    <ui-modal *kitOverlay="display12"
+              size="full"
+              header="Full-screen modal">
+      Full-screen modal body
+      <ui-modal-footer>
+        <button uiButton (click)="display12 = false">Cancel</button>
+      </ui-modal-footer>
+    </ui-modal>
+  </kit-modal>
+</div>
