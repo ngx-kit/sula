@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-MAINTAINER Sasha Novyk <alex@nvx.me>
+MAINTAINER Oleksa Novyk <oleksanovyk@gmail.com>
 
 COPY ./etc/nginx.conf /etc/nginx/nginx.conf
 
