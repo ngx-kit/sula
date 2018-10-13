@@ -34,6 +34,7 @@ table th {
 }
 
 table td {
+  border: 1px solid var(--mainBdColor);
   padding: calc(var(--grid) * 2) calc(var(--grid) * 3);
   text-align: left;
 }

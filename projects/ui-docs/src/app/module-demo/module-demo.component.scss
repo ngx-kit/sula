@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  border: 1px solid var(--panelBdColor);
+  box-shadow: var(--shadow);
+}
+
+ui-tabs-content {
+  padding: calc(var(--grid) * 4);
+}
