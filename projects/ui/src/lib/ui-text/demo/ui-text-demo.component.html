@@ -10,4 +10,11 @@
   <h2>Textarea</h2>
   <textarea uiText [(ngModel)]="textareaModel" rows="6"></textarea>
   {{ textareaModel }}
+
+  <h3>With auto-resize</h3>
+  <textarea uiText
+            [(ngModel)]="textareaModel"
+            [autoResize]="true"
+            rows="2"></textarea>
+  {{ textareaModel }}
 </div>
