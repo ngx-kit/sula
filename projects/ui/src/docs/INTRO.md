@@ -5,7 +5,7 @@ apiPriority: 1
 
 # Sula — Angular UI Components
 
-Set of components for Angular.
+Angular UI components with native CSS variables theming and module extracting feature.
 
 Based on [ngx-kit](https://ngx-kit.com).
 

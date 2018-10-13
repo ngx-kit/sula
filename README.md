@@ -2,7 +2,7 @@
 
 # Sula
 
-Set of components for Angular.
+Angular UI components with native CSS variables theming and module extracting feature.
 
 Browse [Sula demo & docs](https://sula.ngx-kit.com).
 
