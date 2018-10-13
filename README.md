@@ -2,8 +2,8 @@
 
 # Sula
 
-Angular UI components with native CSS variables theming and module extracting feature.
+Angular UI components with [native CSS variables theming](./projects/ui/src/docs/THEMING.md) and [module extracting feature](./projects/ui/src/docs/EXTRACTING.md).
 
-Browse [Sula demo & docs](https://sula.ngx-kit.com).
+Browse [live Sula demo & docs](https://sula.ngx-kit.com).
 
 ![](./projects/ui-docs/src/assets/sula-preview.png)
