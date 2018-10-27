@@ -57,7 +57,7 @@
       --borderColor: var(--primaryColor);
       --hoverBorderColor: var(--primaryHoverColor);
       --activeBorderColor: var(--primaryActiveColor);
-      --focusBoxShadow: var(--shadow), var(--primaryLightColor) 0 0 0 1px inset;
+      --focusBoxShadow: var(--shadow), var(--primaryColor) 0 0 0 1px;
     }
     &-primary {
       --background: var(--primaryColor);
@@ -139,7 +139,7 @@
       transform: none;
     }
     &:focus {
-      box-shadow: var(--primaryLightColor) 0 0 0 2px inset;
+      box-shadow: var(--primaryColor) 0 0 0 2px;
     }
   }
 
