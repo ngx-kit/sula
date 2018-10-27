@@ -44,7 +44,6 @@ export class NavComponent implements OnInit {
       .sort((x, y) => {
         const xPrior = x.meta && x.meta.apiPriority ? x.meta.apiPriority : 0;
         const yPrior = y.meta && y.meta.apiPriority ? y.meta.apiPriority : 0;
-        console.log({xPrior, yPrior});
         return xPrior < yPrior ? -1 : 1;
       })
       .map(doc => doc.meta && doc.meta.title ? doc.meta.title : doc.name);

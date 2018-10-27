@@ -15,8 +15,7 @@
   },
   "schematics": "./schematics/collection.json",
   "peerDependencies": {
-    "@angular/core": "^6.0.0",
-    "@ngx-kit/core": "0.0.0-KIT-PLACEHOLDER",
-    "typescript": "~2.7.2"
+    "@angular/core": "^7.0.0",
+    "@ngx-kit/core": "0.0.0-KIT-PLACEHOLDER"
   }
 }
