@@ -1,5 +1,5 @@
-<button class="nav-toggle"
-        (click)="navToggle.emit()"
+<button (click)="navToggle.emit()"
+        class="nav-toggle"
         title="Show navigation">
   <kit-icon name="menu"></kit-icon>
 </button>
@@ -18,15 +18,18 @@
 <div>
   <a href="mailto:oleksanovyk@gmail.com"
      class="link"
-     title="Write to me">
+     title="Write to me"
+     target="_blank">
     <kit-icon name="mail"></kit-icon>
   </a>
   <a href="https://twitter.com/ngxkit"
      class="link"
-     title="Ngx-kit twitter">
+     title="Ngx-kit twitter"
+     target="_blank">
     <kit-icon name="logo-twitter"></kit-icon>
   </a>
-  <a href="https://github.com/ngx-kit/sula"
+  <a target="_blank"
+     href="https://github.com/ngx-kit/sula"
      class="link"
      title="Sula github repository">
     <kit-icon name="logo-github"></kit-icon>
