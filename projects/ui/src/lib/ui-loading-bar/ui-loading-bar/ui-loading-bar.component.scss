@@ -8,7 +8,7 @@
 
 .bar {
   background: var(--primaryColor);
-  box-shadow: -7px 2px 11px 0 var(--primaryColor);
-  height: 2px;
+  box-shadow: -7px 2px 11px 0 var(--primaryHoverColor);
+  height: 3px;
   min-height: 1px;
 }
