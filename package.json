@@ -1,6 +1,6 @@
 {
   "name": "@ngx-kit/sula",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "scripts": {
     "clean": "rimraf ./dist && rimraf ./tmp",
     "ui-docs:serve": "ng run ui-docs:serve",
@@ -13,7 +13,8 @@
     "ui:build:packgr": "ng run ui:build",
     "ui:build:release": "node ./projects/ui/release.js",
     "ui:build:publish": "publish-build.sh",
-    "ui:publish": "npm publish ./tmp/sula-builds --access=public",
+    "ui:release:build": "npm run ui:build",
+    "ui:release:publish": "npm publish ./tmp/sula-builds --access=public",
     "schematics": "npm run schematics:release && npm run schematics:schematize && npm run schematics:build",
     "schematics:release": "node ./projects/schematics/release",
     "schematics:schematize": "node ./projects/schematics/schematize/schematize",
