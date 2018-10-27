@@ -7,7 +7,7 @@
   box-sizing: border-box;
   color: var(--color);
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
   font-weight: 400;
   line-height: 1.42857;
   margin-bottom: 0;
@@ -18,8 +18,15 @@
   transition-duration: var(--transition);
   transition-property: background, box-shadow;
   user-select: none;
-  vertical-align: middle;
+  vertical-align: top;
   white-space: nowrap;
+
+  .content {
+    line-height: 1.5;
+  }
+  .icon + .content:not(:empty) {
+    padding-left: var(--grid);
+  }
 
   &:hover {
     background: var(--hoverBackground);
@@ -180,8 +187,5 @@
         border-bottom-right-radius: var(--borderRadius);
       }
     }
-  }
-  .icon + .content:not(:empty) {
-    padding-left: var(--grid);
   }
 }
