@@ -9,7 +9,6 @@
   flex-direction: row;
   font-weight: 600;
   padding: calc(var(--grid) * 2);
-
   .wrapper {
     flex-grow: 1;
   }
@@ -20,9 +19,12 @@
     cursor: pointer;
     outline: none;
   }
-  &:hover {
-    background: var(--toTextColor1);
-    border-radius: var(--borderRadius);
-    transition: all var(--transitionSlow) linear;
+  &.-collapsible {
+    cursor: default;
+    &:hover {
+      background: var(--toTextColor1);
+      border-radius: var(--borderRadius);
+      transition: all var(--transitionSlow) linear;
+    }
   }
 }

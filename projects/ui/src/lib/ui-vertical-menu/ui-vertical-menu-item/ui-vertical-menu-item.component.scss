@@ -5,7 +5,6 @@
   display: block;
   padding: calc(var(--grid) * 2);
   text-decoration: none;
-
   &.-active {
     background: var(--primaryColor);
     border-radius: var(--borderRadius);
@@ -27,5 +26,4 @@
   font-weight: 400;
   margin: calc(var(--grid) / 2) 0;
   padding: var(--grid) calc(var(--grid) * 2);
-
 }

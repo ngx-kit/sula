@@ -30,6 +30,8 @@ export class UiVerticalMenuGroupComponent implements OnInit, OnChanges, OnDestro
 
   @Input() activeRoute: any[] | string;
 
+  @Input() collapsible = true;
+
   @ContentChildren(RouterLinkActive) routerLinks: QueryList<RouterLinkActive>;
 
   activeState = false;
