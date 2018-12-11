@@ -1,8 +1,10 @@
 <div class="title"
      [class.-active]="activeState"
+     [class.-collapsible]="collapsible"
      (click)="toggle()">
   <span class="wrapper"><ng-content></ng-content></span>
-  <button class="arrow">
+  <button *ngIf="collapsible"
+          class="arrow">
     <kit-icon *ngIf="activeState" name="sula-arrow-up"></kit-icon>
     <kit-icon *ngIf="!activeState" name="sula-arrow-down"></kit-icon>
   </button>
